@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pet Fortuna · Votorantim/SP (prévia)</title>
+<meta name="description" content="Pet Fortuna — há mais de 27 anos cuidando e fazendo o seu pet feliz. Votorantim/SP.">
+<style>
+  :root{
+    --orange:#f07a2a;
+    --orange-dark:#d4621a;
+    --cream:#fff8f1;
+    --sand:#fdeedd;
+    --ink:#2b2420;
+    --muted:#6f625a;
+    --green:#25a35a;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--cream);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+
+  header{padding:22px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem;letter-spacing:.2px}
+  .brand svg{width:34px;height:34px;flex:none}
+
+  .hero{
+    background:linear-gradient(135deg,#ffb36b 0%,var(--orange) 55%,var(--orange-dark) 100%);
+    color:#fff;border-radius:28px;padding:56px 40px;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;
+    background:rgba(255,255,255,.12);
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:.88rem;font-weight:600;
+  }
+  .hero h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;margin:18px 0 12px;font-weight:800}
+  .hero p.lead{font-size:clamp(1.05rem,2.4vw,1.25rem);max-width:540px;opacity:.95}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative;z-index:1}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;
+    padding:14px 22px;border-radius:14px;transition:transform .15s ease,box-shadow .15s ease;font-size:1rem;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-wa{background:#fff;color:var(--green);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+
+  .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:28px 0}
+  .card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:0 2px 14px rgba(90,50,20,.06)}
+  .card .k{font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+  .card .v{font-size:1.35rem;font-weight:800;margin-top:6px}
+  .card .s{color:var(--muted);font-size:.95rem;margin-top:4px}
+  .card .ico{width:42px;height:42px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:14px}
+  .card .ico svg{width:22px;height:22px;color:var(--orange-dark)}
+
+  h2{font-size:1.5rem;margin:40px 0 6px;font-weight:800}
+  .sub{color:var(--muted);margin-bottom:18px}
+
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .link{
+    display:flex;align-items:center;gap:14px;background:#fff;border-radius:var(--radius);padding:18px 20px;
+    text-decoration:none;box-shadow:0 2px 14px rgba(90,50,20,.06);border:2px solid transparent;
+    transition:border-color .15s ease,transform .15s ease;
+  }
+  .link:hover{border-color:var(--orange);transform:translateY(-2px)}
+  .link .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;flex:none;color:#fff}
+  .link .ico svg{width:24px;height:24px}
+  .link strong{display:block;font-size:1.05rem}
+  .link span{color:var(--muted);font-size:.9rem}
+  .i-wa{background:var(--green)}
+  .i-shop{background:var(--orange)}
+  .i-ig{background:linear-gradient(45deg,#f9a03f,#e1306c,#833ab4)}
+  .i-map{background:#3b7dd8}
+
+  .about{background:var(--sand);border-radius:24px;padding:32px;margin:40px 0}
+  .about h2{margin-top:0}
+  .about p{max-width:640px;font-size:1.05rem}
+
+  footer{padding:28px 0 40px;text-align:center;color:var(--muted);font-size:.85rem}
+  footer .demo{margin-top:8px;font-size:.75rem;opacity:.75}
+
+  @media (max-width:560px){
+    .hero{padding:40px 24px;border-radius:22px}
+    .btn{width:100%;justify-content:center}
+    .about{padding:24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="brand" aria-label="Pet Fortuna">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="32" fill="#f07a2a"/>
+      <g fill="#fff">
+        <ellipse cx="20" cy="24" rx="5" ry="6.5"/>
+        <ellipse cx="30" cy="18" rx="5" ry="6.5"/>
+        <ellipse cx="40" cy="20" rx="5" ry="6.5"/>
+        <ellipse cx="47" cy="29" rx="4.5" ry="6"/>
+        <path d="M33 30c-7 0-14 8-14 14 0 5 4 7 8 6 3-.7 4-2 6-2s3 1.3 6 2c4 1 8-1 8-6 0-6-7-14-14-14z"/>
+      </g>
+    </svg>
+    Pet Fortuna
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="badge">&#9733; Há mais de 27 anos</span>
+    <h1>Cuidando e fazendo o seu pet feliz.</h1>
+    <p class="lead">Pet Fortuna, em Votorantim/SP. Fale com a gente, visite a loja online ou venha nos ver no Parque Bela Vista.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/5515991235406" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="https://pet-fortuna.callbell.shop" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Loja online
+      </a>
+    </div>
+  </section>
+
+  <section class="info" aria-label="Informações">
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div class="k">Atendimento</div>
+      <div class="v">08h30 às 18h30</div>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+      <div class="k">Endereço</div>
+      <div class="v">Av. Matheus Conegero, 205</div>
+      <div class="s">Parque Bela Vista · Votorantim/SP</div>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/></svg></div>
+      <div class="k">Nossa história</div>
+      <div class="v">Mais de 27 anos</div>
+      <div class="s">cuidando do seu pet</div>
+    </div>
+  </section>
+
+  <h2>Fale com a Pet Fortuna</h2>
+  <p class="sub">Todos os nossos canais, em um só lugar.</p>
+
+  <section class="links" aria-label="Canais">
+    <a class="link" href="https://wa.me/5515991235406" target="_blank" rel="noopener">
+      <div class="ico i-wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></div>
+      <div><strong>WhatsApp</strong><span>Converse com a gente</span></div>
+    </a>
+    <a class="link" href="https://pet-fortuna.callbell.shop" target="_blank" rel="noopener">
+      <div class="ico i-shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+      <div><strong>Loja online</strong><span>Acesse a nossa loja</span></div>
+    </a>
+    <a class="link" href="https://instagram.com/pet.fortuna" target="_blank" rel="noopener">
+      <div class="ico i-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+      <div><strong>Instagram</strong><span>@pet.fortuna</span></div>
+    </a>
+    <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Matheus%20Conegero%2C%20205%2C%20Parque%20Bela%20Vista%2C%20Votorantim%2C%20SP" target="_blank" rel="noopener">
+      <div class="ico i-map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+      <div><strong>Como chegar</strong><span>Abrir no mapa</span></div>
+    </a>
+  </section>
+
+  <section class="about">
+    <h2>Pet Fortuna</h2>
+    <p>Há mais de 27 anos cuidando e fazendo o seu pet feliz, aqui em Votorantim. Estamos na Av. Matheus Conegero, 205, no Parque Bela Vista, com atendimento das 08h30 às 18h30.</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div>Pet Fortuna · Av. Matheus Conegero, 205 · Parque Bela Vista · Votorantim/SP</div>
+  <div class="demo">Prévia demonstrativa de página. Ícone ilustrativo, não é o logotipo oficial.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Agropet D.dog Irmãos | Pet shop em Votorantim/SP</title>
+<meta name="description" content="Agropet D.dog Irmãos, pet shop em Votorantim/SP. Ração por kg, pacotes ou sacarias, medicamentos, acessórios e muito mais.">
+<style>
+  :root {
+    --laranja: #ff8a3d;
+    --laranja-escuro: #e86a1c;
+    --turquesa: #1fb8a6;
+    --turquesa-claro: #e3f7f4;
+    --amarelo: #ffd166;
+    --creme: #fff8f0;
+    --texto: #2b2d42;
+    --texto-suave: #5c6078;
+    --branco: #ffffff;
+    --whats: #25d366;
+    --whats-escuro: #1da851;
+    --raio: 20px;
+    --sombra: 0 10px 30px rgba(43, 45, 66, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--texto);
+    background: var(--creme);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  svg { display: block; }
+  .container { width: min(1100px, 92%); margin: 0 auto; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255, 248, 240, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(43, 45, 66, 0.06);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 16px; }
+  .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; }
+  .marca-icone {
+    width: 42px; height: 42px; border-radius: 14px;
+    background: var(--laranja); color: var(--branco);
+    display: grid; place-items: center;
+  }
+  .marca small { display: block; font-weight: 500; font-size: 0.75rem; color: var(--texto-suave); letter-spacing: 0; }
+  .nav-links { display: flex; gap: 22px; list-style: none; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--texto-suave); }
+  .nav-links a:hover { color: var(--laranja-escuro); }
+
+  /* Botões */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px;
+    font-weight: 700; font-size: 1rem; text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-whats { background: var(--whats); color: var(--branco); box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35); }
+  .btn-whats:hover { background: var(--whats-escuro); }
+  .btn-sec { background: var(--branco); color: var(--texto); border: 2px solid rgba(43, 45, 66, 0.12); }
+  .btn-sec:hover { border-color: var(--turquesa); }
+  .btn-sm { padding: 10px 18px; font-size: 0.92rem; }
+
+  /* Hero */
+  .hero { padding: 64px 0 80px; position: relative; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+  .selo {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--turquesa-claro); color: #12806f;
+    padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 18px; }
+  .hero h1 span { color: var(--laranja); }
+  .hero p.lead { font-size: 1.15rem; color: var(--texto-suave); max-width: 520px; margin-bottom: 30px; }
+  .hero-acoes { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-arte {
+    position: relative; aspect-ratio: 1 / 1; max-width: 420px; margin-left: auto; width: 100%;
+  }
+  .blob {
+    position: absolute; inset: 0;
+    background: var(--amarelo);
+    border-radius: 42% 58% 55% 45% / 48% 42% 58% 52%;
+  }
+  .blob-2 {
+    position: absolute; width: 38%; height: 38%; right: -4%; bottom: 4%;
+    background: var(--turquesa); border-radius: 50%; opacity: 0.9;
+  }
+  .hero-arte .pata-grande {
+    position: absolute; inset: 18%; color: var(--laranja);
+  }
+  .bolha {
+    position: absolute; background: var(--branco); border-radius: 16px; box-shadow: var(--sombra);
+    padding: 10px 14px; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
+  }
+  .bolha-1 { top: 8%; left: -6%; }
+  .bolha-2 { bottom: 10%; left: 2%; }
+  .bolha .ponto { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* Seções */
+  section { padding: 80px 0; }
+  .titulo-secao { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .titulo-secao .tag { color: var(--laranja-escuro); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
+  .titulo-secao h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); letter-spacing: -0.02em; line-height: 1.15; margin: 8px 0 12px; }
+  .titulo-secao p { color: var(--texto-suave); }
+
+  .produtos { background: var(--branco); border-radius: 40px 40px 0 0; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card {
+    background: var(--creme); border-radius: var(--raio); padding: 32px 28px;
+    box-shadow: var(--sombra); transition: transform 0.2s ease;
+    border: 1px solid rgba(43, 45, 66, 0.04);
+  }
+  .card:hover { transform: translateY(-4px); }
+  .card-icone {
+    width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 20px;
+    color: var(--branco);
+  }
+  .card:nth-child(1) .card-icone { background: var(--laranja); }
+  .card:nth-child(2) .card-icone { background: var(--turquesa); }
+  .card:nth-child(3) .card-icone { background: #8f6ee8; }
+  .card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .card p { color: var(--texto-suave); }
+  .card ul { list-style: none; margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .card li { background: var(--branco); border-radius: 999px; padding: 4px 12px; font-size: 0.85rem; font-weight: 600; }
+  .e-mais { text-align: center; margin-top: 36px; color: var(--texto-suave); font-weight: 600; }
+
+  /* Faixa WhatsApp */
+  .faixa { background: var(--branco); padding-top: 0; }
+  .faixa-box {
+    background: linear-gradient(135deg, var(--turquesa) 0%, #18998a 100%);
+    color: var(--branco); border-radius: 32px; padding: 52px 48px;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .faixa-box::after {
+    content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08); right: -60px; top: -80px;
+  }
+  .faixa-box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .faixa-box p { opacity: 0.92; }
+  .faixa-acoes { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; position: relative; z-index: 1; }
+  .btn-whats-branco { background: var(--branco); color: #12806f; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15); }
+
+  /* Contato */
+  .contatos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .contato {
+    background: var(--branco); border-radius: var(--raio); padding: 26px 22px; box-shadow: var(--sombra);
+    text-decoration: none; display: flex; flex-direction: column; gap: 10px;
+    border: 2px solid transparent; transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .contato:hover { border-color: var(--laranja); transform: translateY(-3px); }
+  .contato .ic { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; color: var(--branco); }
+  .contato h3 { font-size: 1.05rem; }
+  .contato span { color: var(--texto-suave); font-size: 0.95rem; word-break: break-word; }
+  .contato .acao { color: var(--laranja-escuro); font-weight: 700; font-size: 0.9rem; margin-top: auto; }
+
+  /* Rodapé */
+  footer { background: var(--texto); color: rgba(255, 255, 255, 0.82); padding: 40px 0 28px; }
+  .rodape { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+  .rodape .marca { color: var(--branco); }
+  .rodape .marca small { color: rgba(255, 255, 255, 0.6); }
+  .rodape-links { display: flex; gap: 12px; }
+  .rodape-links a {
+    width: 42px; height: 42px; border-radius: 12px; background: rgba(255, 255, 255, 0.08);
+    display: grid; place-items: center; color: var(--branco);
+  }
+  .rodape-links a:hover { background: var(--laranja); }
+  .aviso { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); text-align: center; }
+
+  /* Botão flutuante */
+  .whats-flutuante {
+    position: fixed; right: 20px; bottom: 20px; z-index: 20;
+    width: 62px; height: 62px; border-radius: 50%;
+    background: var(--whats); color: var(--branco);
+    display: grid; place-items: center;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+    transition: transform 0.2s ease;
+  }
+  .whats-flutuante:hover { transform: scale(1.08); }
+
+  /* Responsivo */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-arte { max-width: 320px; margin: 10px auto 0; }
+    .cards { grid-template-columns: 1fr; }
+    .contatos { grid-template-columns: repeat(2, 1fr); }
+    .faixa-box { grid-template-columns: 1fr; padding: 40px 28px; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 520px) {
+    .contatos { grid-template-columns: 1fr; }
+    .hero { padding: 40px 0 60px; }
+    section { padding: 60px 0; }
+    .hero-acoes .btn { width: 100%; }
+    .nav .btn-sm span { display: none; }
+    .bolha-1 { left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pata" viewBox="0 0 64 64">
+      <ellipse cx="18" cy="22" rx="6.5" ry="8.5"/>
+      <ellipse cx="32" cy="15" rx="6.5" ry="8.5"/>
+      <ellipse cx="46" cy="22" rx="6.5" ry="8.5"/>
+      <ellipse cx="54" cy="36" rx="5.5" ry="7.5"/>
+      <ellipse cx="10" cy="36" rx="5.5" ry="7.5"/>
+      <path d="M32 30c-9 0-17 11-17 19 0 6 5 9 10 8 3-.6 4.8-1.5 7-1.5s4 .9 7 1.5c5 1 10-2 10-8 0-8-8-19-17-19z"/>
+    </symbol>
+    <symbol id="i-whats" viewBox="0 0 32 32">
+      <path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 10 9.9 5.2 16 5.2S27 10 27 15.9 22.1 26.4 16 26.4zm6-7.8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/>
+    </symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/>
+      <circle cx="12" cy="9.5" r="2.6"/>
+    </symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>
+    </symbol>
+    <symbol id="i-moto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="5.5" cy="17" r="3"/>
+      <circle cx="18.5" cy="17" r="3"/>
+      <path d="M8.5 17h5l3-6h-4l-2-3H8"/>
+      <path d="M16.5 11l2 6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="marca" aria-label="Agropet D.dog Irmãos, início">
+      <span class="marca-icone"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-pata"/></svg></span>
+      <span>D.dog Irmãos<small>Agropet · Votorantim/SP</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#contato">Localização</a></li>
+    </ul>
+    <a class="btn btn-whats btn-sm" href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener">
+      <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg>
+      <span>Fale Conosco</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="selo">
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-mapa"/></svg>
+          Pet shop em Votorantim/SP
+        </span>
+        <h1>Agropet <span>D.dog</span> Irmãos</h1>
+        <p class="lead">Temos ração por kg, pacotes ou sacarias, medicamentos, acessórios e muito mais.</p>
+        <div class="hero-acoes">
+          <a class="btn btn-whats" href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener">
+            <svg width="22" height="22" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg>
+            Fale Conosco no WhatsApp
+          </a>
+          <a class="btn btn-sec" href="#produtos">Ver produtos</a>
+        </div>
+      </div>
+      <div class="hero-arte" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="blob-2"></div>
+        <svg class="pata-grande" viewBox="0 0 64 64" fill="currentColor"><use href="#i-pata"/></svg>
+        <div class="bolha bolha-1"><span class="ponto" style="background:var(--laranja)"></span>Ração por kg</div>
+        <div class="bolha bolha-2"><span class="ponto" style="background:var(--turquesa)"></span>Medicamentos</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <div class="titulo-secao">
+        <span class="tag">O que você encontra</span>
+        <h2>Tudo para o seu pet em um só lugar</h2>
+        <p>Ração, medicamentos e acessórios. Fale com a gente para saber o que temos disponível.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 3h12l1 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7z"/>
+              <path d="M5 7h14"/>
+              <circle cx="10" cy="13" r="1.3" fill="currentColor"/>
+              <circle cx="14" cy="12" r="1.3" fill="currentColor"/>
+              <circle cx="12" cy="16" r="1.3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Ração</h3>
+          <p>Ração vendida do jeito que for melhor para você.</p>
+          <ul>
+            <li>Por kg</li>
+            <li>Pacotes</li>
+            <li>Sacarias</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-icone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="8" width="19" height="8" rx="4" transform="rotate(-45 12 12)"/>
+              <path d="M8.5 8.5l7 7"/>
+            </svg>
+          </div>
+          <h3>Medicamentos</h3>
+          <p>Medicamentos para o cuidado do seu animal. Consulte a disponibilidade pelo WhatsApp.</p>
+        </article>
+        <article class="card">
+          <div class="card-icone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12a8 8 0 0 1 16 0"/>
+              <path d="M2.5 12h19"/>
+              <circle cx="12" cy="17" r="3"/>
+              <path d="M12 14v-2"/>
+            </svg>
+          </div>
+          <h3>Acessórios</h3>
+          <p>Acessórios para o dia a dia do seu pet.</p>
+        </article>
+      </div>
+      <p class="e-mais">... e muito mais.</p>
+    </div>
+  </section>
+
+  <section class="faixa">
+    <div class="container">
+      <div class="faixa-box">
+        <div>
+          <h2>Ficou com alguma dúvida?</h2>
+          <p>Chame a equipe da D.dog Irmãos pelo WhatsApp ou ligue para o Disk Entrega.</p>
+        </div>
+        <div class="faixa-acoes">
+          <a class="btn btn-whats-branco" href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener">
+            <svg width="22" height="22" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg>
+            Fale Conosco
+          </a>
+          <a class="btn btn-sec btn-sm" href="tel:+5515996449590" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.5)">
+            <svg width="18" height="18" aria-hidden="true"><use href="#i-moto"/></svg>
+            Disk Entrega: (15) 99644-9590
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="titulo-secao">
+        <span class="tag">Contato</span>
+        <h2>Fale com a D.dog Irmãos</h2>
+        <p>Escolha o canal que preferir.</p>
+      </div>
+      <div class="contatos">
+        <a class="contato" href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener">
+          <span class="ic" style="background:var(--whats)"><svg width="26" height="26" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg></span>
+          <h3>WhatsApp</h3>
+          <span>Fale Conosco</span>
+          <span class="acao">Abrir conversa →</span>
+        </a>
+        <a class="contato" href="tel:+5515996449590">
+          <span class="ic" style="background:var(--laranja)"><svg width="24" height="24" aria-hidden="true"><use href="#i-tel"/></svg></span>
+          <h3>Disk Entrega</h3>
+          <span>(15) 99644-9590</span>
+          <span class="acao">Ligar →</span>
+        </a>
+        <a class="contato" href="https://www.instagram.com/ddog_agropet" target="_blank" rel="noopener">
+          <span class="ic" style="background:#d6457a"><svg width="24" height="24" aria-hidden="true"><use href="#i-insta"/></svg></span>
+          <h3>Instagram</h3>
+          <span>@ddog_agropet</span>
+          <span class="acao">Seguir →</span>
+        </a>
+        <a class="contato" href="https://www.google.com/maps?q=-23.5428599,-47.45986" target="_blank" rel="noopener">
+          <span class="ic" style="background:var(--turquesa)"><svg width="24" height="24" aria-hidden="true"><use href="#i-mapa"/></svg></span>
+          <h3>Localização</h3>
+          <span>Votorantim/SP</span>
+          <span class="acao">Ver no Google Maps →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="rodape">
+      <a href="#inicio" class="marca" aria-label="Agropet D.dog Irmãos, voltar ao início">
+        <span class="marca-icone"><svg width="24" height="24" fill="currentColor" aria-hidden="true"><use href="#i-pata"/></svg></span>
+        <span>Agropet D.dog Irmãos<small>Votorantim/SP</small></span>
+      </a>
+      <div class="rodape-links">
+        <a href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg></a>
+        <a href="https://www.instagram.com/ddog_agropet" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" aria-hidden="true"><use href="#i-insta"/></svg></a>
+        <a href="https://www.google.com/maps?q=-23.5428599,-47.45986" target="_blank" rel="noopener" aria-label="Localização no Google Maps"><svg width="20" height="20" aria-hidden="true"><use href="#i-mapa"/></svg></a>
+      </div>
+    </div>
+    <p class="aviso">Prévia demonstrativa de página. Ícone ilustrativo, não é o logotipo oficial.</p>
+  </div>
+</footer>
+
+<a class="whats-flutuante" href="https://wa.me/message/ORGHFXF6YYFIN1" target="_blank" rel="noopener" aria-label="Fale Conosco pelo WhatsApp">
+  <svg width="32" height="32" fill="currentColor" aria-hidden="true"><use href="#i-whats"/></svg>
+</a>
+
+</body>
+</html>

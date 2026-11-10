@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Loja Japonesa | Moda bebê e infanto-juvenil em Araraquara/SP</title>
+  <meta name="description" content="Loja Japonesa: moda bebê e infanto-juvenil no Centro de Araraquara/SP. Rua 9 de Julho, 940.">
+  <meta name="theme-color" content="#f7efe8">
+  <style>
+    :root {
+      --creme: #fbf6f1;
+      --areia: #f3e7dc;
+      --rosa: #f2c9c0;
+      --rosa-forte: #d9877a;
+      --salvia: #b9cfc1;
+      --salvia-escura: #4f7563;
+      --azul: #c6d9ea;
+      --texto: #3d3431;
+      --texto-suave: #6e625d;
+      --branco: #ffffff;
+      --raio: 22px;
+      --sombra: 0 10px 30px rgba(61, 52, 49, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Avenir Next", "Nunito", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      background: var(--creme);
+      color: var(--texto);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .container { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Topo */
+    header.topo {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(251, 246, 241, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(61, 52, 49, 0.06);
+    }
+    .topo .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .marca-icone { width: 36px; height: 36px; flex-shrink: 0; }
+    .marca-nome { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; line-height: 1.1; }
+    .marca-nome small { display: block; font-weight: 600; font-size: 0.72rem; color: var(--texto-suave); letter-spacing: 0.04em; text-transform: uppercase; }
+    .topo-cta {
+      display: none;
+      text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      padding: 9px 16px; border-radius: 999px;
+      background: var(--salvia-escura); color: var(--branco);
+    }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 48px 0 56px; }
+    .hero::before, .hero::after {
+      content: ""; position: absolute; border-radius: 50%; z-index: 0; opacity: 0.55;
+    }
+    .hero::before { width: 260px; height: 260px; background: var(--rosa); top: -80px; right: -90px; }
+    .hero::after { width: 200px; height: 200px; background: var(--azul); bottom: -90px; left: -70px; }
+    .hero .container { position: relative; z-index: 1; }
+    .selo-local {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--branco); color: var(--salvia-escura);
+      font-weight: 700; font-size: 0.82rem;
+      padding: 6px 12px; border-radius: 999px; box-shadow: var(--sombra);
+    }
+    .selo-local svg { width: 14px; height: 14px; }
+    .hero h1 {
+      font-size: clamp(2.1rem, 8vw, 3.6rem);
+      line-height: 1.08; letter-spacing: -0.025em; font-weight: 800;
+      margin: 18px 0 14px;
+    }
+    .hero h1 .destaque { color: var(--rosa-forte); }
+    .hero p.lead { font-size: 1.08rem; color: var(--texto-suave); max-width: 560px; }
+    .ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      text-decoration: none; font-weight: 700; font-size: 1rem;
+      padding: 15px 22px; border-radius: 999px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--rosa-forte); outline-offset: 3px; }
+    .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .btn-whats { background: #25a85a; color: var(--branco); box-shadow: 0 8px 20px rgba(37, 168, 90, 0.25); }
+    .btn-insta { background: var(--branco); color: var(--texto); border: 2px solid var(--rosa); }
+
+    .hero-ilustra { margin-top: 40px; display: flex; justify-content: center; }
+    .hero-ilustra svg { width: 100%; max-width: 360px; height: auto; }
+
+    /* Aviso do nome */
+    .aviso-nome { padding: 0 0 8px; }
+    .aviso-card {
+      background: var(--branco); border-radius: var(--raio); box-shadow: var(--sombra);
+      padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start;
+      border-left: 6px solid var(--salvia);
+    }
+    .aviso-card svg { width: 28px; height: 28px; flex-shrink: 0; margin-top: 2px; }
+    .aviso-card strong { display: block; font-size: 1rem; margin-bottom: 2px; }
+    .aviso-card p { color: var(--texto-suave); font-size: 0.97rem; }
+
+    /* Secoes */
+    section.bloco { padding: 56px 0; }
+    .rotulo {
+      display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--rosa-forte); margin-bottom: 10px;
+    }
+    h2 { font-size: clamp(1.6rem, 5.5vw, 2.3rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 800; margin-bottom: 14px; }
+    .bloco p.texto { color: var(--texto-suave); font-size: 1.04rem; max-width: 620px; }
+
+    /* Citacao da bio */
+    .geracao { background: var(--areia); }
+    .citacao {
+      margin-top: 26px; background: var(--branco); border-radius: var(--raio);
+      padding: 28px 24px; box-shadow: var(--sombra); position: relative;
+    }
+    .citacao svg.aspas { width: 34px; height: 34px; position: absolute; top: -14px; left: 22px; }
+    .citacao blockquote { font-size: 1.25rem; font-weight: 700; line-height: 1.4; letter-spacing: -0.01em; }
+    .citacao cite { display: block; margin-top: 12px; font-style: normal; font-size: 0.9rem; color: var(--texto-suave); }
+
+    /* Segmento */
+    .cards { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+    .card {
+      background: var(--branco); border-radius: var(--raio); padding: 26px 22px;
+      box-shadow: var(--sombra);
+    }
+    .card .icone {
+      width: 56px; height: 56px; border-radius: 18px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .card .icone svg { width: 30px; height: 30px; }
+    .card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
+    .card p { color: var(--texto-suave); font-size: 0.98rem; }
+    .bg-rosa { background: #fbe6e1; }
+    .bg-azul { background: #e3edf6; }
+    .bg-salvia { background: #e2ede6; }
+
+    /* Visite */
+    .visite { background: var(--salvia-escura); color: var(--branco); }
+    .visite .rotulo { color: #f6d3cb; }
+    .visite p.texto { color: rgba(255, 255, 255, 0.85); }
+    .endereco {
+      margin-top: 24px; background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--raio); padding: 22px; display: flex; gap: 14px; align-items: flex-start;
+    }
+    .endereco svg { width: 30px; height: 30px; flex-shrink: 0; }
+    .endereco address { font-style: normal; font-size: 1.08rem; font-weight: 600; line-height: 1.5; }
+    .endereco address span { display: block; font-weight: 400; opacity: 0.85; font-size: 0.98rem; }
+
+    /* Contato final */
+    .contato { text-align: center; }
+    .contato .ctas { max-width: 420px; margin-left: auto; margin-right: auto; }
+    .contato p.texto { margin: 0 auto; }
+    .link-face {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 22px;
+      font-size: 0.92rem; color: var(--texto-suave); text-decoration: none;
+      border-bottom: 1px solid rgba(110, 98, 93, 0.35); padding-bottom: 1px;
+    }
+    .link-face svg { width: 16px; height: 16px; }
+    .link-face:hover { color: var(--texto); }
+
+    footer {
+      border-top: 1px solid rgba(61, 52, 49, 0.08);
+      padding: 26px 0 96px; text-align: center; font-size: 0.86rem; color: var(--texto-suave);
+    }
+
+    /* Botao flutuante WhatsApp (mobile) */
+    .flutuante {
+      position: fixed; right: 16px; bottom: 16px; z-index: 20;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25a85a; color: var(--branco);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 24px rgba(37, 168, 90, 0.35);
+    }
+    .flutuante svg { width: 30px; height: 30px; }
+
+    @media (min-width: 640px) {
+      .ctas { flex-direction: row; }
+      .ctas .btn { flex: 1; }
+      .hero .ctas { max-width: 520px; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .topo-cta { display: inline-block; }
+    }
+    @media (min-width: 900px) {
+      .hero { padding: 80px 0 90px; }
+      .hero .container { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 40px; }
+      .hero-ilustra { margin-top: 0; }
+      .hero::before { width: 420px; height: 420px; top: -140px; right: -120px; }
+      section.bloco { padding: 80px 0; }
+      .geracao .container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+      .citacao { margin-top: 0; }
+      .flutuante { display: none; }
+      footer { padding-bottom: 26px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <a class="marca" href="#inicio" aria-label="Loja Japonesa, início">
+        <svg class="marca-icone" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="#f2c9c0"/>
+          <path d="M13 15c0-2 1.6-3 3.2-3 1.2 0 2.3.6 2.8 1.6L20 15l1-1.4c.5-1 1.6-1.6 2.8-1.6 1.6 0 3.2 1 3.2 3l-3 2v10a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V17l-3-2z" fill="#ffffff"/>
+        </svg>
+        <span class="marca-nome">Loja Japonesa<small>Araraquara/SP</small></span>
+      </a>
+      <a class="topo-cta" href="https://wa.me/5516997540977" target="_blank" rel="noopener">Fale no WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="container">
+        <div>
+          <span class="selo-local">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Centro de Araraquara/SP
+          </span>
+          <h1>Moda bebê e <span class="destaque">infanto-juvenil</span> em Araraquara</h1>
+          <p class="lead">Na Loja Japonesa, cuidamos da nova geração de Araraquara e região. Venha nos visitar na Rua 9 de Julho, 940, no Centro.</p>
+          <div class="ctas">
+            <a class="btn btn-whats" href="https://wa.me/5516997540977" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+              Entrar no grupo de ofertas
+            </a>
+            <a class="btn btn-insta" href="https://instagram.com/japonesaararaquara" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              @japonesaararaquara
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-ilustra" aria-hidden="true">
+          <svg viewBox="0 0 360 300">
+            <!-- varal com roupinhas ilustradas -->
+            <path d="M10 60 Q180 110 350 60" fill="none" stroke="#c9b8ad" stroke-width="3"/>
+            <!-- body de bebe -->
+            <g transform="translate(40 70)">
+              <path d="M10 0h50l14 18-12 10-6-6v52c0 10-8 16-15 16h-12c-7 0-15-6-15-16V22l-6 6L-4 18z" fill="#f2c9c0"/>
+              <circle cx="35" cy="46" r="8" fill="#ffffff" opacity="0.8"/>
+              <rect x="22" y="-6" width="4" height="12" rx="2" fill="#d9877a"/>
+              <rect x="44" y="-6" width="4" height="12" rx="2" fill="#d9877a"/>
+            </g>
+            <!-- camiseta infantil -->
+            <g transform="translate(140 88)">
+              <path d="M18 0h44l22 16-12 18-10-6v62H18V28L8 34-4 16z" fill="#c6d9ea"/>
+              <path d="M30 0c2 8 8 12 10 12s8-4 10-12" fill="none" stroke="#ffffff" stroke-width="3"/>
+              <path d="M28 50h24" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+              <path d="M28 62h16" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+              <rect x="34" y="-8" width="4" height="12" rx="2" fill="#d9877a"/>
+            </g>
+            <!-- vestidinho -->
+            <g transform="translate(250 72)">
+              <path d="M22 0h28l4 22 22 64H-4l22-64z" fill="#b9cfc1"/>
+              <path d="M18 22h36" stroke="#ffffff" stroke-width="4"/>
+              <circle cx="20" cy="60" r="3" fill="#ffffff"/>
+              <circle cx="36" cy="70" r="3" fill="#ffffff"/>
+              <circle cx="52" cy="58" r="3" fill="#ffffff"/>
+              <rect x="34" y="-8" width="4" height="12" rx="2" fill="#d9877a"/>
+            </g>
+            <!-- detalhes -->
+            <circle cx="90" cy="240" r="10" fill="#f2c9c0" opacity="0.7"/>
+            <circle cx="180" cy="258" r="6" fill="#c6d9ea"/>
+            <circle cx="290" cy="236" r="8" fill="#b9cfc1" opacity="0.8"/>
+            <path d="M170 220l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#f3d9a4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="aviso-nome" aria-label="Sobre o nome da loja">
+      <div class="container">
+        <div class="aviso-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4f7563" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r="0.8" fill="#4f7563"/></svg>
+          <div>
+            <strong>Apesar do nome, somos moda infantil.</strong>
+            <p>A Loja Japonesa é uma loja de moda bebê e infanto-juvenil em Araraquara. Não trabalhamos com produtos japoneses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco geracao" id="sobre">
+      <div class="container">
+        <div>
+          <span class="rotulo">Quem somos</span>
+          <h2>Cuidando da nova geração de Araraquara e região</h2>
+          <p class="texto">Vestir os pequenos é cuidar deles em cada fase. Esse é o nosso jeito de estar presente na vida das famílias de Araraquara e das cidades vizinhas.</p>
+        </div>
+        <div class="citacao">
+          <svg class="aspas" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#d9877a"/><path d="M10 21c0-4 2-7 5-8l1 2c-2 1-2.6 2.4-2.6 3.6H16V24h-6zm9 0c0-4 2-7 5-8l1 2c-2 1-2.6 2.4-2.6 3.6H25V24h-6z" fill="#ffffff"/></svg>
+          <blockquote>"Nós cuidamos da nova geração de Araraquara e Região! Venha nos visitar!"</blockquote>
+          <cite>Loja Japonesa, no Instagram</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" id="moda">
+      <div class="container">
+        <span class="rotulo">Nosso segmento</span>
+        <h2>Moda para cada fase da infância</h2>
+        <p class="texto">Dos primeiros meses até a adolescência, a Loja Japonesa é dedicada à moda bebê e infanto-juvenil.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="icone bg-rosa">
+              <svg viewBox="0 0 32 32" fill="none" stroke="#d9877a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5h10l5 5-3 3-2-2v14a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2V11l-2 2-3-3z"/></svg>
+            </div>
+            <h3>Moda bebê</h3>
+            <p>Peças para os primeiros meses e anos dos pequenos.</p>
+          </article>
+          <article class="card">
+            <div class="icone bg-azul">
+              <svg viewBox="0 0 32 32" fill="none" stroke="#5a7fa3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6h12l6 5-3 4-3-2v13H10V13l-3 2-3-4z"/></svg>
+            </div>
+            <h3>Moda infantil</h3>
+            <p>Roupas para a criançada que está crescendo.</p>
+          </article>
+          <article class="card">
+            <div class="icone bg-salvia">
+              <svg viewBox="0 0 32 32" fill="none" stroke="#4f7563" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h16l2 20H6z"/><path d="M12 6v3a4 4 0 0 0 8 0V6"/></svg>
+            </div>
+            <h3>Moda juvenil</h3>
+            <p>Estilo para quem já está ficando grande.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco visite" id="visite">
+      <div class="container">
+        <span class="rotulo">Venha nos visitar</span>
+        <h2>Estamos no Centro de Araraquara</h2>
+        <p class="texto">Passe na loja para conhecer de perto. Para novidades e ofertas, acompanhe a gente pelo WhatsApp e pelo Instagram.</p>
+        <div class="endereco">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f6d3cb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <address>
+            Rua 9 de Julho, 940
+            <span>Centro, Araraquara/SP</span>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco contato" id="contato">
+      <div class="container">
+        <span class="rotulo">Fale com a gente</span>
+        <h2>Acompanhe as novidades</h2>
+        <p class="texto">Entre no nosso grupo de ofertas no WhatsApp e siga a Loja Japonesa no Instagram.</p>
+        <div class="ctas">
+          <a class="btn btn-whats" href="https://wa.me/5516997540977" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-insta" href="https://instagram.com/japonesaararaquara" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+        </div>
+        <a class="link-face" href="https://facebook.com/japonesaaraquarasp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v7h4v-7h3l.5-4H14V8.6c0-.4.2-.6.6-.6z"/></svg>
+          Também estamos no Facebook
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Loja Japonesa</strong> · Moda bebê e infanto-juvenil</p>
+      <p>Rua 9 de Julho, 940, Centro, Araraquara/SP</p>
+    </div>
+  </footer>
+
+  <a class="flutuante" href="https://wa.me/5516997540977" target="_blank" rel="noopener" aria-label="Falar com a Loja Japonesa no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+  </a>
+
+</body>
+</html>
