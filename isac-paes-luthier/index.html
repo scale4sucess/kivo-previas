@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Isac Paes Luthier | Franca – SP</title>
+<meta name="description" content="Isac Paes Luthier — manutenção de instrumentos de sopro em Franca/SP. Atendimento com horário agendado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1a17;
+    --ink-soft:#4a4540;
+    --muted:#7a7268;
+    --cream:#f8f4ec;
+    --paper:#fffdf8;
+    --line:#e6ddcc;
+    --brass:#b08a3e;
+    --brass-deep:#8a6a2a;
+    --brass-light:#e9d9b0;
+    --night:#1f2a2e;
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep);font-weight:600}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,4vw,2.9rem);margin:.5rem 0 1rem}
+  .lead{color:var(--ink-soft);font-size:1.05rem;max-width:620px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:40px;height:40px;border-radius:50%;background:var(--night);display:grid;place-items:center}
+  .brand-mark svg{width:22px;height:22px}
+  .brand-name{font-family:var(--serif);font-size:1.45rem;font-weight:700;line-height:1}
+  .brand-sub{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--brass-deep)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.95rem;transition:all .2s ease;border:1px solid transparent}
+  .btn-dark{background:var(--night);color:#fff}
+  .btn-dark:hover{background:#111a1d;transform:translateY(-1px)}
+  .btn-line{border-color:var(--ink);color:var(--ink)}
+  .btn-line:hover{background:var(--ink);color:#fff}
+  .btn-brass{background:var(--brass);color:#fff}
+  .btn-brass:hover{background:var(--brass-deep)}
+  .btn svg{width:18px;height:18px}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%);padding:96px 0 88px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.6rem);margin:18px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--brass-deep)}
+  .hero .lead{font-size:1.15rem;margin-bottom:34px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-note{margin-top:26px;font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--brass)}
+  .hero-card{background:var(--night);color:#f3ede0;border-radius:28px;padding:40px 36px;position:relative;box-shadow:0 30px 60px -30px rgba(31,42,46,.55)}
+  .hero-card .eyebrow{color:var(--brass-light)}
+  .hero-card h3{font-size:1.9rem;margin:10px 0 22px;color:#fff}
+  .hc-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12);font-size:.95rem}
+  .hc-row svg{flex:0 0 20px;width:20px;height:20px;color:var(--brass-light);margin-top:2px}
+  .hc-row strong{display:block;color:#fff;font-weight:600}
+  .hc-row span{color:#c9c1b1}
+  .ornament{position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;border:1px solid var(--brass-light);opacity:.6}
+  .ornament.two{right:-60px;top:-20px;width:300px;height:300px}
+
+  section{padding:96px 0}
+  .section-head{margin-bottom:48px}
+
+  /* Instruments */
+  .inst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .inst{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 22px;transition:all .25s ease}
+  .inst:hover{border-color:var(--brass);transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(138,106,42,.45)}
+  .inst-ic{width:46px;height:46px;border-radius:14px;background:var(--cream);display:grid;place-items:center;margin-bottom:18px;color:var(--brass-deep)}
+  .inst-ic svg{width:24px;height:24px}
+  .inst h3{font-size:1.5rem;margin-bottom:4px}
+  .inst p{font-size:.85rem;color:var(--muted)}
+  .families{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .tag{font-size:.8rem;padding:7px 14px;border-radius:999px;background:var(--cream);border:1px solid var(--line);color:var(--ink-soft)}
+
+  /* Service band */
+  .band{background:var(--night);color:#efe8da}
+  .band-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .band h2{color:#fff}
+  .band .eyebrow{color:var(--brass-light)}
+  .band .lead{color:#c9c1b1}
+  .steps{display:grid;gap:16px}
+  .step{display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px}
+  .step-n{font-family:var(--serif);font-size:2rem;color:var(--brass-light);line-height:1;min-width:34px}
+  .step h3{font-size:1.3rem;color:#fff;margin-bottom:4px}
+  .step p{font-size:.9rem;color:#c9c1b1}
+  .step a{color:var(--brass-light);text-decoration:underline;text-underline-offset:3px}
+
+  /* Checklist */
+  .check-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  .checklist{background:#fff;border:1px solid var(--line);border-radius:24px;padding:12px 32px}
+  .ck{display:flex;gap:18px;padding:24px 0;border-bottom:1px dashed var(--line)}
+  .ck:last-child{border-bottom:0}
+  .ck-box{flex:0 0 30px;height:30px;border-radius:9px;border:1.5px solid var(--brass);display:grid;place-items:center;color:var(--brass-deep)}
+  .ck-box svg{width:16px;height:16px}
+  .ck h3{font-size:1.4rem;margin-bottom:4px}
+  .ck p{font-size:.92rem;color:var(--ink-soft)}
+  .ck .ex{display:inline-block;margin-top:8px;font-size:.8rem;color:var(--muted);font-style:italic}
+  .tip{margin-top:28px;background:var(--cream);border-left:3px solid var(--brass);border-radius:0 14px 14px 0;padding:18px 22px;font-size:.92rem;color:var(--ink-soft)}
+  .tip strong{color:var(--ink)}
+
+  /* Info */
+  .info{background:var(--cream)}
+  .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px;display:flex;flex-direction:column}
+  .card-ic{width:48px;height:48px;border-radius:50%;background:var(--night);color:var(--brass-light);display:grid;place-items:center;margin-bottom:22px}
+  .card-ic svg{width:22px;height:22px}
+  .card h3{font-size:1.65rem;margin-bottom:14px}
+  .hours{width:100%;border-collapse:collapse;font-size:.95rem}
+  .hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:0}
+  .hours .closed{color:var(--muted);font-weight:400}
+  .card address{font-style:normal;color:var(--ink-soft);font-size:.98rem;line-height:1.7}
+  .card .link{margin-top:auto;padding-top:20px;font-weight:600;color:var(--brass-deep);display:inline-flex;align-items:center;gap:6px;font-size:.92rem}
+  .card .link:hover{color:var(--ink)}
+  .contact-line{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+  .contact-line:last-of-type{border-bottom:0}
+  .contact-line small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .contact-line span{font-weight:600;font-size:1.02rem;word-break:break-all}
+  .contact-line:hover span{color:var(--brass-deep)}
+  .badge{display:inline-block;margin-top:16px;font-size:.78rem;padding:6px 12px;border-radius:999px;background:var(--brass-light);color:var(--brass-deep);font-weight:600}
+
+  /* CTA */
+  .cta{text-align:center;padding:110px 0}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.4rem);max-width:760px;margin:12px auto 18px}
+  .cta .lead{margin:0 auto 34px}
+  .cta .hero-ctas{justify-content:center}
+
+  footer{background:var(--night);color:#a9a192;padding:48px 0 32px;font-size:.88rem}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+  .foot .brand-name{color:#fff}
+  .foot a:hover{color:var(--brass-light)}
+  .foot-col{display:flex;flex-direction:column;gap:6px}
+  .demo-note{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem;color:#7d766a;text-align:center}
+
+  /* Floating */
+  .float{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:10px;background:var(--brass);color:#fff;padding:14px 20px 14px 16px;border-radius:999px;box-shadow:0 14px 30px -10px rgba(138,106,42,.7);font-weight:600;font-size:.92rem;transition:transform .2s ease}
+  .float:hover{transform:translateY(-2px);background:var(--brass-deep)}
+  .float svg{width:22px;height:22px}
+
+  @media (max-width:960px){
+    .hero-grid,.band-grid,.check-wrap{grid-template-columns:1fr;gap:40px}
+    .inst-grid{grid-template-columns:repeat(2,1fr)}
+    .info-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+  @media (max-width:520px){
+    section{padding:72px 0}
+    .hero{padding:64px 0}
+    .inst-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .inst{padding:20px 16px}
+    .nav .btn{display:none}
+    .float .float-label{display:none}
+    .float{padding:16px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Isac Paes Luthier">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e9d9b0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Isac Paes</div>
+        <div class="brand-sub">Luthier · Franca/SP</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#instrumentos">Instrumentos</a>
+      <a href="#como-agendar">Como agendar</a>
+      <a href="#antes-de-chamar">Antes de chamar</a>
+      <a href="#horarios">Horários e local</a>
+    </nav>
+    <a href="tel:+5516993195956" class="btn btn-dark">Ligar agora</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="ornament" aria-hidden="true"></div>
+    <div class="ornament two" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Luthier de instrumentos de sopro</span>
+        <h1>Manutenção para o seu instrumento de <em>sopro</em>, em Franca.</h1>
+        <p class="lead">Saxofones, clarinetes, flautas, oboés, fagotes, trompetes, trombones e tubas. Atendimento com horário agendado — fale com o Isac e agende a manutenção do seu instrumento.</p>
+        <div class="hero-ctas">
+          <a href="tel:+5516993195956" class="btn btn-dark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            (16) 99319-5956
+          </a>
+          <a href="mailto:Isacpaes47@gmail.com" class="btn btn-line">Enviar e-mail</a>
+        </div>
+        <p class="hero-note"><span class="dot"></span>Atendimento com horário agendado</p>
+      </div>
+
+      <aside class="hero-card">
+        <span class="eyebrow">Resumo rápido</span>
+        <h3>Tudo o que você precisa para agendar</h3>
+        <div class="hc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><strong>Seg. a sex., 9h às 17h</strong><span>Sábados, 9h às 12h</span></div>
+        </div>
+        <div class="hc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><strong>Jardim Redentor, Franca – SP</strong><span>Av. Prof. Moacir Viêira Coelho, 3856 – sala 6</span></div>
+        </div>
+        <div class="hc-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <div><strong>Isacpaes47@gmail.com</strong><span>Telefone: (16) 99319-5956</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- INSTRUMENTOS -->
+  <section id="instrumentos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Instrumentos atendidos</span>
+        <h2>Madeiras e metais, em um só lugar</h2>
+        <p class="lead">Manutenção de instrumentos de sopro. Confira os instrumentos atendidos:</p>
+      </div>
+      <div class="inst-grid">
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Saxofones</h3><p>Madeiras</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Clarinetes</h3><p>Madeiras</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Flautas</h3><p>Madeiras</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Oboés</h3><p>Madeiras</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Fagotes</h3><p>Madeiras</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Trompetes</h3><p>Metais</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Trombones</h3><p>Metais</p></div>
+        <div class="inst"><div class="inst-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v11a4 4 0 1 0 4 4V8l6-2V3l-6 2"/></svg></div><h3>Tubas</h3><p>Metais</p></div>
+      </div>
+      <div class="families">
+        <span class="tag">Instrumentos de sopro</span>
+        <span class="tag">Madeiras</span>
+        <span class="tag">Metais</span>
+        <span class="tag">Atendimento com horário agendado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO AGENDAR -->
+  <section class="band" id="como-agendar">
+    <div class="wrap band-grid">
+      <div>
+        <span class="eyebrow">Como agendar</span>
+        <h2>Três passos até a bancada</h2>
+        <p class="lead">O atendimento é feito com horário agendado. Entre em contato por telefone ou e-mail, combine o melhor horário e leve o seu instrumento até o endereço em Franca.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <div><h3>Entre em contato</h3><p>Ligue para <a href="tel:+5516993195956">(16) 99319-5956</a> ou escreva para <a href="mailto:Isacpaes47@gmail.com">Isacpaes47@gmail.com</a>.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <div><h3>Conte sobre o instrumento</h3><p>Use o guia “Antes de chamar”, logo abaixo, para já informar o essencial.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <div><h3>Compareça no horário agendado</h3><p>Av. Prof. Moacir Viêira Coelho, 3856 – sala 6, Jardim Redentor – Franca/SP.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES DE CHAMAR -->
+  <section id="antes-de-chamar">
+    <div class="wrap check-wrap">
+      <div>
+        <span class="eyebrow">Antes de chamar</span>
+        <h2>O que informar ao entrar em contato</h2>
+        <p class="lead">Um guia simples para deixar a conversa mais objetiva. Tenha estas informações em mãos ao ligar ou ao escrever o seu e-mail.</p>
+        <div class="tip"><strong>Dica:</strong> no e-mail, coloque o nome do instrumento no assunto — por exemplo, “Manutenção — clarinete”.</div>
+        <div class="hero-ctas" style="margin-top:28px">
+          <a href="tel:+5516993195956" class="btn btn-dark">Ligar</a>
+          <a href="mailto:Isacpaes47@gmail.com?subject=Manuten%C3%A7%C3%A3o%20de%20instrumento" class="btn btn-line">Escrever e-mail</a>
+        </div>
+      </div>
+
+      <div class="checklist" role="list">
+        <div class="ck" role="listitem">
+          <div class="ck-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+          <div><h3>Seu nome e um contato</h3><p>Nome, telefone e e-mail para o retorno.</p></div>
+        </div>
+        <div class="ck" role="listitem">
+          <div class="ck-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+          <div><h3>Qual é o instrumento</h3><p>Saxofone, clarinete, flauta, oboé, fagote, trompete, trombone ou tuba.</p></div>
+        </div>
+        <div class="ck" role="listitem">
+          <div class="ck-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+          <div><h3>Marca e modelo, se souber</h3><p>Geralmente aparecem gravados no corpo do instrumento ou no estojo.</p><span class="ex">Se não souber, tudo bem — basta dizer o tipo de instrumento.</span></div>
+        </div>
+        <div class="ck" role="listitem">
+          <div class="ck-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+          <div><h3>O problema que você percebeu</h3><p>Descreva com suas palavras o que notou ao tocar ou ao manusear o instrumento.</p></div>
+        </div>
+        <div class="ck" role="listitem">
+          <div class="ck-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></div>
+          <div><h3>Sua disponibilidade</h3><p>Dias e períodos em que pode comparecer, dentro do horário de atendimento.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS E LOCAL -->
+  <section class="info" id="horarios">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Horários, endereço e contato</span>
+        <h2>Onde e quando encontrar o Isac</h2>
+      </div>
+      <div class="info-grid">
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Horários</h3>
+          <table class="hours">
+            <tr><td>Segunda a sexta</td><td>9h – 17h</td></tr>
+            <tr><td>Sábado</td><td>9h – 12h</td></tr>
+          </table>
+          <span class="badge">Com horário agendado</span>
+        </div>
+
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3>Endereço</h3>
+          <address>
+            Av. Prof. Moacir Viêira Coelho, 3856 – sala 6<br>
+            Jardim Redentor – Franca – SP<br>
+            CEP 14409-275
+          </address>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Prof.%20Moacir%20Vi%C3%AAira%20Coelho%2C%203856%20-%20sala%206%2C%20Jardim%20Redentor%2C%20Franca%20-%20SP%2C%2014409-275" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <h3>Contato</h3>
+          <a class="contact-line" href="tel:+5516993195956"><small>Telefone</small><span>(16) 99319-5956</span></a>
+          <a class="contact-line" href="mailto:Isacpaes47@gmail.com"><small>E-mail</small><span>Isacpaes47@gmail.com</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="eyebrow">Agende a manutenção</span>
+      <h2>Seu instrumento de sopro merece cuidado de luthier.</h2>
+      <p class="lead">Ligue ou envie um e-mail para combinar um horário com o Isac.</p>
+      <div class="hero-ctas">
+        <a href="tel:+5516993195956" class="btn btn-dark">Ligar (16) 99319-5956</a>
+        <a href="mailto:Isacpaes47@gmail.com" class="btn btn-line">Isacpaes47@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand-name">Isac Paes Luthier</div>
+        <p style="margin-top:6px">Manutenção de instrumentos de sopro · Franca/SP</p>
+      </div>
+      <div class="foot-col">
+        <span>Av. Prof. Moacir Viêira Coelho, 3856 – sala 6</span>
+        <span>Jardim Redentor – Franca – SP · CEP 14409-275</span>
+      </div>
+      <div class="foot-col">
+        <a href="tel:+5516993195956">(16) 99319-5956</a>
+        <a href="mailto:Isacpaes47@gmail.com">Isacpaes47@gmail.com</a>
+      </div>
+    </div>
+    <p class="demo-note">Prévia de demonstração — página ilustrativa, não é o site oficial.</p>
+  </div>
+</footer>
+
+<a href="tel:+5516993195956" class="float" aria-label="Ligar para Isac Paes Luthier">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  <span class="float-label">Ligar e agendar</span>
+</a>
+
+</body>
+</html>
