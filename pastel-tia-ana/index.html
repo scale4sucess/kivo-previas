@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pastel Tia Ana · Igaraçu do Tietê/SP — prévia</title>
+  <meta name="description" content="Pastel Tia Ana: pastelaria artesanal em Igaraçu do Tietê/SP. Nota 4,9 no Google. Pedidos pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --coal: #2a160f;
+      --coal-2: #351d14;
+      --ember: #c23f1f;
+      --ember-2: #da4f2a;
+      --ember-deep: #8f2c14;
+      --gold: #e8a33d;
+      --gold-2: #f2bd66;
+      --cream: #fff3e0;
+      --dough: #fbe3b8;
+      --paper: #fff9f0;
+      --white: #ffffff;
+      --ink: #2f2018;
+      --ink-soft: #725a44;
+      --muted-dark: #c7ab85;
+      --line: #f0ddb8;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; line-height: 1.04; margin: 0 0 .5em; letter-spacing: -.025em; }
+    h3 { font-weight: 700; letter-spacing: -.01em; }
+    p { margin: 0 0 1em; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .6rem; font-size: .74rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--ember); margin-bottom: 1rem;
+    }
+    .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; box-shadow: 4px -4px 0 -2px var(--gold); }
+    .on-dark .eyebrow { color: var(--gold-2); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      padding: .95rem 1.5rem; border-radius: 14px; font-weight: 700; font-size: .95rem;
+      text-decoration: none; border: 2px solid transparent; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn-ember { background: var(--ember); color: var(--white); box-shadow: 0 6px 0 var(--ember-deep); }
+    .btn-ember:hover { background: var(--ember-2); box-shadow: 0 8px 0 var(--ember-deep); }
+    .btn-gold { background: var(--gold); color: var(--coal); box-shadow: 0 6px 0 #a96a1f; }
+    .btn-gold:hover { background: var(--gold-2); box-shadow: 0 8px 0 #a96a1f; }
+    .btn-line { border-color: rgba(255,243,224,.38); color: var(--cream); }
+    .btn-line:hover { background: var(--cream); color: var(--coal); }
+    .btn-dark { background: var(--coal); color: var(--cream); }
+    .btn-dark:hover { background: #3f261b; }
+    .btn-outline { border-color: var(--coal); color: var(--coal); }
+    .btn-outline:hover { background: var(--coal); color: var(--cream); }
+
+    .preview-bar { background: var(--gold); color: var(--coal); font-size: .8rem; font-weight: 700; text-align: center; padding: .5rem 1rem; letter-spacing: .02em; }
+
+    /* Header */
+    header.site {
+      position: sticky; top: 0; z-index: 50; background: rgba(42,22,15,.94);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(232,163,61,.18);
+      color: var(--cream);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+    .brand-mark { width: 44px; height: 44px; flex: none; }
+    .brand-text strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.2rem; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+    .brand-text span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted-dark); }
+    .menu ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    .menu a { text-decoration: none; font-size: .92rem; font-weight: 500; color: #ead5ba; }
+    .menu a:hover { color: var(--gold-2); }
+    .nav-cta { padding: .65rem 1.1rem; box-shadow: 0 4px 0 var(--ember-deep); }
+    .menu-toggle { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+      position: absolute; left: 10px; width: 22px; height: 2px; background: var(--cream); content: ""; transition: transform .2s;
+    }
+    .menu-toggle span { top: 20px; }
+    .menu-toggle span::before { top: -7px; left: 0; }
+    .menu-toggle span::after { top: 7px; left: 0; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; border-top: 1px solid rgba(232,163,61,.18); }
+    .mobile-menu ul { list-style: none; margin: 0; padding: 1rem 22px 1.6rem; display: grid; gap: .9rem; }
+    .mobile-menu a { text-decoration: none; color: #ead5ba; }
+    .mobile-menu .btn { color: var(--white); justify-self: start; }
+    .mobile-menu.open { display: block; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden; color: var(--cream);
+      background:
+        radial-gradient(820px 520px at 85% 15%, rgba(194,63,31,.38), transparent 62%),
+        radial-gradient(620px 420px at 5% 105%, rgba(232,163,61,.20), transparent 70%),
+        var(--coal);
+      padding: 92px 0 108px;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55;
+      background-image: repeating-linear-gradient(-28deg, rgba(255,255,255,.022) 0 3px, transparent 3px 46px);
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); color: var(--white); }
+    .hero h1 em { font-style: normal; color: var(--gold-2); }
+    .hero h1 .u { background: linear-gradient(transparent 68%, rgba(194,63,31,.5) 68%); }
+    .lead { font-size: 1.14rem; color: #ead8c2; max-width: 33rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2.1rem 0 2.4rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; color: var(--muted-dark); }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--gold); }
+
+    /* Ilustração: pastel dourado */
+    .art { position: relative; height: 440px; display: grid; place-items: center; }
+    .art .halo { position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(194,63,31,.34), rgba(42,22,15,0) 68%); }
+    .art .ring { position: absolute; width: 330px; height: 330px; border-radius: 50%; border: 1.5px dashed rgba(232,163,61,.28); }
+    .pastel { position: relative; z-index: 2; width: 300px; filter: drop-shadow(0 30px 40px rgba(0,0,0,.5)); }
+    .badge-float {
+      position: absolute; z-index: 3; background: var(--cream); color: var(--ink); border-radius: 16px;
+      padding: 14px 18px; box-shadow: 0 18px 40px rgba(0,0,0,.4); text-align: left;
+    }
+    .badge-float .n { font-family: "Bricolage Grotesque", sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; color: var(--coal); }
+    .badge-float small { display: block; font-size: .76rem; color: var(--ink-soft); }
+    .badge-float .st { display: flex; gap: 2px; color: var(--gold); margin: .3rem 0 .2rem; }
+    .badge-float .st svg { width: 14px; height: 14px; }
+    .badge-float.b1 { top: 26px; right: 4px; transform: rotate(4deg); }
+    .badge-float.b2 { bottom: 34px; left: 0; transform: rotate(-4deg); background: var(--ember); color: var(--white); }
+    .badge-float.b2 .n { color: var(--white); font-size: 1.5rem; }
+    .badge-float.b2 small { color: #ffdfd4; }
+
+    /* Faixa */
+    .stats { background: var(--ember); color: var(--white); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 32px 18px; text-align: center; border-left: 1px solid rgba(255,255,255,.18); }
+    .stat:first-child { border-left: 0; }
+    .stat .v { font-family: "Bricolage Grotesque", sans-serif; font-size: 2.2rem; font-weight: 800; line-height: 1; }
+    .stat .k { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: #ffdfd4; margin-top: .6rem; }
+
+    /* Seções */
+    .section { padding: 104px 0; }
+    .section-head { max-width: 660px; margin-bottom: 52px; }
+    .section-head h2 { font-size: clamp(2rem, 3.8vw, 3rem); }
+    .section-head p { color: var(--ink-soft); font-size: 1.06rem; }
+
+    /* Sobre */
+    .about { background: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-panel {
+      position: relative; border-radius: 22px; padding: 42px 36px; background: var(--dough); border: 1px solid var(--line); overflow: hidden;
+    }
+    .about-panel::before {
+      content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, var(--ember-2), var(--ember-deep)); opacity: .9;
+    }
+    .about-panel ul { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .about-panel li { display: flex; gap: 14px; align-items: flex-start; }
+    .about-panel li .dot { width: 34px; height: 34px; flex: none; border-radius: 10px; background: var(--coal); color: var(--gold-2); display: grid; place-items: center; }
+    .about-panel li .dot svg { width: 18px; height: 18px; }
+    .about-panel li strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.1rem; }
+    .about-panel li span { color: var(--ink-soft); font-size: .95rem; }
+    .about-copy p { color: var(--ink-soft); font-size: 1.06rem; }
+
+    /* Como pedir */
+    .order { background: var(--white); }
+    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px;
+      position: relative; transition: transform .25s, box-shadow .25s, border-color .25s; display: flex; flex-direction: column;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(47,32,24,.10); border-color: #e8c478; }
+    .card .icon { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; background: var(--ember); color: var(--white); margin-bottom: 1.3rem; }
+    .card .icon svg { width: 26px; height: 26px; }
+    .card h3 { font-size: 1.35rem; }
+    .card p { color: var(--ink-soft); font-size: .97rem; }
+    .card .card-link { margin-top: auto; padding-top: .6rem; font-weight: 700; font-size: .92rem; color: var(--ember); text-decoration: none; }
+    .card .card-link:hover { color: var(--ember-deep); }
+    .card.feature { background: var(--coal); border-color: var(--coal); color: var(--cream); }
+    .card.feature .icon { background: var(--gold); color: var(--coal); }
+    .card.feature p { color: #e0c8a9; }
+    .card.feature .card-link { color: var(--gold-2); }
+    .tag { display: inline-block; align-self: flex-start; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 999px; background: rgba(194,63,31,.08); color: var(--ember); border: 1px solid rgba(194,63,31,.2); margin-bottom: .9rem; }
+    .card.feature .tag { background: rgba(232,163,61,.14); color: var(--gold-2); border-color: rgba(232,163,61,.32); }
+
+    /* Reputação */
+    .rep { background: var(--coal); color: var(--cream); position: relative; overflow: hidden; }
+    .rep::before { content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none; background-image: repeating-linear-gradient(-28deg, rgba(255,255,255,.02) 0 3px, transparent 3px 46px); }
+    .rep-grid { position: relative; display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: center; }
+    .rep-score { text-align: center; padding: 48px 30px; border-radius: 22px; background: linear-gradient(160deg, var(--ember), var(--ember-deep)); box-shadow: 0 24px 50px rgba(0,0,0,.35); }
+    .rep-score .big { font-family: "Bricolage Grotesque", sans-serif; font-size: 6.2rem; font-weight: 800; line-height: 1; color: var(--white); }
+    .stars { display: flex; justify-content: center; gap: 6px; margin: .9rem 0 .8rem; color: var(--gold-2); }
+    .stars svg { width: 26px; height: 26px; }
+    .rep-score .note { color: #ffdfd4; font-size: .95rem; }
+    .rep h2 { font-size: clamp(2rem, 3.8vw, 3rem); color: var(--white); }
+    .rep-copy p { color: #e0c8a9; font-size: 1.06rem; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 1.8rem; }
+    .fact { padding: 20px 22px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(232,163,61,.18); }
+    .fact .v { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--gold-2); line-height: 1.1; }
+    .fact .k { font-size: .86rem; color: var(--muted-dark); }
+
+    /* Localização */
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+    .loc-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 40px; }
+    .loc-row { display: flex; gap: 1rem; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .loc-row:last-of-type { border-bottom: 0; }
+    .loc-row svg { width: 22px; height: 22px; color: var(--ember); flex: none; margin-top: 3px; }
+    .loc-row .k { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ember); font-weight: 700; }
+    .loc-row .v { font-size: 1.03rem; color: var(--ink); }
+    .loc-row .v a { color: var(--ink); }
+    .loc-cta { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: .8rem; }
+    .map-card {
+      border-radius: 20px; overflow: hidden; position: relative; min-height: 360px; color: var(--cream);
+      background:
+        linear-gradient(170deg, rgba(42,22,15,.05), rgba(42,22,15,.92)),
+        repeating-linear-gradient(20deg, rgba(255,243,224,.16) 0 2px, transparent 2px 52px),
+        repeating-linear-gradient(-70deg, rgba(255,243,224,.12) 0 2px, transparent 2px 64px),
+        var(--ember-deep);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 36px;
+    }
+    .map-pin { position: absolute; top: 36%; left: 50%; transform: translate(-50%,-50%); width: 58px; height: 58px; border-radius: 50% 50% 50% 0; rotate: -45deg; background: var(--gold); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+    .map-pin::after { content: ""; position: absolute; inset: 18px; border-radius: 50%; background: var(--coal); }
+    .map-card h3 { font-size: 1.9rem; color: var(--white); margin-bottom: .2rem; }
+    .map-card p { color: #f2dfc4; margin: 0; }
+    .map-card a { color: var(--gold-2); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 1rem; font-size: .92rem; }
+
+    /* CTA final */
+    .cta { background: var(--dough); padding: 92px 0; text-align: center; border-top: 1px solid var(--line); }
+    .cta h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); max-width: 760px; margin: 0 auto .5em; }
+    .cta h2 em { font-style: normal; color: var(--ember); }
+    .cta p { color: var(--ink-soft); font-size: 1.08rem; max-width: 560px; margin: 0 auto 2rem; }
+    .cta .row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    footer { background: #1d0f09; color: #b89a79; padding: 40px 0; font-size: .86rem; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.2rem; align-items: center; }
+    .foot strong { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.2rem; color: var(--cream); font-weight: 800; }
+    .foot a { color: var(--gold-2); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .btn:hover, .card:hover { transform: none; } }
+
+    @media (max-width: 960px) {
+      .hero-grid, .rep-grid, .loc-grid, .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.18); }
+      .art { height: 380px; max-width: 440px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 760px) {
+      .menu, .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .hero { padding: 60px 0 76px; }
+      .section { padding: 76px 0; }
+      .card-grid, .facts { grid-template-columns: 1fr; }
+      .loc-card { padding: 28px; }
+      .about-panel { padding: 34px 24px; }
+      .art { height: 340px; }
+      .art .halo { width: 300px; height: 300px; }
+      .art .ring { width: 270px; height: 270px; }
+      .pastel { width: 230px; }
+      .badge-float { padding: 11px 14px; }
+      .badge-float .n { font-size: 1.6rem; }
+      .badge-float.b2 .n { font-size: 1.25rem; }
+      .hero-actions .btn, .cta .row .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-bar" role="note">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="site">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Pastel Tia Ana — início">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#c23f1f"/>
+          <path d="M11 27c0-10 6-17 13-17s13 7 13 17c0 3-2 5-5 5H16c-3 0-5-2-5-5Z" fill="#e8a33d"/>
+          <path d="M14 24l3-3 3 3 3-3 3 3 3-3 3 3" stroke="#8f2c14" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Pastel Tia Ana</strong>
+          <span>Igaraçu do Tietê · SP</span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">A casa</a></li>
+          <li><a href="#pedir">Como pedir</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-ember nav-cta" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#sobre">A casa</a></li>
+        <li><a href="#pedir">Como pedir</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a class="btn btn-ember" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">Pedir no WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero on-dark">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Pastelaria artesanal em Igaraçu do Tietê/SP</span>
+          <h1>Pastel bom é <em>boca a boca</em>: <span class="u">nota 4,9</span>.</h1>
+          <p class="lead">A Pastel Tia Ana atende a Vila Boa Vista, em Igaraçu do Tietê, com pedidos combinados direto pelo WhatsApp. Hoje a casa reúne clientes pelo Facebook e pelo Instagram, sem um site próprio para apresentar esse histórico.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ember" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              Pedir pelo WhatsApp
+            </a>
+            <a class="btn btn-line" href="https://www.facebook.com/pasteltiaana" target="_blank" rel="noopener">Ver no Facebook</a>
+          </div>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Vila Boa Vista · Igaraçu do Tietê/SP
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              4,9 no Google · 20 avaliações
+            </span>
+          </div>
+        </div>
+
+        <div class="art" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="ring"></div>
+          <svg class="pastel" viewBox="0 0 300 300">
+            <path d="M58 196c0-66 42-116 92-116s92 50 92 116c0 18-12 28-30 28H88c-18 0-30-10-30-28Z" fill="#e8a33d"/>
+            <path d="M66 190c3-54 38-96 84-96s81 42 84 96Z" fill="#f2bd66" opacity=".5"/>
+            <path d="M72 188l16-15 16 15 16-15 16 15 16-15 16 15 16-15 16 15" stroke="#8f2c14" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#fff3e0" opacity=".85">
+              <ellipse cx="110" cy="150" rx="5" ry="3" transform="rotate(-18 110 150)"/>
+              <ellipse cx="150" cy="134" rx="5" ry="3"/>
+              <ellipse cx="190" cy="150" rx="5" ry="3" transform="rotate(18 190 150)"/>
+              <ellipse cx="130" cy="172" rx="5" ry="3" transform="rotate(8 130 172)"/>
+              <ellipse cx="170" cy="174" rx="5" ry="3" transform="rotate(-8 170 174)"/>
+            </g>
+            <path d="M74 206h212" stroke="#c23f1f" stroke-width="0" fill="none"/>
+            <rect x="60" y="198" width="180" height="20" rx="10" fill="#da4f2a" opacity=".16"/>
+          </svg>
+          <div class="badge-float b1">
+            <div class="n">4,9</div>
+            <div class="st">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <small>20 avaliações no Google</small>
+          </div>
+          <div class="badge-float b2">
+            <div class="n">1.583</div>
+            <small>curtidas no Facebook oficial</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Destaques">
+      <div class="container stats-grid">
+        <div class="stat"><div class="v">4,9★</div><div class="k">Nota no Google</div></div>
+        <div class="stat"><div class="v">20</div><div class="k">Avaliações</div></div>
+        <div class="stat"><div class="v">1.583</div><div class="k">Curtidas no Facebook</div></div>
+        <div class="stat"><div class="v">53</div><div class="k">Seguidores no Instagram</div></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">A casa</span>
+          <h2>Pastelaria de bairro, na Vila Boa Vista</h2>
+          <p>A Pastel Tia Ana atende a Vila Boa Vista, em Igaraçu do Tietê, com pedidos combinados direto pelo WhatsApp. A casa é acompanhada de perto no Facebook (<strong>@pasteltiaana</strong>) e no Instagram (<strong>@pasteltiaana66</strong>).</p>
+          <p>Hoje a Pastel Tia Ana já reúne nota <strong>4,9 em 20 avaliações no Google</strong> e mais de <strong>1.580 curtidas</strong> na página oficial do Facebook — sem um site próprio para apresentar esse histórico a quem ainda não conhece a casa.</p>
+        </div>
+        <div class="about-panel reveal">
+          <ul>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
+              <div><strong>Nota alta</strong><span>4,9 estrelas em 20 avaliações no Google.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <div><strong>Vila Boa Vista</strong><span>R. Fiorindo Dias Silva, 128 — Igaraçu do Tietê/SP.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></span>
+              <div><strong>Comunidade ativa</strong><span>Página oficial no Facebook com 1.583 curtidas.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span>
+              <div><strong>Pedido por mensagem</strong><span>WhatsApp (14) 99107-6633.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="pedir" class="section order">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Como pedir</span>
+          <h2>Bateu a vontade? Escolha o seu caminho</h2>
+          <p>Os pedidos da Pastel Tia Ana são combinados direto pelo WhatsApp — e a casa também está no Facebook e no Instagram.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card feature reveal">
+            <span class="tag">Direto com a casa</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11.5h7"/><path d="M8.5 14.5h4"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Mande uma mensagem e combine o seu pedido direto com a Pastel Tia Ana.</p>
+            <a class="card-link" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">Chamar no WhatsApp &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Comunidade</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+            </div>
+            <h3>Facebook</h3>
+            <p>Acompanhe novidades na página oficial, com 1.583 curtidas.</p>
+            <a class="card-link" href="https://www.facebook.com/pasteltiaana" target="_blank" rel="noopener">Abrir o Facebook &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Novidades</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </div>
+            <h3>Instagram</h3>
+            <p>Veja fotos e avisos no perfil <strong>@pasteltiaana66</strong>.</p>
+            <a class="card-link" href="https://www.instagram.com/pasteltiaana66/" target="_blank" rel="noopener">Ver o perfil &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="section rep on-dark">
+      <div class="container rep-grid">
+        <div class="rep-score reveal">
+          <div class="big">4,9</div>
+          <div class="stars" aria-label="4,9 de 5 estrelas">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </div>
+          <div class="note">20 avaliações no Google</div>
+        </div>
+        <div class="rep-copy reveal">
+          <span class="eyebrow">Reputação</span>
+          <h2>Nota alta, reconhecida pelo bairro</h2>
+          <p>Com 20 avaliações no Google, a Pastel Tia Ana mantém nota 4,9 — e soma mais de 1.580 curtidas na sua página oficial do Facebook.</p>
+          <div class="facts">
+            <div class="fact"><div class="v">4,9 ★</div><div class="k">Média no Google</div></div>
+            <div class="fact"><div class="v">20</div><div class="k">Avaliações de clientes</div></div>
+            <div class="fact"><div class="v">1.583</div><div class="k">Curtidas no Facebook</div></div>
+            <div class="fact"><div class="v">Vila Boa Vista</div><div class="k">Bairro em Igaraçu do Tietê/SP</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Localização</span>
+          <h2>Na Vila Boa Vista, em Igaraçu do Tietê</h2>
+          <p>Encontre a Pastel Tia Ana na R. Fiorindo Dias Silva, 128.</p>
+        </div>
+        <div class="loc-grid">
+          <div class="loc-card reveal">
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><div class="k">Endereço</div><div class="v">R. Fiorindo Dias Silva, 128<br>Vila Boa Vista<br>Igaraçu do Tietê - SP</div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              <div><div class="k">WhatsApp</div><div class="v"><a href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">(14) 99107-6633</a></div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              <div><div class="k">Pedidos</div><div class="v">WhatsApp, Facebook (<a href="https://www.facebook.com/pasteltiaana" target="_blank" rel="noopener">@pasteltiaana</a>) e Instagram (<a href="https://www.instagram.com/pasteltiaana66/" target="_blank" rel="noopener">@pasteltiaana66</a>)</div></div>
+            </div>
+            <div class="loc-cta">
+              <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Pastel+Tia+Ana+R.+Fiorindo+Dias+Silva,+128+Vila+Boa+Vista+Igaracu+do+Tiete+SP" target="_blank" rel="noopener">Abrir no Google Maps</a>
+              <a class="btn btn-ember" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-pin" aria-hidden="true"></div>
+            <h3>Igaraçu do Tietê · SP</h3>
+            <p>R. Fiorindo Dias Silva, 128 — Vila Boa Vista</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pastel+Tia+Ana+R.+Fiorindo+Dias+Silva,+128+Vila+Boa+Vista+Igaracu+do+Tiete+SP" target="_blank" rel="noopener">Ver rota no mapa &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="cta">
+      <div class="container reveal">
+        <span class="eyebrow">Bateu a vontade?</span>
+        <h2>Seu pastel está a <em>uma mensagem</em> de distância.</h2>
+        <p>Chame a Pastel Tia Ana no WhatsApp ou acompanhe as novidades pelo Facebook.</p>
+        <div class="row">
+          <a class="btn btn-ember" href="https://wa.me/5514991076633?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            Pedir pelo WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.facebook.com/pasteltiaana" target="_blank" rel="noopener">Abrir o Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Pastel Tia Ana</strong><br>Pastelaria artesanal · Igaraçu do Tietê/SP · <a href="https://www.instagram.com/pasteltiaana66/" target="_blank" rel="noopener">@pasteltiaana66</a></div>
+      <div>R. Fiorindo Dias Silva, 128 — Vila Boa Vista<br><small>Prévia de demonstração — não é o site oficial. Hoje a casa atende pelo WhatsApp, Facebook e Instagram, sem site próprio.</small></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var t = document.querySelector('.menu-toggle'), m = document.getElementById('mobile-menu');
+      t.addEventListener('click', function () {
+        var o = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', o ? 'true' : 'false');
+        t.setAttribute('aria-label', o ? 'Fechar menu' : 'Abrir menu');
+      });
+      m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }); });
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
