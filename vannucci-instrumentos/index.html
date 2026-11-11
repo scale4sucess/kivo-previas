@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Vannucci Instrumentos Musicais · Itu/SP</title>
+<meta name="description" content="Prévia de demonstração: nova página inicial para a Vannucci Instrumentos Musicais, Itu/SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16130f;
+    --ink-2:#221d17;
+    --wood:#b8763a;
+    --wood-dark:#8f5626;
+    --amber:#e2a54c;
+    --cream:#f7f2ea;
+    --paper:#fffcf7;
+    --muted:#6f665c;
+    --line:#e8dfd2;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  /* Barra superior */
+  .topbar{background:var(--ink);color:#d9cfc1;font-size:13px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+  .topbar a{text-decoration:none;color:#f1e7d8}
+  .topbar a:hover{color:var(--amber)}
+  .topbar .links{display:flex;gap:18px;flex-wrap:wrap}
+
+  header.top{position:sticky;top:0;z-index:30;background:rgba(255,252,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px}
+  .brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:12px;background:var(--ink);display:grid;place-items:center;color:var(--amber);font-family:"Fraunces",serif;font-weight:700;font-size:22px}
+  .brand-name{font-family:"Fraunces",serif;font-weight:700;font-size:23px;letter-spacing:.01em;line-height:1}
+  .brand-sub{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:4px}
+  nav.links{display:flex;gap:24px}
+  nav.links a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:500}
+  nav.links a:hover{color:var(--wood-dark)}
+  .top-cta{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;text-decoration:none;color:#fff;background:#1f8a4c;padding:10px 18px;border-radius:999px;white-space:nowrap}
+  .top-cta:hover{background:#17703d}
+  @media (max-width:880px){nav.links{display:none}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% -10%,#3a2c1d 0%,transparent 60%),linear-gradient(180deg,var(--ink) 0%,var(--ink-2) 100%);color:#f4ebdd;padding:86px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:22px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--amber)}
+  .hero h1{font-size:clamp(42px,6.6vw,76px);letter-spacing:-.015em;margin-bottom:22px;color:#fff8ee}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--amber)}
+  .hero .lead{font-size:clamp(16.5px,2vw,19px);color:#cfc3b2;max-width:540px;margin-bottom:32px}
+  .actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:999px;transition:transform .15s ease,background .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-wa{background:#1f8a4c;color:#fff;box-shadow:0 12px 26px rgba(31,138,76,.3)}
+  .btn-wa:hover{background:#17703d}
+  .btn-ghost{border:1.5px solid rgba(226,165,76,.6);color:#f4ebdd}
+  .btn-ghost:hover{background:rgba(226,165,76,.12)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--wood-dark)}
+  .btn-line{border:1.5px solid var(--wood);color:var(--wood-dark);background:var(--paper)}
+  .btn-line:hover{background:#f3e7d6}
+  .ico{width:18px;height:18px;flex:none}
+
+  .hero-card{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(226,165,76,.25);border-radius:24px;padding:30px}
+  .stat{display:flex;align-items:baseline;gap:10px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .stat:last-child{border-bottom:0}
+  .stat b{font-family:"Fraunces",serif;font-size:46px;color:#fff8ee;font-weight:600;line-height:1}
+  .stat small{color:var(--amber);font-size:20px;font-family:"Fraunces",serif}
+  .stat span{color:#cfc3b2;font-size:14.5px}
+  .stars{color:var(--amber);letter-spacing:2px;font-size:14px}
+  @media (max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero{padding:60px 0 70px}}
+
+  /* Faixa de strings */
+  .strings{height:10px;background:repeating-linear-gradient(90deg,var(--wood) 0 2px,transparent 2px 18px),linear-gradient(90deg,var(--wood-dark),var(--amber),var(--wood-dark));opacity:.9}
+
+  section{padding:88px 0}
+  .head{max-width:660px;margin-bottom:44px}
+  .kicker{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wood-dark);margin-bottom:12px;display:block}
+  .head h2{font-size:clamp(32px,4.6vw,48px);margin-bottom:14px}
+  .head p{color:var(--muted);font-size:17px}
+
+  /* Departamentos */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .cat{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:border-color .15s,transform .15s,box-shadow .15s}
+  .cat:hover{border-color:var(--wood);transform:translateY(-2px);box-shadow:0 14px 30px rgba(60,40,20,.08)}
+  .cat .ic{width:48px;height:48px;border-radius:14px;background:#f3e7d6;display:grid;place-items:center;color:var(--wood-dark)}
+  .cat h3{font-size:23px}
+  .cat p{color:var(--muted);font-size:14.5px;flex:1}
+  .cat .go{font-size:13.5px;font-weight:600;color:var(--wood-dark)}
+
+  .brands{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .brands span.l{font-size:13px;color:var(--muted);margin-right:6px}
+  .chip{font-size:13.5px;font-weight:600;background:var(--paper);border:1px solid var(--line);padding:7px 14px;border-radius:999px;color:var(--ink)}
+
+  /* Sonorização */
+  .sono{background:var(--ink);color:#efe5d6}
+  .sono .head h2{color:#fff8ee}
+  .sono .head p{color:#c9bca9}
+  .sono .kicker{color:var(--amber)}
+  .uses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:46px}
+  @media (max-width:900px){.uses{grid-template-columns:repeat(2,1fr)}}
+  .use{border:1px solid rgba(226,165,76,.22);border-radius:var(--radius);padding:22px;background:rgba(255,255,255,.03)}
+  .use h3{font-size:20px;color:#fff8ee;margin:12px 0 6px}
+  .use p{font-size:14px;color:#c9bca9}
+  .use .ic{color:var(--amber)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  @media (max-width:800px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;padding:24px 24px 24px 72px;border-radius:var(--radius);background:#1f1a14;border:1px solid #2f271e}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;left:22px;top:22px;width:34px;height:34px;border-radius:50%;background:var(--amber);color:var(--ink);font-weight:700;display:grid;place-items:center;font-family:"Fraunces",serif}
+  .step h3{font-size:19px;color:#fff8ee;margin-bottom:6px}
+  .step p{font-size:14.5px;color:#c9bca9}
+  .sono .actions{margin-top:38px}
+
+  /* História */
+  .story .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  @media (max-width:880px){.story .wrap{grid-template-columns:1fr;gap:30px}}
+  .year{font-family:"Fraunces",serif;font-size:clamp(90px,15vw,170px);line-height:.9;color:var(--wood);font-weight:600;letter-spacing:-.03em}
+  .year-sub{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:10px}
+  .story p{color:var(--muted);font-size:17px;margin-bottom:16px}
+
+  /* Contato */
+  .contact{background:var(--paper);border-top:1px solid var(--line)}
+  .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media (max-width:960px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.cgrid{grid-template-columns:1fr}}
+  .cbox{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--cream);text-decoration:none;display:flex;flex-direction:column;gap:6px;transition:border-color .15s,transform .15s}
+  .cbox:hover{border-color:var(--wood);transform:translateY(-2px)}
+  .cbox .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .cbox .val{font-family:"Fraunces",serif;font-size:21px;font-weight:600}
+  .cbox .act{font-size:13.5px;color:var(--wood-dark);font-weight:600;margin-top:auto;padding-top:8px}
+  .cbox .ic{color:var(--wood-dark);margin-bottom:6px}
+  .cbox.wa{background:#eaf6ee;border-color:#cfe8d8}
+  .cbox.wa .ic,.cbox.wa .act{color:#17703d}
+
+  footer{background:var(--ink);color:#a99c8a;padding:42px 0 110px;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a{color:#efe5d6;text-decoration:none}
+  footer .demo{margin-top:22px;width:100%;font-size:12.5px;color:#8a7e6e;border-top:1px solid #2c251d;padding-top:18px}
+
+  /* Botão flutuante */
+  .float-wa{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:10px;background:#1f8a4c;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:14px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+  .float-wa:hover{background:#17703d}
+  @media (max-width:520px){.float-wa span{display:none}.float-wa{padding:16px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-guitar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m14 10 6-6M18 2l4 4"/><path d="M10.5 9.5a3.5 3.5 0 0 0-5 0c-1 1-1 2.3-1.8 3.1-.9.9-2.7 1-2.7 3.4C1 18.6 5.4 23 8 23c2.4 0 2.5-1.8 3.4-2.7.8-.8 2.1-.8 3.1-1.8a3.5 3.5 0 0 0 0-5Z"/><circle cx="9" cy="15" r="1.5"/></g></symbol>
+  <symbol id="i-drum" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><ellipse cx="12" cy="9" rx="8" ry="3"/><path d="M4 9v7c0 1.7 3.6 3 8 3s8-1.3 8-3V9M8 2l3 5M16 2l-3 5"/></g></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><circle cx="12" cy="6.5" r="1.5"/></g></symbol>
+  <symbol id="i-sax" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h3v11a4 4 0 0 0 8 0v-2h-3"/><path d="M11 13a4 4 0 0 1-8 0V9"/><path d="M14 6h2M14 9h2"/></g></symbol>
+  <symbol id="i-keys" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 5v8M12 5v8M17 5v8M7 13v6M12 13v6M17 13v6"/></g></symbol>
+  <symbol id="i-proj" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="8" width="20" height="9" rx="2"/><circle cx="15" cy="12.5" r="2.5"/><path d="M6 12h3M5 17v2M19 17v2"/></g></symbol>
+  <symbol id="i-church" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2v4M10 4h4M5 22V11l7-5 7 5v11Z"/><path d="M10 22v-5h4v5"/></g></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></g></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></g></symbol>
+  <symbol id="i-room" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="7" cy="8" r="2.5"/><circle cx="17" cy="8" r="2.5"/><path d="M2 20c0-3 2.2-5 5-5s5 2 5 5M12 20c0-3 2.2-5 5-5s5 2 5 5"/></g></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>R. Floriano Peixoto, 395 · Centro · Itu/SP</span>
+    <div class="links">
+      <a href="tel:+551140232677">(11) 4023-2677</a>
+      <a href="https://wa.me/5511973110433" target="_blank" rel="noopener">WhatsApp (11) 97311-0433</a>
+      <a href="https://www.instagram.com/vannucciinstrumentos/" target="_blank" rel="noopener">@vannucciinstrumentos</a>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">V</span>
+      <span><span class="brand-name">Vannucci</span><span class="brand-sub">Instrumentos musicais &amp; áudio</span></span>
+    </a>
+    <nav class="links" aria-label="Seções">
+      <a href="#departamentos">Departamentos</a>
+      <a href="#sonorizacao">Sonorização</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="top-cta" href="https://wa.me/5511973110433" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Itu/SP · desde 1985</span>
+        <h1>Há 41 anos, a música de Itu <em>passa por aqui.</em></h1>
+        <p class="lead">Instrumentos musicais, áudio profissional, vídeo projeção e projetos de sonorização e instalação. Fale direto com a equipe da loja para tirar dúvidas sobre um instrumento ou um projeto de som.</p>
+        <div class="actions">
+          <a class="btn btn-wa" href="https://wa.me/5511973110433" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Conversar pelo WhatsApp</a>
+          <a class="btn btn-ghost" href="#sonorizacao">Projetos de sonorização</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Destaques">
+        <div class="stat"><b>41</b><small>anos</small><span>no ramo da música em Itu</span></div>
+        <div class="stat"><b>4,6</b><small>/5</small><span><span class="stars">★★★★★</span><br>no Google · 279 avaliações</span></div>
+        <div class="stat"><b>6</b><small>departamentos</small><span>do violão ao telão</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="strings" aria-hidden="true"></div>
+
+  <section id="departamentos">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Departamentos</span>
+        <h2>Tudo para tocar, gravar e sonorizar</h2>
+        <p>Os mesmos departamentos da loja, organizados de forma direta. Cada um leva ao catálogo e tem atalho para perguntar à equipe pelo WhatsApp.</p>
+      </div>
+      <div class="grid">
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/cordas/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-guitar"/></svg></span>
+          <h3>Cordas</h3><p>Violões, guitarras e acessórios para quem está começando ou já sobe ao palco.</p><span class="go">Ver departamento →</span>
+        </a>
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/percussao/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-drum"/></svg></span>
+          <h3>Percussão</h3><p>Instrumentos de percussão e acessórios para estudo, ensaio e apresentação.</p><span class="go">Ver departamento →</span>
+        </a>
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/audio-profissional/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-speaker"/></svg></span>
+          <h3>Áudio profissional</h3><p>Mesas de som, fones, interfaces e caixas acústicas para estúdio, palco e eventos.</p><span class="go">Ver departamento →</span>
+        </a>
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/sopro/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-sax"/></svg></span>
+          <h3>Sopro</h3><p>Saxofones, flautas e outros instrumentos de sopro, com acessórios.</p><span class="go">Ver departamento →</span>
+        </a>
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/piano-teclados/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-keys"/></svg></span>
+          <h3>Piano &amp; teclados</h3><p>Teclados e pianos digitais para estudo em casa, igreja ou palco.</p><span class="go">Ver departamento →</span>
+        </a>
+        <a class="cat" href="https://vannucci.com.br/categoria-produto/video-projecao/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-proj"/></svg></span>
+          <h3>Vídeo projeção</h3><p>Projetores e telões para salas, auditórios e ambientes de apresentação.</p><span class="go">Ver departamento →</span>
+        </a>
+      </div>
+      <div class="brands">
+        <span class="l">Algumas marcas no catálogo:</span>
+        <span class="chip">Yamaha</span><span class="chip">Soundcraft</span><span class="chip">AKG</span><span class="chip">Tagima</span><span class="chip">Epiphone</span><span class="chip">Takamine</span><span class="chip">Eagle</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="sonorizacao" class="sono">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Sonorização &amp; instalação</span>
+        <h2>Do projeto à instalação do som</h2>
+        <p>A Vannucci desenvolve projetos de sonorização e instala os equipamentos, com assessoria do início ao fim: caixas acústicas, projetores, telões e o que mais o ambiente pedir.</p>
+      </div>
+      <div class="uses">
+        <div class="use"><span class="ic"><svg class="ico" style="width:26px;height:26px"><use href="#i-church"/></svg></span><h3>Igrejas</h3><p>Para a mensagem chegar com clareza a todos os bancos.</p></div>
+        <div class="use"><span class="ic"><svg class="ico" style="width:26px;height:26px"><use href="#i-mic"/></svg></span><h3>Palestras</h3><p>Voz nítida para auditórios e espaços de apresentação.</p></div>
+        <div class="use"><span class="ic"><svg class="ico" style="width:26px;height:26px"><use href="#i-room"/></svg></span><h3>Cursos &amp; treinamentos</h3><p>Salas preparadas para ensinar e ser ouvido.</p></div>
+        <div class="use"><span class="ic"><svg class="ico" style="width:26px;height:26px"><use href="#i-board"/></svg></span><h3>Projeção</h3><p>Projetores e telões integrados ao som do ambiente.</p></div>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Conte sobre o espaço</h3><p>Pelo WhatsApp, diga o tipo de ambiente, o tamanho aproximado e o uso.</p></div>
+        <div class="step"><h3>Projeto com assessoria</h3><p>A equipe orienta sobre os equipamentos indicados para aquele espaço.</p></div>
+        <div class="step"><h3>Instalação</h3><p>Os equipamentos são instalados pela própria Vannucci.</p></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-wa" href="https://wa.me/5511973110433" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Falar sobre um projeto de som</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="story">
+    <div class="wrap">
+      <div>
+        <div class="year">1985</div>
+        <div class="year-sub">Desde então, em Itu/SP</div>
+      </div>
+      <div>
+        <span class="kicker">Nossa história</span>
+        <h2 style="font-size:clamp(30px,4.2vw,44px);margin-bottom:18px">41 anos no ramo da música</h2>
+        <p>Desde 1985 a Vannucci Instrumentos Musicais e Equipamentos de Áudio atua na cidade de Itu, com instrumentos musicais, equipamentos e acessórios nacionais e importados.</p>
+        <p>Além da loja, mantém uma estrutura dedicada à sonorização de ambientes e à instalação de som.</p>
+        <div class="actions" style="margin-top:24px">
+          <a class="btn btn-line" href="https://www.instagram.com/vannucciinstrumentos/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>Acompanhar no Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Contato</span>
+        <h2>Fale com a Vannucci</h2>
+        <p>Todos os canais a um toque: no celular, o WhatsApp e o telefone já abrem prontos para chamar.</p>
+      </div>
+      <div class="cgrid">
+        <a class="cbox wa" href="https://wa.me/5511973110433" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-wa"/></svg></span>
+          <span class="lbl">WhatsApp</span><span class="val">(11) 97311-0433</span><span class="act">Abrir conversa →</span>
+        </a>
+        <a class="cbox" href="tel:+551140232677">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-phone"/></svg></span>
+          <span class="lbl">Telefone</span><span class="val">(11) 4023-2677</span><span class="act">Ligar →</span>
+        </a>
+        <a class="cbox" href="https://www.instagram.com/vannucciinstrumentos/" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-ig"/></svg></span>
+          <span class="lbl">Instagram</span><span class="val">@vannucciinstrumentos</span><span class="act">Ver perfil →</span>
+        </a>
+        <a class="cbox" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Floriano+Peixoto,+395,+Centro,+Itu+-+SP" target="_blank" rel="noopener">
+          <span class="ic"><svg class="ico" style="width:24px;height:24px"><use href="#i-pin"/></svg></span>
+          <span class="lbl">Loja</span><span class="val">R. Floriano Peixoto, 395</span><span style="color:var(--muted);font-size:14px">Centro · Itu/SP</span><span class="act">Abrir no mapa →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#efe5d6;font-family:'Fraunces',serif;font-size:18px">Vannucci</strong><br>Instrumentos musicais, áudio, som e instalação · desde 1985</div>
+    <div>R. Floriano Peixoto, 395 · Centro · Itu/SP<br><a href="https://www.instagram.com/vannucciinstrumentos/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/5511973110433" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="demo">Prévia de demonstração: proposta de página inicial modernizada para vannucci.com.br, com contatos clicáveis, Instagram integrado e seção de sonorização em destaque.</div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/5511973110433" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg class="ico" style="width:22px;height:22px"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+</body>
+</html>
