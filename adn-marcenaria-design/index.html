@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ADN Marcenaria &amp; Design · Itapetininga/SP — prévia</title>
+  <meta name="description" content="ADN Marcenaria &amp; Design: marcenaria e móveis planejados na Vila Deyse, Itapetininga/SP, com nota 4,9 no Google.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --graphite: #1e2422;
+      --graphite-2: #2a312e;
+      --oak: #c8a77a;
+      --oak-light: #e6d3b5;
+      --oak-deep: #9c7b4f;
+      --sage: #7f8c76;
+      --sage-soft: #dfe4da;
+      --linen: #f4f1eb;
+      --paper: #fbfaf7;
+      --ink: #252a28;
+      --ink-soft: #626a66;
+      --line: #e2ddd3;
+      --radius: 6px;
+      --max: 1140px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.7; font-weight: 400; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Marcellus", Georgia, serif; font-weight: 400; line-height: 1.12; margin: 0 0 .5em; letter-spacing: .01em; }
+    p { margin: 0 0 1em; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .eyebrow { font-size: .74rem; letter-spacing: .28em; text-transform: uppercase; color: var(--oak-deep); font-weight: 600; margin-bottom: 1rem; display: inline-block; }
+
+    .preview-bar { background: var(--graphite); color: var(--oak-light); font-size: .78rem; text-align: center; padding: .5rem 1rem; letter-spacing: .02em; }
+
+    header.top { position: sticky; top: 0; z-index: 20; background: rgba(251,250,247,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .mark { width: 42px; height: 42px; border: 1.5px solid var(--graphite); display: grid; place-items: center; font-family: "Marcellus", serif; font-size: .95rem; letter-spacing: .06em; position: relative; }
+    .mark::after { content: ""; position: absolute; inset: 4px; border: 1px solid var(--oak); }
+    .brand-name { font-family: "Marcellus", serif; font-size: 1.12rem; line-height: 1.1; }
+    .brand-name small { display: block; font-family: "Work Sans", sans-serif; font-size: .66rem; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-soft); }
+    .nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; font-size: .9rem; }
+    .nav ul a { text-decoration: none; color: var(--ink-soft); transition: color .2s; }
+    .nav ul a:hover { color: var(--ink); }
+    .btn { display: inline-flex; align-items: center; gap: .6rem; padding: .9rem 1.6rem; border-radius: var(--radius); font-weight: 500; font-size: .92rem; text-decoration: none; letter-spacing: .02em; transition: transform .2s, background .2s, color .2s; border: 1.5px solid transparent; }
+    .btn-dark { background: var(--graphite); color: var(--paper); }
+    .btn-dark:hover { background: var(--graphite-2); transform: translateY(-1px); }
+    .btn-line { border-color: var(--graphite); color: var(--graphite); }
+    .btn-line:hover { background: var(--graphite); color: var(--paper); }
+    .btn-oak { background: var(--oak); color: var(--graphite); }
+    .btn-oak:hover { background: var(--oak-light); }
+
+    /* Hero */
+    .hero { padding: 84px 0 96px; background: linear-gradient(180deg, var(--linen), var(--paper)); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4.1rem); }
+    .hero h1 em { font-style: normal; color: var(--oak-deep); }
+    .hero .lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 34rem; font-weight: 300; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 2rem; }
+    .rating { display: inline-flex; align-items: center; gap: 12px; margin-top: 2.4rem; padding: .8rem 1.2rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: .9rem; }
+    .stars { color: var(--oak-deep); letter-spacing: 2px; font-size: 1rem; }
+    .rating strong { font-family: "Marcellus", serif; font-size: 1.3rem; font-weight: 400; }
+
+    /* Wood art */
+    .art { position: relative; aspect-ratio: 4/5; max-width: 460px; justify-self: end; width: 100%; }
+    .panel { position: absolute; border-radius: 4px; box-shadow: 0 24px 50px -24px rgba(30,36,34,.45); }
+    .panel.oak {
+      inset: 0 18% 14% 0;
+      background:
+        repeating-linear-gradient(92deg, rgba(156,123,79,.0) 0 9px, rgba(156,123,79,.22) 9px 10px, rgba(156,123,79,0) 10px 23px, rgba(120,92,56,.16) 23px 24px),
+        repeating-radial-gradient(ellipse at 30% 120%, rgba(156,123,79,.18) 0 2px, transparent 2px 14px),
+        linear-gradient(160deg, #e3cba6, #c8a77a 55%, #b8946a);
+    }
+    .panel.dark { width: 46%; height: 52%; right: 0; bottom: 0; background: linear-gradient(160deg, var(--graphite-2), var(--graphite)); display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; color: var(--oak-light); }
+    .panel.dark span { font-family: "Marcellus", serif; font-size: 1.5rem; color: var(--paper); line-height: 1.15; }
+    .panel.dark small { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; margin-bottom: .5rem; }
+    .panel.sage { width: 28%; height: 22%; left: 8%; bottom: 0; background: var(--sage); }
+    .handle { position: absolute; left: 62%; top: 34%; width: 6px; height: 64px; background: var(--graphite); border-radius: 3px; }
+    .seam { position: absolute; left: 0; right: 18%; top: 50%; height: 1px; background: rgba(30,36,34,.25); }
+
+    section { padding: 96px 0; }
+    .section-head { max-width: 640px; margin-bottom: 3rem; }
+    .section-head h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); }
+    .section-head p { color: var(--ink-soft); font-weight: 300; font-size: 1.05rem; }
+
+    /* Services */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .card { background: var(--paper); padding: 38px 32px; transition: background .25s; }
+    .card:hover { background: var(--linen); }
+    .card .num { font-family: "Marcellus", serif; color: var(--oak-deep); font-size: .95rem; letter-spacing: .1em; }
+    .card h3 { font-size: 1.4rem; margin-top: 1.2rem; }
+    .card p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+
+    /* About / process */
+    .about { background: var(--graphite); color: var(--sage-soft); }
+    .about .eyebrow { color: var(--oak); }
+    .about h2 { color: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .about p { color: #b9c1bb; font-weight: 300; }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+    .steps li { counter-increment: s; display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 24px 0; border-bottom: 1px solid rgba(230,211,181,.15); }
+    .steps li:first-child { padding-top: 0; }
+    .steps li::before { content: "0" counter(s); font-family: "Marcellus", serif; color: var(--oak); font-size: 1.6rem; line-height: 1; }
+    .steps h3 { color: var(--paper); font-size: 1.15rem; margin-bottom: .3rem; }
+    .steps p { margin: 0; font-size: .93rem; }
+
+    /* Proof */
+    .proof { background: var(--linen); }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .stat { background: var(--paper); border: 1px solid var(--line); padding: 36px 30px; border-radius: var(--radius); }
+    .stat .big { font-family: "Marcellus", serif; font-size: 2.8rem; line-height: 1; color: var(--graphite); }
+    .stat .big span { font-size: 1.1rem; color: var(--oak-deep); margin-left: .3rem; }
+    .stat p { margin: .9rem 0 0; color: var(--ink-soft); font-size: .93rem; }
+
+    /* Visit */
+    .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
+    .visit-card { border: 1px solid var(--line); padding: 40px; border-radius: var(--radius); background: var(--paper); }
+    .visit-card h3 { font-size: 1.5rem; }
+    .info-row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+    .info-row:last-of-type { border-bottom: 0; }
+    .info-row b { font-weight: 500; color: var(--ink-soft); font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; padding-top: 3px; }
+    .map { border-radius: var(--radius); background:
+        linear-gradient(90deg, rgba(127,140,118,.18) 1px, transparent 1px) 0 0/44px 44px,
+        linear-gradient(0deg, rgba(127,140,118,.18) 1px, transparent 1px) 0 0/44px 44px,
+        var(--sage-soft);
+      position: relative; min-height: 340px; display: grid; place-items: center; text-align: center; padding: 24px; }
+    .pin { width: 54px; height: 54px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--graphite); display: grid; place-items: center; margin: 0 auto 1.4rem; }
+    .pin::after { content: ""; width: 16px; height: 16px; border-radius: 50%; background: var(--oak); }
+    .map p { margin: 0; font-size: .95rem; }
+
+    /* CTA */
+    .cta { background: linear-gradient(120deg, var(--oak-deep), var(--oak)); color: var(--graphite); text-align: center; }
+    .cta h2 { font-size: clamp(2rem, 4vw, 3rem); }
+    .cta p { max-width: 36rem; margin: 0 auto 2rem; font-size: 1.05rem; }
+    .cta .row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    footer { background: var(--graphite); color: #9aa39d; padding: 40px 0; font-size: .85rem; }
+    .foot { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: center; }
+    footer .brand-name { color: var(--paper); }
+    footer .brand-name small { color: #9aa39d; }
+
+    @media (max-width: 900px) {
+      .nav ul { display: none; }
+      .hero-grid, .about-grid, .visit-grid { grid-template-columns: 1fr; gap: 48px; }
+      .art { justify-self: center; max-width: 380px; }
+      .cards, .proof-grid { grid-template-columns: 1fr; }
+      section { padding: 72px 0; }
+    }
+    @media (max-width: 520px) {
+      .nav .btn { display: none; }
+      .visit-card { padding: 28px 22px; }
+      .info-row { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="top">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="mark">ADN</span>
+        <span class="brand-name">ADN Marcenaria &amp; Design<small>Itapetininga · SP</small></span>
+      </a>
+      <ul>
+        <li><a href="#servicos">Projetos</a></li>
+        <li><a href="#como">Como trabalhamos</a></li>
+        <li><a href="#avaliacao">Avaliação</a></li>
+        <li><a href="#visite">Visite</a></li>
+      </ul>
+      <a class="btn btn-dark" href="#contato">Solicitar orçamento</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Marcenaria · Móveis planejados</span>
+          <h1>Móveis planejados com <em>design</em> e acabamento de marcenaria.</h1>
+          <p class="lead">Projetos sob medida para cada ambiente da casa ou do seu negócio, pensados para aproveitar o espaço com funcionalidade e estética — direto da Vila Deyse, em Itapetininga/SP.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-dark" href="#contato">Quero um projeto</a>
+            <a class="btn btn-line" href="#servicos">Ver o que fazemos</a>
+          </div>
+          <div class="rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <strong>4,9</strong>
+            <span>no Google · 10 avaliações</span>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <div class="panel oak"><div class="seam"></div><div class="handle"></div></div>
+          <div class="panel sage"></div>
+          <div class="panel dark"><small>Sob medida</small><span>Cada peça,<br>um projeto.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">O que fazemos</span>
+          <h2>Ambientes inteiros, planejados do jeito certo.</h2>
+          <p>Exemplos ilustrativos de ambientes atendidos por uma marcenaria de móveis planejados. Nesta prévia, os textos são demonstrativos.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="num">01</span><h3>Cozinhas</h3><p>Armários, bancadas e nichos planejados para o dia a dia, com organização e boa circulação.</p></article>
+          <article class="card"><span class="num">02</span><h3>Dormitórios</h3><p>Guarda-roupas, cabeceiras e closets sob medida, integrados ao estilo do ambiente.</p></article>
+          <article class="card"><span class="num">03</span><h3>Salas e home office</h3><p>Painéis, racks, estantes e estações de trabalho que unem conforto e praticidade.</p></article>
+          <article class="card"><span class="num">04</span><h3>Banheiros e lavabos</h3><p>Gabinetes e espelheiras pensados para espaços compactos e úmidos.</p></article>
+          <article class="card"><span class="num">05</span><h3>Áreas de serviço</h3><p>Armários e soluções que transformam a lavanderia em um espaço organizado.</p></article>
+          <article class="card"><span class="num">06</span><h3>Comercial</h3><p>Balcões, expositores e mobiliário para lojas, escritórios e consultórios.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="como">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">Como trabalhamos</span>
+          <h2>Da ideia ao móvel instalado.</h2>
+          <p>A ADN une marcenaria e design: cada projeto parte do espaço real e das necessidades de quem vai usá-lo. O resultado são móveis feitos para durar e para combinar com o ambiente.</p>
+          <p>Etapas ao lado apresentadas de forma ilustrativa nesta demonstração.</p>
+        </div>
+        <ol class="steps">
+          <li><div><h3>Conversa inicial</h3><p>Entendemos o ambiente, o estilo desejado e como o espaço é usado.</p></div></li>
+          <li><div><h3>Medição e projeto</h3><p>Medidas no local e um projeto pensado para cada centímetro.</p></div></li>
+          <li><div><h3>Produção</h3><p>Fabricação com atenção aos detalhes de corte, encaixe e acabamento.</p></div></li>
+          <li><div><h3>Montagem</h3><p>Instalação cuidadosa para entregar o ambiente pronto para uso.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="proof" id="avaliacao">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Reputação</span>
+          <h2>Bem avaliada por quem já contratou.</h2>
+        </div>
+        <div class="proof-grid">
+          <div class="stat"><div class="big">4,9<span>★</span></div><p>Nota média no Google</p></div>
+          <div class="stat"><div class="big">10</div><p>Avaliações no Google Business</p></div>
+          <div class="stat"><div class="big">854</div><p>Seguidores no Facebook</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visite">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Visite</span>
+          <h2>Na Vila Deyse, em Itapetininga.</h2>
+        </div>
+        <div class="visit-grid">
+          <div class="visit-card">
+            <h3>ADN Marcenaria &amp; Design</h3>
+            <div class="info-row"><b>Endereço</b><span>Av. Carlos Lichiti, 417 — Vila Deyse<br>Itapetininga – SP, 18210-255</span></div>
+            <div class="info-row"><b>Instagram</b><span>@adnmarcenariaedesing</span></div>
+            <div class="info-row"><b>Facebook</b><span>ADN Marcenaria e Design | Itapetininga SP</span></div>
+            <div class="info-row"><b>Google</b><span>4,9 ★ · 10 avaliações</span></div>
+          </div>
+          <div class="map">
+            <div>
+              <div class="pin"></div>
+              <p><strong>Av. Carlos Lichiti, 417</strong><br>Vila Deyse · Itapetininga/SP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contato">
+      <div class="container">
+        <h2>Vamos planejar o seu ambiente?</h2>
+        <p>Fale com a ADN Marcenaria &amp; Design e conte qual espaço você quer transformar.</p>
+        <div class="row">
+          <a class="btn btn-dark" href="#contato">Solicitar orçamento</a>
+          <a class="btn btn-line" href="#visite">Como chegar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span class="brand-name">ADN Marcenaria &amp; Design<small>Itapetininga · SP</small></span>
+      <span>Prévia de demonstração — não é o site oficial.</span>
+    </div>
+  </footer>
+</body>
+</html>
