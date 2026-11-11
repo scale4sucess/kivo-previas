@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>D Plácido Couro · Pratânia/SP — prévia</title>
+  <meta name="description" content="D Plácido Couro: confecção de jaquetas e casacos em couro legítimo desde 1990, em Pratânia/SP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --espresso: #1f1611;
+      --espresso-2: #2b1f18;
+      --saddle: #5a3a26;
+      --cognac: #9a5b2e;
+      --caramel: #c98a4b;
+      --amber: #e0a85e;
+      --cream: #f6efe4;
+      --cream-2: #ede2d1;
+      --ink: #2a211b;
+      --ink-soft: #5c4f45;
+      --line: #dccdb6;
+      --radius: 6px;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--cream); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: 1.08; margin: 0 0 .5em; letter-spacing: -.005em; }
+    p { margin: 0 0 1em; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .7rem; font-size: .74rem; font-weight: 700;
+      letter-spacing: .22em; text-transform: uppercase; color: var(--cognac); margin-bottom: 1rem;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+    .on-dark .eyebrow { color: var(--amber); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      padding: .95rem 1.5rem; border-radius: var(--radius); font-weight: 700; font-size: .92rem;
+      letter-spacing: .04em; text-decoration: none; border: 1.5px solid transparent; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s, transform .2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-amber { background: var(--amber); color: var(--espresso); }
+    .btn-amber:hover { background: var(--caramel); }
+    .btn-line { border-color: rgba(246,239,228,.45); color: var(--cream); }
+    .btn-line:hover { background: var(--cream); color: var(--espresso); }
+
+    .preview-bar { background: #120c09; color: #d9c9b2; font-size: .78rem; text-align: center; padding: .5rem 1rem; letter-spacing: .02em; }
+
+    /* Header */
+    header.site {
+      position: sticky; top: 0; z-index: 50; background: rgba(31,22,17,.94);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(224,168,94,.18);
+      color: var(--cream);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+      border: 1.5px dashed var(--amber); color: var(--amber);
+      font-family: "Cormorant Garamond", serif; font-size: 1.35rem; font-weight: 700;
+    }
+    .brand-text strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 1.3rem; font-weight: 700; letter-spacing: .02em; line-height: 1; }
+    .brand-text span { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: #bfa98c; }
+    .menu ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    .menu a { text-decoration: none; font-size: .9rem; font-weight: 500; color: #e6d8c4; }
+    .menu a:hover { color: var(--amber); }
+    .nav-cta { padding: .65rem 1.1rem; }
+    .menu-toggle { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+      position: absolute; left: 10px; width: 22px; height: 2px; background: var(--cream); content: ""; transition: transform .2s, opacity .2s;
+    }
+    .menu-toggle span { top: 20px; }
+    .menu-toggle span::before { top: -7px; left: 0; }
+    .menu-toggle span::after { top: 7px; left: 0; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; border-top: 1px solid rgba(224,168,94,.18); }
+    .mobile-menu ul { list-style: none; margin: 0; padding: 1rem 22px 1.4rem; display: grid; gap: .9rem; }
+    .mobile-menu a { text-decoration: none; color: #e6d8c4; }
+    .mobile-menu.open { display: block; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden; color: var(--cream);
+      background:
+        radial-gradient(1100px 520px at 85% 10%, rgba(201,138,75,.28), transparent 60%),
+        radial-gradient(700px 400px at 0% 100%, rgba(90,58,38,.55), transparent 70%),
+        var(--espresso);
+      padding: 96px 0 110px;
+    }
+    .hero::after { /* textura sutil de grão */
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .09;
+      background-image: radial-gradient(rgba(255,255,255,.6) 1px, transparent 1px);
+      background-size: 3px 3px;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 5.6vw, 4.6rem); color: #fbf5ec; }
+    .hero h1 em { font-style: italic; color: var(--amber); }
+    .lead { font-size: 1.12rem; color: #d9c9b2; max-width: 34rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 2.4rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.6rem; font-size: .88rem; color: #bfa98c; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--amber); }
+
+    /* Selo / etiqueta de couro */
+    .tag-wrap { display: flex; justify-content: center; }
+    .leather-tag {
+      position: relative; width: min(360px, 100%); aspect-ratio: 4 / 5; border-radius: 18px;
+      background:
+        radial-gradient(120% 90% at 30% 20%, #b9763d 0%, #8a4f26 45%, #5e3519 100%);
+      box-shadow: 0 30px 60px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.06), inset 0 -20px 50px rgba(0,0,0,.25);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      padding: 40px 30px; transform: rotate(-3deg);
+    }
+    .leather-tag::before { /* costura */
+      content: ""; position: absolute; inset: 14px; border-radius: 12px; border: 2px dashed rgba(246,226,196,.55);
+    }
+    .leather-tag::after { /* ilhós */
+      content: ""; position: absolute; top: 30px; left: 50%; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%;
+      background: #1f1611; box-shadow: 0 0 0 4px #c9a46a, 0 0 0 5px rgba(0,0,0,.3);
+    }
+    .leather-tag .t-small { font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; color: #f3dfc0; margin-top: 30px; }
+    .leather-tag .t-name { font-family: "Cormorant Garamond", serif; font-size: 2.6rem; font-weight: 700; color: #fff4e4; line-height: 1; margin: .6rem 0 .3rem; text-shadow: 0 1px 0 rgba(0,0,0,.35); }
+    .leather-tag .t-sub { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.25rem; color: #f3dfc0; }
+    .leather-tag .t-rule { width: 60px; height: 1px; background: rgba(243,223,192,.6); margin: 1.2rem auto; }
+    .leather-tag .t-year { font-family: "Cormorant Garamond", serif; font-size: 1.1rem; letter-spacing: .25em; color: #fff4e4; }
+    .leather-tag .t-city { font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: #e8cfa8; margin-top: .4rem; }
+
+    /* Faixa de números */
+    .stats { background: var(--espresso-2); color: var(--cream); border-top: 1px solid rgba(224,168,94,.15); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 34px 20px; text-align: center; border-left: 1px solid rgba(224,168,94,.14); }
+    .stat:first-child { border-left: 0; }
+    .stat .v { font-family: "Cormorant Garamond", serif; font-size: 2.5rem; font-weight: 700; color: var(--amber); line-height: 1; }
+    .stat .k { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: #bfa98c; margin-top: .55rem; }
+
+    /* Seções */
+    .section { padding: 104px 0; }
+    .section-head { max-width: 640px; margin-bottom: 56px; }
+    .section-head h2, .about h2 { font-size: clamp(2.1rem, 3.8vw, 3.1rem); }
+    .section-head p { color: var(--ink-soft); font-size: 1.05rem; }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-copy p { color: var(--ink-soft); font-size: 1.05rem; }
+    .bio-quote {
+      position: relative; background: #fffaf2; border: 1px solid var(--line); border-radius: 10px;
+      padding: 44px 40px 34px; box-shadow: 0 20px 40px rgba(42,33,27,.08);
+    }
+    .bio-quote::before {
+      content: "\201C"; position: absolute; top: -28px; left: 30px; font-family: "Cormorant Garamond", serif;
+      font-size: 6rem; line-height: 1; color: var(--caramel);
+    }
+    .bio-quote blockquote { margin: 0; font-family: "Cormorant Garamond", serif; font-size: 1.75rem; line-height: 1.3; color: var(--ink); font-style: italic; }
+    .bio-quote cite { display: block; margin-top: 1.4rem; font-style: normal; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--cognac); font-weight: 700; }
+
+    /* Especialidade */
+    .craft { background: var(--cream-2); }
+    .craft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .craft-card {
+      background: #fffaf2; border: 1px solid var(--line); border-radius: 10px; padding: 34px 30px;
+      position: relative; transition: transform .25s, box-shadow .25s;
+    }
+    .craft-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(42,33,27,.10); }
+    .craft-card .num { font-family: "Cormorant Garamond", serif; font-size: 1rem; color: var(--caramel); letter-spacing: .2em; }
+    .craft-card .icon { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--espresso); color: var(--amber); margin: 1rem 0 1.4rem; }
+    .craft-card .icon svg { width: 26px; height: 26px; }
+    .craft-card h3 { font-size: 1.7rem; }
+    .craft-card p { color: var(--ink-soft); margin: 0; }
+
+    /* Reputação */
+    .rep { background: var(--espresso); color: var(--cream); position: relative; overflow: hidden; }
+    .rep-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+    .rep-score { text-align: center; padding: 48px 30px; border: 1px solid rgba(224,168,94,.25); border-radius: 12px; background: rgba(255,255,255,.02); }
+    .rep-score .big { font-family: "Cormorant Garamond", serif; font-size: 6.5rem; font-weight: 700; line-height: 1; color: #fbf5ec; }
+    .stars { display: flex; justify-content: center; gap: 6px; margin: .9rem 0 .8rem; color: var(--amber); }
+    .stars svg { width: 26px; height: 26px; }
+    .rep-score .note { color: #bfa98c; font-size: .9rem; }
+    .rep h2 { font-size: clamp(2.1rem, 3.8vw, 3.1rem); color: #fbf5ec; }
+    .rep p { color: #d9c9b2; font-size: 1.05rem; }
+    .channels { display: grid; gap: 12px; margin-top: 1.8rem; }
+    .channel { display: flex; align-items: center; gap: 1rem; padding: 14px 18px; border-radius: 8px; background: rgba(255,255,255,.04); border: 1px solid rgba(224,168,94,.14); }
+    .channel svg { width: 22px; height: 22px; color: var(--amber); flex: none; }
+    .channel strong { display: block; font-size: .95rem; color: #fbf5ec; }
+    .channel span { font-size: .84rem; color: #bfa98c; }
+
+    /* Contato */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+    .contact-card { background: #fffaf2; border: 1px solid var(--line); border-radius: 12px; padding: 40px; }
+    .contact-row { display: flex; gap: 1rem; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .contact-row:last-of-type { border-bottom: 0; }
+    .contact-row svg { width: 22px; height: 22px; color: var(--cognac); flex: none; margin-top: 3px; }
+    .contact-row .k { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--cognac); font-weight: 700; }
+    .contact-row .v { font-size: 1.05rem; color: var(--ink); }
+    .contact-row a { text-decoration: none; }
+    .contact-row a:hover { color: var(--cognac); }
+    .contact-cta { margin-top: 1.6rem; }
+    .contact-cta .btn { background: var(--espresso); color: var(--cream); }
+    .contact-cta .btn:hover { background: var(--saddle); }
+    .map-card {
+      border-radius: 12px; overflow: hidden; position: relative; min-height: 340px; color: var(--cream);
+      background:
+        linear-gradient(160deg, rgba(31,22,17,.25), rgba(31,22,17,.85)),
+        repeating-linear-gradient(35deg, #6b4428 0 2px, transparent 2px 46px),
+        repeating-linear-gradient(-55deg, #6b4428 0 2px, transparent 2px 58px),
+        #4a2f1e;
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 36px;
+    }
+    .map-pin { position: absolute; top: 38%; left: 50%; transform: translate(-50%,-50%); width: 56px; height: 56px; border-radius: 50% 50% 50% 0; rotate: -45deg; background: var(--amber); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+    .map-pin::after { content: ""; position: absolute; inset: 17px; border-radius: 50%; background: var(--espresso); }
+    .map-card h3 { font-size: 2rem; color: #fbf5ec; margin-bottom: .2rem; }
+    .map-card p { color: #e1cfb6; margin: 0; }
+    .map-card a { color: var(--amber); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 1rem; font-size: .9rem; letter-spacing: .04em; }
+
+    footer { background: #120c09; color: #a8957d; padding: 40px 0; font-size: .85rem; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center; }
+    .foot strong { font-family: "Cormorant Garamond", serif; font-size: 1.25rem; color: var(--cream); font-weight: 700; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    @media (max-width: 960px) {
+      .hero-grid, .about-grid, .rep-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .craft-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid rgba(224,168,94,.14); }
+      .leather-tag { width: min(300px, 100%); }
+    }
+    @media (max-width: 760px) {
+      .menu, .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .hero { padding: 64px 0 80px; }
+      .section { padding: 76px 0; }
+      .contact-card { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-bar" role="note">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="site">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="D Plácido Couro — início">
+        <span class="brand-mark" aria-hidden="true">DP</span>
+        <span class="brand-text">
+          <strong>D Plácido Couro</strong>
+          <span>Pratânia · SP</span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#especialidade">Especialidade</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-amber nav-cta" href="tel:+551438441104">Ligar agora</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#especialidade">Especialidade</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a class="btn btn-amber" href="tel:+551438441104">Ligar (14) 3844-1104</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero on-dark">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Couro legítimo desde 1990</span>
+          <h1>Jaquetas e casacos em couro, <em>feitos para durar</em>.</h1>
+          <p class="lead">Há mais de três décadas, a D Plácido Couro se dedica à confecção de jaquetas e casacos em couro legítimo, em Pratânia, interior de São Paulo.</p>
+          <div class="hero-actions">
+            <a class="btn btn-amber" href="tel:+551438441104">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              Ligar (14) 3844-1104
+            </a>
+            <a class="btn btn-line" href="#historia">Conhecer a história</a>
+          </div>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              R. Cap. Maneco, 161 · Pratânia/SP
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              4,7 no Google · 98 avaliações
+            </span>
+          </div>
+        </div>
+
+        <div class="tag-wrap" aria-hidden="true">
+          <div class="leather-tag">
+            <div class="t-small">Confecção em couro</div>
+            <div class="t-name">D Plácido</div>
+            <div class="t-sub">Couro legítimo</div>
+            <div class="t-rule"></div>
+            <div class="t-year">DESDE 1990</div>
+            <div class="t-city">Pratânia · SP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Destaques">
+      <div class="container stats-grid">
+        <div class="stat"><div class="v">1990</div><div class="k">Ano de início</div></div>
+        <div class="stat"><div class="v">35+</div><div class="k">Anos de ofício</div></div>
+        <div class="stat"><div class="v">4,7</div><div class="k">Nota no Google</div></div>
+        <div class="stat"><div class="v">98</div><div class="k">Avaliações</div></div>
+      </div>
+    </section>
+
+    <section id="historia" class="section about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">Nossa história</span>
+          <h2>Mais de 35 anos dedicados ao couro</h2>
+          <p>Desde 1990, a D Plácido Couro trabalha com um foco claro: a confecção de jaquetas e casacos em couro legítimo. Uma especialidade construída ao longo de mais de três décadas, em Pratânia, vizinha de São Manuel, no interior paulista.</p>
+          <p>É um ofício de paciência e cuidado — e a confiança de quem já comprou aparece na nota que os clientes deixam no Google.</p>
+        </div>
+        <figure class="bio-quote reveal" style="margin:0">
+          <blockquote>Especializada em Confecção de Jaquetas e Casacos em Couro legítimo desde 1.990</blockquote>
+          <cite>— Bio oficial · Instagram @d.placidocouro</cite>
+        </figure>
+      </div>
+    </section>
+
+    <section id="especialidade" class="section craft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Especialidade</span>
+          <h2>Uma casa, um material, um ofício</h2>
+          <p>Em vez de fazer de tudo um pouco, a D Plácido Couro se especializou no que faz de melhor.</p>
+        </div>
+        <div class="craft-grid">
+          <article class="craft-card reveal">
+            <div class="num">01</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 6v15h5v-7l3-3 3 3v7h5V6l-4-3-4 3z"/><path d="M12 6v5"/></svg>
+            </div>
+            <h3>Jaquetas</h3>
+            <p>Confecção de jaquetas em couro legítimo, a especialidade da casa desde 1990.</p>
+          </article>
+          <article class="craft-card reveal">
+            <div class="num">02</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2 4 5v17h16V5l-4-3"/><path d="m8 2 4 6 4-6"/><path d="M12 8v14"/><circle cx="10" cy="13" r=".6"/><circle cx="10" cy="17" r=".6"/></svg>
+            </div>
+            <h3>Casacos</h3>
+            <p>Casacos em couro legítimo, com a mesma dedicação e experiência de mais de três décadas.</p>
+          </article>
+          <article class="craft-card reveal">
+            <div class="num">03</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4"/><path d="M15 4h5v5"/><path d="M6 14l4 4" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3>Couro legítimo</h3>
+            <p>O material é o ponto de partida: a casa trabalha com couro legítimo, como afirma desde sempre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="section rep on-dark">
+      <div class="container rep-grid">
+        <div class="rep-score reveal">
+          <div class="big">4,7</div>
+          <div class="stars" aria-label="4,7 de 5 estrelas">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" opacity=".55"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </div>
+          <div class="note">98 avaliações no Google</div>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Reputação</span>
+          <h2>Bem avaliada por quem conhece</h2>
+          <p>Com nota 4,7 em 98 avaliações no Google, a D Plácido Couro tem a reputação que só anos de trabalho constroem. Acompanhe também a casa nas redes sociais.</p>
+          <div class="channels">
+            <div class="channel">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+              <div><strong>Instagram</strong><span>@d.placidocouro</span></div>
+            </div>
+            <div class="channel">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg>
+              <div><strong>Facebook</strong><span>D Plácido Couro</span></div>
+            </div>
+            <div class="channel">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><strong>Google Maps</strong><span>D Plácido Couro · Pratânia/SP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Visite / Contato</span>
+          <h2>Fale com a D Plácido Couro</h2>
+          <p>Ligue ou faça uma visita à loja em Pratânia/SP.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <div><div class="k">Telefone</div><div class="v"><a href="tel:+551438441104">(14) 3844-1104</a></div></div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><div class="k">Endereço</div><div class="v">R. Cap. Maneco, 161<br>Pratânia - SP, 18660-000</div></div>
+            </div>
+            <div class="contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+              <div><div class="k">Redes sociais</div><div class="v">Instagram @d.placidocouro<br>Facebook: D Plácido Couro</div></div>
+            </div>
+            <div class="contact-cta">
+              <a class="btn" href="tel:+551438441104">Ligar agora</a>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-pin" aria-hidden="true"></div>
+            <h3>Pratânia · SP</h3>
+            <p>R. Cap. Maneco, 161 — vizinha de São Manuel</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=R.+Cap.+Maneco,+161,+Pratânia+-+SP,+18660-000" target="_blank" rel="noopener">Abrir no Google Maps &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div><strong>D Plácido Couro</strong><br>Jaquetas e casacos em couro legítimo · desde 1990</div>
+      <div>Pratânia/SP · (14) 3844-1104<br><small>Prévia de demonstração — não é o site oficial.</small></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var t = document.querySelector('.menu-toggle'), m = document.getElementById('mobile-menu');
+      t.addEventListener('click', function () {
+        var o = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', o ? 'true' : 'false');
+        t.setAttribute('aria-label', o ? 'Fechar menu' : 'Abrir menu');
+      });
+      m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }); });
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
