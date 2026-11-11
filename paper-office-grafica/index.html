@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Paper Office Gráfica e Serviços · Curitiba/PR — prévia</title>
+  <meta name="description" content="Paper Office Gráfica e Serviços, em Curitiba/PR desde 1997: impressão, papelaria corporativa, papelaria artesanal e serviços rápidos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c1f24;
+      --ink-soft: #4a505a;
+      --muted: #6b717c;
+      --paper: #faf8f4;
+      --paper-2: #f2eee6;
+      --white: #ffffff;
+      --line: #e3ded3;
+      --accent: #c2410c;
+      --accent-dark: #9a3412;
+      --accent-soft: #fdeee4;
+      --wa: #1f9d55;
+      --wa-dark: #187a42;
+      --radius: 14px;
+      --shadow: 0 1px 2px rgba(28,31,36,.04), 0 8px 24px rgba(28,31,36,.06);
+      --max: 1140px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.15; margin: 0 0 .5em; letter-spacing: -.01em; }
+    p { margin: 0 0 1em; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .eyebrow {
+      display: inline-block; font-size: .78rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: .9rem;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      padding: .85rem 1.35rem; border-radius: 999px; font-weight: 600; font-size: .98rem;
+      text-decoration: none; transition: background .2s, color .2s, border-color .2s, transform .2s;
+      border: 1.5px solid transparent; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: var(--wa-dark); }
+    .btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+    .btn-ghost:hover { background: var(--ink); color: #fff; }
+
+    /* Aviso de prévia */
+    .preview-bar {
+      background: var(--ink); color: #e9e6df; font-size: .8rem; text-align: center;
+      padding: .5rem 1rem;
+    }
+
+    /* Header */
+    header.site {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(250,248,244,.92); backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 10px; background: var(--ink); color: var(--paper);
+      display: grid; place-items: center; font-family: "Fraunces", serif; font-weight: 700; font-size: 1.05rem;
+      position: relative; overflow: hidden;
+    }
+    .brand-mark::after {
+      content: ""; position: absolute; right: 0; top: 0; width: 12px; height: 12px;
+      background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+    .brand-text { line-height: 1.1; }
+    .brand-text strong { display: block; font-family: "Fraunces", serif; font-size: 1.12rem; font-weight: 600; }
+    .brand-text span { font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
+
+    .menu { display: none; }
+    .menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.8rem; }
+    .menu a { text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--ink-soft); }
+    .menu a:hover { color: var(--accent); }
+    .nav-cta { display: none; }
+
+    .menu-toggle {
+      width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 10px; background: var(--white);
+      display: grid; place-items: center; cursor: pointer; padding: 0;
+    }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+      display: block; width: 18px; height: 2px; background: var(--ink); border-radius: 2px; position: relative;
+      transition: transform .25s, background .25s;
+    }
+    .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+    .menu-toggle span::before { top: -6px; }
+    .menu-toggle span::after { top: 6px; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .menu-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none; border-top: 1px solid var(--line); background: var(--paper);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; margin: 0; padding: .5rem 20px 1.25rem; }
+    .mobile-menu li a {
+      display: block; padding: .85rem 0; text-decoration: none; font-weight: 500;
+      border-bottom: 1px solid var(--line);
+    }
+    .mobile-menu .btn { width: 100%; margin-top: 1rem; }
+
+    /* Hero */
+    .hero { padding: 56px 0 64px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; gap: 40px; align-items: center; }
+    .hero h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); font-weight: 600; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero .lead { font-size: 1.1rem; color: var(--ink-soft); max-width: 36rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; font-size: .9rem; color: var(--muted);
+    }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .4rem; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--accent); }
+
+    .hero-art { position: relative; height: 320px; }
+    .sheet {
+      position: absolute; background: var(--white); border-radius: 10px; box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+    .sheet-a { width: 62%; height: 78%; left: 4%; top: 10%; transform: rotate(-6deg); padding: 22px; }
+    .sheet-b { width: 52%; height: 66%; right: 4%; top: 2%; transform: rotate(5deg); background: var(--paper-2); }
+    .sheet-c {
+      width: 46%; height: 30%; right: 10%; bottom: 4%; transform: rotate(-2deg);
+      background: var(--ink); color: var(--paper); padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .sheet-c strong { font-family: "Fraunces", serif; font-size: 1rem; font-weight: 600; }
+    .sheet-c small { font-size: .7rem; opacity: .75; }
+    .sheet-c .dot { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); }
+    .lines i { display: block; height: 8px; background: var(--paper-2); border-radius: 4px; margin-bottom: 10px; }
+    .lines i:nth-child(1) { width: 55%; height: 12px; background: var(--ink); opacity: .85; margin-bottom: 18px; }
+    .lines i:nth-child(2) { width: 90%; }
+    .lines i:nth-child(3) { width: 80%; }
+    .lines i:nth-child(4) { width: 86%; }
+    .lines i:nth-child(5) { width: 40%; background: var(--accent-soft); }
+    .swatches { position: absolute; left: 18px; bottom: 18px; display: flex; gap: 6px; }
+    .swatches b { width: 18px; height: 18px; border-radius: 4px; display: block; }
+
+    /* Sections */
+    section { scroll-margin-top: 80px; }
+    .section { padding: 72px 0; }
+    .section-head { max-width: 42rem; margin-bottom: 2.5rem; }
+    .section-head h2 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); font-weight: 600; }
+    .section-head p { color: var(--ink-soft); font-size: 1.05rem; }
+
+    /* About */
+    .about { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .about-grid { display: grid; gap: 40px; }
+    .about-copy p { color: var(--ink-soft); font-size: 1.04rem; }
+    .about-quote {
+      margin: 1.5rem 0 0; padding: 1.25rem 1.5rem; border-left: 3px solid var(--accent);
+      background: var(--paper); border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: "Fraunces", serif; font-size: 1.25rem; font-style: italic; color: var(--ink);
+    }
+    .facts { display: grid; gap: 14px; }
+    .fact {
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.4rem; background: var(--paper);
+    }
+    .fact .k { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+    .fact .v { font-family: "Fraunces", serif; font-size: 1.45rem; font-weight: 600; margin-top: .2rem; }
+    .fact .s { font-size: .92rem; color: var(--ink-soft); margin-top: .15rem; }
+
+    /* Services */
+    .services-grid { display: grid; gap: 20px; }
+    .card {
+      background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 28px 24px;
+      box-shadow: var(--shadow); display: flex; flex-direction: column;
+    }
+    .card-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: var(--accent-soft); color: var(--accent);
+      display: grid; place-items: center; margin-bottom: 1.1rem;
+    }
+    .card-icon svg { width: 24px; height: 24px; }
+    .card h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: .35rem; }
+    .card .sub { color: var(--muted); font-size: .95rem; margin-bottom: 1.1rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .tags li {
+      font-size: .86rem; padding: .38rem .75rem; border-radius: 999px; background: var(--paper);
+      border: 1px solid var(--line); color: var(--ink-soft);
+    }
+    .card-note {
+      margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px dashed var(--line);
+      font-size: .9rem; color: var(--ink-soft);
+    }
+    .card-note strong { color: var(--ink); }
+    .card.featured { border-color: var(--ink); }
+
+    /* CTA band */
+    .band { background: var(--ink); color: var(--paper); padding: 56px 0; }
+    .band-inner { display: grid; gap: 24px; align-items: center; }
+    .band h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 600; margin: 0; }
+    .band p { color: #c9c5bc; margin: .5rem 0 0; }
+    .band .btn-ghost { border-color: #e9e6df; color: #e9e6df; }
+    .band .btn-ghost:hover { background: #e9e6df; color: var(--ink); }
+    .band-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+    /* Contact */
+    .contact-grid { display: grid; gap: 20px; }
+    .contact-list { display: grid; gap: 14px; }
+    .contact-item {
+      display: flex; gap: 1rem; align-items: flex-start; padding: 1.15rem 1.25rem; background: var(--white);
+      border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; transition: border-color .2s;
+    }
+    a.contact-item:hover { border-color: var(--accent); }
+    .contact-item .ic {
+      width: 42px; height: 42px; flex: none; border-radius: 10px; background: var(--paper-2);
+      display: grid; place-items: center; color: var(--accent);
+    }
+    .contact-item .ic svg { width: 20px; height: 20px; }
+    .contact-item .k { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+    .contact-item .v { font-weight: 600; font-size: 1.02rem; word-break: break-word; }
+
+    .address-card {
+      background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 28px 24px;
+      position: relative; overflow: hidden;
+    }
+    .address-card::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: linear-gradient(var(--paper-2) 1px, transparent 1px), linear-gradient(90deg, var(--paper-2) 1px, transparent 1px);
+      background-size: 28px 28px; opacity: .7; pointer-events: none;
+    }
+    .address-card > * { position: relative; }
+    .pin {
+      width: 52px; height: 52px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+      background: var(--accent); display: grid; place-items: center; margin-bottom: 1.4rem;
+    }
+    .pin::after { content: ""; width: 18px; height: 18px; border-radius: 50%; background: var(--white); }
+    .address-card h3 { font-size: 1.5rem; font-weight: 600; }
+    .address-card address { font-style: normal; font-size: 1.08rem; color: var(--ink-soft); line-height: 1.7; }
+    .address-card address strong { color: var(--ink); }
+    .social { display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap; }
+    .social a {
+      display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--white); text-decoration: none; font-weight: 500; font-size: .92rem;
+    }
+    .social a:hover { border-color: var(--accent); color: var(--accent); }
+    .social svg { width: 18px; height: 18px; }
+
+    /* Footer */
+    footer.site { border-top: 1px solid var(--line); padding: 32px 0; font-size: .9rem; color: var(--muted); }
+    .footer-inner { display: flex; flex-direction: column; gap: .75rem; }
+    .footer-inner a { text-decoration: none; }
+    .footer-inner a:hover { color: var(--accent); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 56px; height: 56px; border-radius: 50%;
+      background: var(--wa); color: #fff; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(31,157,85,.35);
+      transition: transform .2s, background .2s;
+    }
+    .wa-float:hover { transform: scale(1.06); background: var(--wa-dark); }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* Breakpoints */
+    @media (min-width: 640px) {
+      .container { padding: 0 28px; }
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .contact-list { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
+    }
+    @media (min-width: 900px) {
+      .menu, .nav-cta { display: block; }
+      .menu-toggle, .mobile-menu, .mobile-menu.open { display: none; }
+      .hero { padding: 88px 0 96px; }
+      .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 56px; }
+      .hero-art { height: 400px; }
+      .section { padding: 96px 0; }
+      .about-grid { grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: start; }
+      .facts { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .band-inner { grid-template-columns: 1fr auto; }
+      .contact-grid { grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-bar" role="note">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="site">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Paper Office Gráfica e Serviços — início">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-text">
+          <strong>Paper Office</strong>
+          <span>Gráfica e Serviços · Curitiba</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">A empresa</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-wa nav-cta" href="https://wa.me/554133627802" target="_blank" rel="noopener">WhatsApp</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        <span></span>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#sobre">A empresa</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a class="btn btn-wa" href="https://wa.me/554133627802" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Gráfica em Curitiba desde 1997</span>
+          <h1>Impressão e papelaria feitas com <em>capricho e dedicação</em>.</h1>
+          <p class="lead">Da papelaria corporativa aos cadernos artesanais, passando por fotocópias, encadernações e plastificação: a Paper Office atende no Alto da XV, em Curitiba.</p>
+          <div class="hero-actions">
+            <a class="btn btn-wa" href="https://wa.me/554133627802" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+              Pedir orçamento no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
+          </div>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Rua XV de Novembro, 2800 · Alto da XV
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              (41) 3362-7802
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="sheet sheet-b"></div>
+          <div class="sheet sheet-a">
+            <div class="lines"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="swatches">
+              <b style="background:#1c1f24"></b><b style="background:#c2410c"></b><b style="background:#e3ded3"></b>
+            </div>
+          </div>
+          <div class="sheet sheet-c">
+            <span class="dot"></span>
+            <div>
+              <strong>Paper Office</strong><br>
+              <small>Gráfica e Serviços</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">A empresa</span>
+          <h2>Uma gráfica de Curitiba com história desde 1997</h2>
+          <p>A Paper Office Gráfica e Serviços foi fundada em 2 de janeiro de 1997 por Maria Christina Nickel, formada em Matemática. Desde então, ela atende os clientes pessoalmente, cuidando de cada trabalho de impressão, papelaria e acabamento.</p>
+          <p>Do cartão de visita ao livro encadernado, passando pela papelaria artesanal e pelos serviços do dia a dia, a proposta é a mesma desde o início:</p>
+          <blockquote class="about-quote">“Capricho e dedicação.”</blockquote>
+        </div>
+
+        <div class="facts reveal">
+          <div class="fact">
+            <div class="k">Fundação</div>
+            <div class="v">02/01/1997</div>
+            <div class="s">Curitiba, Paraná</div>
+          </div>
+          <div class="fact">
+            <div class="k">Fundadora</div>
+            <div class="v">Maria Christina Nickel</div>
+            <div class="s">Formada em Matemática</div>
+          </div>
+          <div class="fact">
+            <div class="k">Onde estamos</div>
+            <div class="v">Alto da XV</div>
+            <div class="s">Rua XV de Novembro, 2800</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Serviços</span>
+          <h2>Tudo o que a Paper Office faz, em três frentes</h2>
+          <p>Impressão e papelaria corporativa, peças artesanais e serviços rápidos para o dia a dia.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card featured reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>
+            </div>
+            <h3>Papelaria Corporativa e Impressão</h3>
+            <p class="sub">Materiais impressos para empresas, eventos e uso pessoal.</p>
+            <ul class="tags">
+              <li>Cartões de visita</li>
+              <li>Papelaria corporativa</li>
+              <li>Cartazes e folhetos</li>
+              <li>Cardápios</li>
+              <li>Convites</li>
+              <li>Apostilas</li>
+              <li>Livros</li>
+              <li>Banners</li>
+              <li>Papel timbrado</li>
+              <li>Envelopes personalizados</li>
+              <li>Blocos</li>
+              <li>Cadernos</li>
+              <li>Pastas</li>
+              <li>Receituários</li>
+              <li>Magnetos</li>
+            </ul>
+            <p class="card-note"><strong>Como imprimimos:</strong> impressora a laser, jato de tinta e offset, com variedade de papéis especiais. Impressão em papel, adesivos e tecido.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5A2 2 0 0 1 6 21h13"/><path d="M9 7h6"/></svg>
+            </div>
+            <h3>Papelaria Artesanal</h3>
+            <p class="sub">Peças feitas à mão e cuidado com o que já existe.</p>
+            <ul class="tags">
+              <li>Blocos artesanais</li>
+              <li>Cadernos artesanais</li>
+              <li>Materiais personalizados em cartonagem</li>
+              <li>Restauração de livros</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
+            </div>
+            <h3>Serviços com agilidade</h3>
+            <p class="sub">Para resolver o dia a dia do escritório, da faculdade e de casa.</p>
+            <ul class="tags">
+              <li>Fotocópias</li>
+              <li>Encadernação de apostilas</li>
+              <li>Capa dura para monografia</li>
+              <li>Capa dura para livros fiscais</li>
+              <li>Plastificação</li>
+              <li>Crachás</li>
+              <li>Carimbos</li>
+              <li>Magnetos</li>
+              <li>Serviço de scanner</li>
+              <li>Serviço de digitação</li>
+              <li>Acesso à internet e impressão</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faixa CTA -->
+    <section class="band">
+      <div class="container band-inner reveal">
+        <div>
+          <h2>Tem um trabalho para imprimir?</h2>
+          <p>Mande os detalhes pelo WhatsApp ou por e-mail e combine direto com a Paper Office.</p>
+        </div>
+        <div class="band-actions">
+          <a class="btn btn-wa" href="https://wa.me/554133627802" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:paperoffice@paperoffice.com.br">Enviar e-mail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contato</span>
+          <h2>Fale com a Paper Office</h2>
+          <p>Escolha o canal que preferir.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-list reveal">
+            <a class="contact-item" href="https://wa.me/554133627802" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+              </span>
+              <span><span class="k">WhatsApp</span><br><span class="v">(41) 3362-7802</span></span>
+            </a>
+            <a class="contact-item" href="tel:+554133627802">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              </span>
+              <span><span class="k">Telefone</span><br><span class="v">(41) 3362-7802</span></span>
+            </a>
+            <a class="contact-item" href="mailto:paperoffice@paperoffice.com.br">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <span><span class="k">E-mail</span><br><span class="v">paperoffice@paperoffice.com.br</span></span>
+            </a>
+            <a class="contact-item" href="https://www.instagram.com/paperofficegrafica" target="_blank" rel="noopener">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </span>
+              <span><span class="k">Instagram</span><br><span class="v">@paperofficegrafica</span></span>
+            </a>
+          </div>
+
+          <div class="address-card reveal">
+            <div class="pin" aria-hidden="true"></div>
+            <h3>Endereço</h3>
+            <address>
+              <strong>Paper Office Gráfica e Serviços</strong><br>
+              Rua XV de Novembro, 2800<br>
+              Alto da XV — Curitiba/PR<br>
+              CEP 80045-340
+            </address>
+            <div class="social">
+              <a href="https://www.facebook.com/PaperOfficeCuritiba" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg>
+                Facebook
+              </a>
+              <a href="https://www.instagram.com/paperofficegrafica" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container footer-inner">
+      <div>Paper Office Gráfica e Serviços · Curitiba/PR · desde 1997</div>
+      <div class="footer-links">
+        <a href="https://wa.me/554133627802" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:paperoffice@paperoffice.com.br">E-mail</a>
+        <a href="https://www.facebook.com/PaperOfficeCuritiba" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/paperofficegrafica" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/554133627802" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.230-.74-.66-1.230-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.410.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      function closeMenu() {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+      }
+      toggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+      window.addEventListener('resize', function () { if (window.innerWidth >= 900) closeMenu(); });
+
+      var items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</body>
+</html>
