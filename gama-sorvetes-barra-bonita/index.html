@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gama Sorvetes Barra Bonita · Barra Bonita/SP — prévia</title>
+  <meta name="description" content="Gama Sorvetes Barra Bonita: sorveteria e açaí artesanal no Centro de Barra Bonita/SP. Nota 5,0 no Google. Loja física e delivery pelo iFood; contato pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --acai: #4b1d5e;
+      --acai-2: #6a2c84;
+      --acai-deep: #2e0f3b;
+      --berry: #ff4f8b;
+      --berry-2: #ff77a6;
+      --berry-deep: #c92a64;
+      --mint: #3fd6b4;
+      --mint-2: #8cf0d8;
+      --mint-soft: #e3fbf4;
+      --lemon: #ffd65a;
+      --vanilla: #fff8ee;
+      --cone: #e8a95b;
+      --white: #ffffff;
+      --ink: #2a1633;
+      --ink-soft: #6d5a76;
+      --line: #f0e3f2;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: "Outfit", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--vanilla); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Fredoka", system-ui, sans-serif; font-weight: 700; line-height: 1.05; margin: 0 0 .5em; letter-spacing: -.015em; }
+    h3 { font-weight: 600; }
+    p { margin: 0 0 1em; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .55rem; font-size: .76rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--berry-deep); margin-bottom: 1rem;
+    }
+    .eyebrow::before { content: ""; width: 10px; height: 10px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: currentColor; }
+    .on-dark .eyebrow { color: var(--mint-2); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      padding: .95rem 1.55rem; border-radius: 999px; font-weight: 700; font-size: .96rem;
+      text-decoration: none; border: 2px solid transparent; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn-berry { background: var(--berry); color: var(--white); box-shadow: 0 10px 24px rgba(255,79,139,.35); }
+    .btn-berry:hover { background: var(--berry-2); box-shadow: 0 14px 30px rgba(255,79,139,.45); }
+    .btn-mint { background: var(--mint); color: var(--acai-deep); box-shadow: 0 10px 24px rgba(63,214,180,.3); }
+    .btn-mint:hover { background: var(--mint-2); }
+    .btn-ghost { border-color: rgba(255,255,255,.45); color: var(--white); }
+    .btn-ghost:hover { background: var(--white); color: var(--acai); }
+    .btn-acai { background: var(--acai); color: var(--white); }
+    .btn-acai:hover { background: var(--acai-2); }
+    .btn-outline { border-color: var(--acai); color: var(--acai); }
+    .btn-outline:hover { background: var(--acai); color: var(--white); }
+
+    .preview-bar { background: var(--lemon); color: var(--acai-deep); font-size: .8rem; font-weight: 700; text-align: center; padding: .5rem 1rem; letter-spacing: .02em; }
+
+    /* Header */
+    header.site {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,248,238,.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+    .brand-mark { width: 46px; height: 46px; flex: none; }
+    .brand-text strong { display: block; font-family: "Fredoka", sans-serif; font-size: 1.3rem; font-weight: 700; line-height: 1; color: var(--acai); }
+    .brand-text span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
+    .menu ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    .menu a { text-decoration: none; font-size: .94rem; font-weight: 500; color: var(--ink-soft); }
+    .menu a:hover { color: var(--berry-deep); }
+    .nav-cta { padding: .65rem 1.2rem; }
+    .menu-toggle { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+      position: absolute; left: 10px; width: 22px; height: 2px; background: var(--acai); content: ""; transition: transform .2s;
+    }
+    .menu-toggle span { top: 20px; }
+    .menu-toggle span::before { top: -7px; left: 0; }
+    .menu-toggle span::after { top: 7px; left: 0; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; border-top: 1px solid var(--line); }
+    .mobile-menu ul { list-style: none; margin: 0; padding: 1rem 22px 1.6rem; display: grid; gap: .9rem; }
+    .mobile-menu a { text-decoration: none; color: var(--ink); }
+    .mobile-menu .btn { color: var(--white); justify-self: start; }
+    .mobile-menu.open { display: block; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden; color: var(--white);
+      background:
+        radial-gradient(700px 480px at 88% 12%, rgba(255,79,139,.45), transparent 62%),
+        radial-gradient(640px 460px at 0% 100%, rgba(63,214,180,.30), transparent 68%),
+        linear-gradient(160deg, var(--acai-2), var(--acai) 55%, var(--acai-deep));
+      padding: 92px 0 120px;
+    }
+    .hero::before { /* granulado colorido */
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image:
+        radial-gradient(circle at 12% 22%, var(--lemon) 0 3px, transparent 4px),
+        radial-gradient(circle at 34% 78%, var(--mint) 0 3px, transparent 4px),
+        radial-gradient(circle at 58% 18%, var(--berry-2) 0 3px, transparent 4px),
+        radial-gradient(circle at 72% 88%, var(--lemon) 0 3px, transparent 4px),
+        radial-gradient(circle at 92% 52%, var(--mint-2) 0 3px, transparent 4px),
+        radial-gradient(circle at 6% 62%, var(--berry-2) 0 3px, transparent 4px);
+    }
+    .hero::after { /* onda de casquinha derretendo */
+      content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 54px;
+      background: radial-gradient(circle at 30px -6px, transparent 32px, var(--vanilla) 33px) 0 0 / 60px 54px repeat-x;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); }
+    .hero h1 em { font-style: normal; color: var(--mint-2); }
+    .hero h1 .u { background: linear-gradient(transparent 66%, rgba(255,79,139,.6) 66%); padding: 0 .1em; }
+    .lead { font-size: 1.15rem; color: #ecdcf2; max-width: 33rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2.1rem 0 2.4rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .92rem; color: #dcc8e4; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--lemon); }
+
+    .art { position: relative; height: 460px; display: grid; place-items: center; }
+    .art .halo { position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(255,119,166,.45), rgba(75,29,94,0) 68%); }
+    .art .ring { position: absolute; width: 340px; height: 340px; border-radius: 50%; border: 2px dashed rgba(140,240,216,.35); animation: spin 40s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .cone { position: relative; z-index: 2; width: 270px; filter: drop-shadow(0 30px 40px rgba(20,4,28,.5)); animation: float 5s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-10px); } }
+    .badge-float {
+      position: absolute; z-index: 3; background: var(--white); color: var(--ink); border-radius: 20px;
+      padding: 14px 18px; box-shadow: 0 18px 40px rgba(20,4,28,.35); text-align: left;
+    }
+    .badge-float .n { font-family: "Fredoka", sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1; color: var(--acai); }
+    .badge-float small { display: block; font-size: .78rem; color: var(--ink-soft); }
+    .badge-float .st { display: flex; gap: 2px; color: #f5b400; margin: .3rem 0 .2rem; }
+    .badge-float .st svg { width: 14px; height: 14px; }
+    .badge-float.b1 { top: 22px; right: 0; transform: rotate(4deg); }
+    .badge-float.b2 { bottom: 40px; left: -6px; transform: rotate(-4deg); background: var(--mint); }
+    .badge-float.b2 .n { color: var(--acai-deep); font-size: 1.3rem; }
+    .badge-float.b2 small { color: var(--acai); }
+
+    /* Faixa */
+    .stats { background: var(--vanilla); padding: 8px 0 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat { padding: 26px 18px; text-align: center; border-radius: 22px; background: var(--white); border: 1px solid var(--line); }
+    .stat:nth-child(1) { background: #ffe6ef; border-color: #ffd0e0; }
+    .stat:nth-child(2) { background: var(--mint-soft); border-color: #c6f3e6; }
+    .stat:nth-child(3) { background: #f3e8f7; border-color: #e6d4ee; }
+    .stat:nth-child(4) { background: #fff4cc; border-color: #ffe9a0; }
+    .stat .v { font-family: "Fredoka", sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1; color: var(--acai); }
+    .stat .k { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: .6rem; font-weight: 600; }
+
+    /* Seções */
+    .section { padding: 100px 0; }
+    .section-head { max-width: 660px; margin-bottom: 52px; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .section-head h2 { font-size: clamp(2rem, 3.8vw, 3rem); color: var(--acai); }
+    .section-head p { color: var(--ink-soft); font-size: 1.06rem; }
+
+    /* Sobre */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-copy h2 { font-size: clamp(2rem, 3.8vw, 3rem); color: var(--acai); }
+    .about-copy p { color: var(--ink-soft); font-size: 1.06rem; }
+    .about-panel { position: relative; border-radius: 28px; padding: 40px 34px; background: var(--white); border: 1px solid var(--line); overflow: hidden; box-shadow: 0 20px 50px rgba(75,29,94,.08); }
+    .about-panel::before { content: ""; position: absolute; right: -50px; top: -50px; width: 170px; height: 170px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, var(--berry-2), var(--berry)); opacity: .9; }
+    .about-panel::after { content: ""; position: absolute; right: 50px; top: 70px; width: 70px; height: 70px; border-radius: 50%; background: var(--mint); opacity: .85; }
+    .about-panel ul { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+    .about-panel li { display: flex; gap: 14px; align-items: flex-start; max-width: 86%; }
+    .about-panel li .dot { width: 38px; height: 38px; flex: none; border-radius: 12px; background: var(--acai); color: var(--mint-2); display: grid; place-items: center; }
+    .about-panel li .dot svg { width: 19px; height: 19px; }
+    .about-panel li strong { display: block; font-family: "Fredoka", sans-serif; font-size: 1.15rem; font-weight: 600; color: var(--acai); }
+    .about-panel li span { color: var(--ink-soft); font-size: .95rem; }
+
+    /* Cardápio ilustrativo */
+    .menu-sec { background: var(--white); }
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .prod {
+      border-radius: 26px; overflow: hidden; background: var(--vanilla); border: 1px solid var(--line);
+      transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column;
+    }
+    .prod:hover { transform: translateY(-5px); box-shadow: 0 22px 44px rgba(75,29,94,.12); }
+    .prod .pic { height: 210px; display: grid; place-items: center; position: relative; }
+    .prod .pic svg { width: 150px; height: 150px; filter: drop-shadow(0 14px 18px rgba(0,0,0,.15)); }
+    .prod.p1 .pic { background: radial-gradient(circle at 50% 60%, #ffd0e0, #ffe6ef 70%); }
+    .prod.p2 .pic { background: radial-gradient(circle at 50% 60%, #e2c8ee, #f3e8f7 70%); }
+    .prod.p3 .pic { background: radial-gradient(circle at 50% 60%, #b9f3e3, var(--mint-soft) 70%); }
+    .prod .body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+    .prod h3 { font-size: 1.45rem; color: var(--acai); margin-bottom: .35em; }
+    .prod p { color: var(--ink-soft); font-size: .97rem; }
+    .prod .link { margin-top: auto; font-weight: 700; font-size: .92rem; color: var(--berry-deep); text-decoration: none; }
+    .prod .link:hover { color: var(--acai); }
+    .pill { position: absolute; top: 16px; left: 16px; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .32rem .75rem; border-radius: 999px; background: rgba(255,255,255,.85); color: var(--acai); }
+    .disclaimer { margin-top: 26px; text-align: center; font-size: .86rem; color: var(--ink-soft); }
+
+    /* Como pedir */
+    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--white); border: 1px solid var(--line); border-radius: 24px; padding: 32px 28px;
+      transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(75,29,94,.10); }
+    .card .icon { width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; background: #ffe6ef; color: var(--berry-deep); margin-bottom: 1.3rem; }
+    .card .icon svg { width: 26px; height: 26px; }
+    .card h3 { font-size: 1.4rem; color: var(--acai); }
+    .card p { color: var(--ink-soft); font-size: .97rem; }
+    .card .card-link { margin-top: auto; padding-top: .6rem; font-weight: 700; font-size: .92rem; color: var(--berry-deep); text-decoration: none; }
+    .card.feature { background: var(--acai); border-color: var(--acai); color: var(--white); }
+    .card.feature h3 { color: var(--white); }
+    .card.feature .icon { background: var(--mint); color: var(--acai-deep); }
+    .card.feature p { color: #e2d0ea; }
+    .card.feature .card-link { color: var(--mint-2); }
+    .tag { display: inline-block; align-self: flex-start; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .75rem; border-radius: 999px; background: #f3e8f7; color: var(--acai-2); margin-bottom: .9rem; }
+    .card.feature .tag { background: rgba(140,240,216,.16); color: var(--mint-2); }
+
+    /* Reputação */
+    .rep { background: linear-gradient(160deg, var(--acai), var(--acai-deep)); color: var(--white); position: relative; overflow: hidden; }
+    .rep::before { content: ""; position: absolute; width: 520px; height: 520px; right: -160px; top: -200px; border-radius: 50%; background: radial-gradient(circle, rgba(255,79,139,.35), transparent 65%); }
+    .rep-grid { position: relative; display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: center; }
+    .rep-score { text-align: center; padding: 48px 30px; border-radius: 30px; background: var(--white); color: var(--ink); box-shadow: 0 24px 50px rgba(0,0,0,.3); }
+    .rep-score .g { font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--ink-soft); }
+    .rep-score .big { font-family: "Fredoka", sans-serif; font-size: 6.4rem; font-weight: 700; line-height: 1; color: var(--acai); margin-top: .3rem; }
+    .stars { display: flex; justify-content: center; gap: 6px; margin: .9rem 0 .8rem; color: #f5b400; }
+    .stars svg { width: 28px; height: 28px; }
+    .rep-score .note { color: var(--ink-soft); font-size: .98rem; }
+    .rep h2 { font-size: clamp(2rem, 3.8vw, 3rem); }
+    .rep-copy p { color: #e2d0ea; font-size: 1.06rem; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 1.8rem; }
+    .fact { padding: 20px 22px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(140,240,216,.2); }
+    .fact .v { font-family: "Fredoka", sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--mint-2); line-height: 1.1; }
+    .fact .k { font-size: .88rem; color: #d3bfdc; }
+
+    /* Localização */
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .loc-card { background: var(--white); border: 1px solid var(--line); border-radius: 26px; padding: 40px; }
+    .loc-row { display: flex; gap: 1rem; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .loc-row:last-of-type { border-bottom: 0; }
+    .loc-row svg { width: 22px; height: 22px; color: var(--berry); flex: none; margin-top: 3px; }
+    .loc-row .k { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--berry-deep); font-weight: 700; }
+    .loc-row .v { font-size: 1.03rem; color: var(--ink); }
+    .loc-row .v a { color: var(--ink); }
+    .loc-cta { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: .8rem; }
+    .map-card {
+      border-radius: 26px; overflow: hidden; position: relative; min-height: 360px; color: var(--white);
+      background:
+        linear-gradient(175deg, rgba(46,15,59,0), rgba(46,15,59,.9)),
+        repeating-linear-gradient(18deg, rgba(255,255,255,.14) 0 2px, transparent 2px 54px),
+        repeating-linear-gradient(-72deg, rgba(255,255,255,.10) 0 2px, transparent 2px 66px),
+        linear-gradient(140deg, var(--mint), var(--acai-2));
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 36px;
+    }
+    .map-pin { position: absolute; top: 36%; left: 50%; transform: translate(-50%,-50%); width: 60px; height: 60px; border-radius: 50% 50% 50% 0; rotate: -45deg; background: var(--berry); box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+    .map-pin::after { content: ""; position: absolute; inset: 19px; border-radius: 50%; background: var(--white); }
+    .map-card h3 { font-size: 1.9rem; margin-bottom: .2rem; }
+    .map-card p { color: #efe2f4; margin: 0; }
+    .map-card a { color: var(--lemon); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 1rem; font-size: .92rem; }
+
+    /* CTA */
+    .cta { background: linear-gradient(180deg, var(--vanilla), #ffe6ef); padding: 96px 0; text-align: center; }
+    .cta h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); max-width: 760px; margin: 0 auto .5em; color: var(--acai); }
+    .cta h2 em { font-style: normal; color: var(--berry); }
+    .cta p { color: var(--ink-soft); font-size: 1.08rem; max-width: 560px; margin: 0 auto 2rem; }
+    .cta .row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    footer { background: var(--acai-deep); color: #c6b2cf; padding: 40px 0; font-size: .86rem; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.2rem; align-items: center; }
+    .foot strong { font-family: "Fredoka", sans-serif; font-size: 1.25rem; color: var(--white); font-weight: 700; }
+    .foot a { color: var(--mint-2); text-decoration: none; }
+
+    .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 60px; height: 60px; border-radius: 50%; background: #25d366; color: var(--white); display: grid; place-items: center; box-shadow: 0 12px 28px rgba(0,0,0,.25); transition: transform .2s; }
+    .wa-float:hover { transform: scale(1.07); }
+    .wa-float svg { width: 30px; height: 30px; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; }
+      .btn:hover, .card:hover, .prod:hover { transform: none; } .cone, .art .ring { animation: none; }
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid, .rep-grid, .loc-grid, .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .card-grid, .prod-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .art { height: 400px; max-width: 440px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 760px) {
+      .menu, .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .hero { padding: 60px 0 96px; }
+      .section { padding: 76px 0; }
+      .card-grid, .prod-grid, .facts { grid-template-columns: 1fr; }
+      .loc-card { padding: 28px; }
+      .about-panel { padding: 34px 24px; }
+      .about-panel li { max-width: 100%; }
+      .art { height: 360px; }
+      .art .halo { width: 300px; height: 300px; }
+      .art .ring { width: 280px; height: 280px; }
+      .cone { width: 210px; }
+      .badge-float { padding: 11px 14px; }
+      .badge-float .n { font-size: 1.6rem; }
+      .badge-float.b2 .n { font-size: 1.1rem; }
+      .hero-actions .btn, .cta .row .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-bar" role="note">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="site">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Gama Sorvetes — início">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="14" fill="#4b1d5e"/>
+          <path d="M16 24 24 41 32 24Z" fill="#e8a95b"/>
+          <path d="M19 27l9 7M22 24l8 6M26 24l3 3" stroke="#c98538" stroke-width="1.4"/>
+          <circle cx="24" cy="18" r="9" fill="#ff4f8b"/>
+          <circle cx="17.5" cy="23" r="5" fill="#3fd6b4"/>
+          <circle cx="30.5" cy="23" r="5" fill="#ffd65a"/>
+          <circle cx="21" cy="15" r="2.4" fill="#fff" opacity=".55"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Gama Sorvetes</strong>
+          <span>Barra Bonita · SP</span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">A sorveteria</a></li>
+          <li><a href="#sabores">Delícias</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao">Onde estamos</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-berry nav-cta" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#sobre">A sorveteria</a></li>
+        <li><a href="#sabores">Delícias</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#localizacao">Onde estamos</a></li>
+        <li><a class="btn btn-berry" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Chamar no WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero on-dark">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Sorveteria &amp; açaí artesanal · Centro de Barra Bonita</span>
+          <h1>A pausa mais <em>gelada</em> e gostosa do Centro tem <span class="u">nota 5,0</span>.</h1>
+          <p class="lead">A Gama Sorvetes chegou a Barra Bonita em agosto de 2026 com sorvetes e açaí artesanais. Passe na loja da Rua Primeiro de Março ou peça no conforto de casa pelo iFood.</p>
+          <div class="hero-actions">
+            <a class="btn btn-berry" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              Falar no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#localizacao">Como chegar</a>
+          </div>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              R. Primeiro de Março, 25 · Centro
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              5,0 no Google · 45 avaliações
+            </span>
+          </div>
+        </div>
+
+        <div class="art" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="ring"></div>
+          <svg class="cone" viewBox="0 0 260 340">
+            <!-- casquinha -->
+            <path d="M70 168 130 330 190 168Z" fill="#e8a95b"/>
+            <g stroke="#c98538" stroke-width="3" opacity=".8">
+              <path d="M84 180 156 300M104 172 170 262M130 170 182 220M176 180 104 300M156 172 92 262M130 170 80 218"/>
+            </g>
+            <!-- bola de baixo (menta) -->
+            <circle cx="88" cy="160" r="40" fill="#3fd6b4"/>
+            <circle cx="172" cy="160" r="40" fill="#ffd65a"/>
+            <!-- bola de cima (morango) -->
+            <circle cx="130" cy="110" r="52" fill="#ff4f8b"/>
+            <!-- calda derretendo -->
+            <path d="M82 100c4-30 26-46 48-46s44 16 48 46c-6 6-10 0-14 8s-2 22-9 22-6-16-12-16-4 26-12 26-6-22-12-22-6 12-12 12-4-18-10-18-8 6-15-12Z" fill="#6a2c84"/>
+            <!-- brilhos -->
+            <ellipse cx="108" cy="70" rx="10" ry="6" fill="#fff" opacity=".45" transform="rotate(-25 108 70)"/>
+            <ellipse cx="72" cy="146" rx="7" ry="4" fill="#fff" opacity=".5" transform="rotate(-30 72 146)"/>
+            <ellipse cx="160" cy="144" rx="7" ry="4" fill="#fff" opacity=".55" transform="rotate(-30 160 144)"/>
+            <!-- granulado -->
+            <g stroke-width="4" stroke-linecap="round">
+              <path d="M112 46l6 3" stroke="#ffd65a"/>
+              <path d="M140 40l-2 6" stroke="#3fd6b4"/>
+              <path d="M158 56l6-2" stroke="#fff"/>
+              <path d="M124 60l-5 4" stroke="#3fd6b4"/>
+              <path d="M146 66l4 4" stroke="#ffd65a"/>
+            </g>
+            <!-- cereja -->
+            <path d="M132 22c2-10 8-16 16-18" stroke="#2f7a52" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <circle cx="130" cy="34" r="13" fill="#e01e5a"/>
+            <circle cx="125" cy="29" r="4" fill="#fff" opacity=".55"/>
+          </svg>
+          <div class="badge-float b1">
+            <div class="n">5,0</div>
+            <div class="st">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <small>45 avaliações no Google</small>
+          </div>
+          <div class="badge-float b2">
+            <div class="n">@gamasorvetesbarrabonita</div>
+            <small>2.161 seguidores no Instagram</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Destaques">
+      <div class="container stats-grid">
+        <div class="stat reveal"><div class="v">5,0★</div><div class="k">Nota no Google</div></div>
+        <div class="stat reveal"><div class="v">45</div><div class="k">Avaliações</div></div>
+        <div class="stat reveal"><div class="v">2.161</div><div class="k">Seguidores no Instagram</div></div>
+        <div class="stat reveal"><div class="v">ago/2026</div><div class="k">Inauguração</div></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">A sorveteria</span>
+          <h2>Sorvete e açaí artesanal, bem no Centro de Barra Bonita</h2>
+          <p>A Gama Sorvetes Barra Bonita abriu as portas em agosto de 2026 e virou parada certa para quem quer se refrescar no Centro da cidade.</p>
+          <p>Em poucos meses, os clientes já deixaram <strong>45 avaliações no Google, com nota 5,0</strong>. Dá para aproveitar na loja física ou receber em casa pelo delivery do iFood — e tirar dúvidas direto pelo WhatsApp.</p>
+        </div>
+        <div class="about-panel reveal">
+          <ul>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11 12 22l4-11"/><circle cx="12" cy="8" r="5"/></svg></span>
+              <div><strong>Artesanal</strong><span>Sorveteria e açaí com proposta artesanal.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
+              <div><strong>Nota máxima</strong><span>5,0 estrelas em 45 avaliações no Google.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3Z"/><path d="M9 20v-6h6v6"/></svg></span>
+              <div><strong>Loja + delivery</strong><span>Atendimento na loja física e entregas pelo iFood.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <div><strong>No Centro</strong><span>R. Primeiro de Março, 25 — Barra Bonita/SP.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sabores" class="section menu-sec">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Delícias</span>
+          <h2>Pra todo tipo de vontade</h2>
+          <p>Do sorvete na casquinha ao açaí caprichado na tigela: escolha o seu jeito de se refrescar.</p>
+        </div>
+        <div class="prod-grid">
+          <article class="prod p1 reveal">
+            <div class="pic">
+              <span class="pill">Sorvetes</span>
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <path d="M52 78 80 150 108 78Z" fill="#e8a95b"/>
+                <path d="M60 86l34 46M70 80l30 34M100 86 66 132M90 80 60 114" stroke="#c98538" stroke-width="2.5"/>
+                <circle cx="80" cy="62" r="32" fill="#ff4f8b"/>
+                <circle cx="80" cy="34" r="10" fill="#e01e5a"/>
+                <ellipse cx="68" cy="50" rx="7" ry="4" fill="#fff" opacity=".5" transform="rotate(-25 68 50)"/>
+              </svg>
+            </div>
+            <div class="body">
+              <h3>Sorvete artesanal</h3>
+              <p>Sabores pra escolher na hora, na casquinha ou no copinho. Pergunte o que tem de novo no balcão.</p>
+              <a class="link" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20quais%20sabores%20de%20sorvete%20voc%C3%AAs%20t%C3%AAm%20hoje." target="_blank" rel="noopener">Perguntar os sabores &rarr;</a>
+            </div>
+          </article>
+          <article class="prod p2 reveal">
+            <div class="pic">
+              <span class="pill">Açaí</span>
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <path d="M24 74h112c0 40-26 64-56 64S24 114 24 74Z" fill="#fff" />
+                <path d="M30 86h100" stroke="#e6d4ee" stroke-width="4"/>
+                <ellipse cx="80" cy="74" rx="56" ry="16" fill="#4b1d5e"/>
+                <ellipse cx="80" cy="70" rx="50" ry="12" fill="#6a2c84"/>
+                <circle cx="62" cy="64" r="8" fill="#ff4f8b"/>
+                <circle cx="96" cy="62" r="7" fill="#ffd65a"/>
+                <circle cx="80" cy="58" r="6" fill="#3fd6b4"/>
+                <path d="M104 52c6-10 16-12 22-8" stroke="#2f7a52" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <g fill="#fff"><circle cx="70" cy="74" r="2"/><circle cx="88" cy="76" r="2"/><circle cx="110" cy="70" r="2"/><circle cx="48" cy="72" r="2"/></g>
+              </svg>
+            </div>
+            <div class="body">
+              <h3>Açaí na tigela</h3>
+              <p>Aquele açaí cremoso pra montar do seu jeito, com os acompanhamentos que você mais gosta.</p>
+              <a class="link" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Montar meu açaí &rarr;</a>
+            </div>
+          </article>
+          <article class="prod p3 reveal">
+            <div class="pic">
+              <span class="pill">Delivery</span>
+              <svg viewBox="0 0 160 160" aria-hidden="true">
+                <rect x="34" y="54" width="92" height="80" rx="14" fill="#fff"/>
+                <path d="M34 72h92" stroke="#c6f3e6" stroke-width="5"/>
+                <path d="M60 54a20 20 0 0 1 40 0" stroke="#4b1d5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <circle cx="80" cy="102" r="18" fill="#ff4f8b"/>
+                <path d="M72 102l6 6 10-12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 96h12M8 110h18M16 124h10" stroke="#3fd6b4" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="body">
+              <h3>Em casa, pelo iFood</h3>
+              <p>Bateu a vontade e não dá pra sair? A Gama Sorvetes entrega em Barra Bonita pelo iFood.</p>
+              <a class="link" href="https://www.instagram.com/gamasorvetesbarrabonita/" target="_blank" rel="noopener">Ver o link do iFood no Instagram &rarr;</a>
+            </div>
+          </article>
+        </div>
+        <p class="disclaimer">Ilustrações meramente demonstrativas. Sabores, acompanhamentos e valores atualizados: consulte a loja, o WhatsApp ou o iFood.</p>
+      </div>
+    </section>
+
+    <section id="pedir" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Como aproveitar</span>
+          <h2>Três jeitos de matar a vontade</h2>
+          <p>Tudo o que você precisa pra encontrar a Gama Sorvetes, reunido em um só lugar.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card feature reveal">
+            <span class="tag">Direto com a loja</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11.5h7"/><path d="M8.5 14.5h4"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Tire dúvidas sobre sabores, açaí e atendimento conversando direto com a equipe.</p>
+            <a class="card-link" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">(14) 99759-7562 &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Loja física</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6v10H3Z"/><path d="M9 20v-6h6v6"/></svg>
+            </div>
+            <h3>Venha à loja</h3>
+            <p>Passe na R. Primeiro de Março, 25, no Centro, e escolha pessoalmente o seu sorvete ou açaí.</p>
+            <a class="card-link" href="https://www.google.com/maps/search/?api=1&query=Gama+Sorvetes+R.+Primeiro+de+Mar%C3%A7o,+25+Centro+Barra+Bonita+SP+17340-035" target="_blank" rel="noopener">Abrir no Google Maps &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Novidades</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </div>
+            <h3>Instagram</h3>
+            <p>Siga o <strong>@gamasorvetesbarrabonita</strong> (2.161 seguidores) — o link do iFood está na bio.</p>
+            <a class="card-link" href="https://www.instagram.com/gamasorvetesbarrabonita/" target="_blank" rel="noopener">Ver o perfil &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="section rep on-dark">
+      <div class="container rep-grid">
+        <div class="rep-score reveal">
+          <div class="g">Avaliação no Google</div>
+          <div class="big">5,0</div>
+          <div class="stars" aria-label="5,0 de 5 estrelas">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </div>
+          <div class="note">45 avaliações de clientes</div>
+        </div>
+        <div class="rep-copy reveal">
+          <span class="eyebrow">Quem prova, aprova</span>
+          <h2>45 avaliações, todas somando nota 5,0</h2>
+          <p>Inaugurada em agosto de 2026, a Gama Sorvetes já reúne 45 avaliações no Google com média máxima — um ótimo cartão de visitas pra quem ainda não conhece a loja.</p>
+          <div class="facts">
+            <div class="fact"><div class="v">5,0 ★</div><div class="k">Média no Google</div></div>
+            <div class="fact"><div class="v">45</div><div class="k">Avaliações de clientes</div></div>
+            <div class="fact"><div class="v">2.161</div><div class="k">Seguidores no Instagram</div></div>
+            <div class="fact"><div class="v">Ago/2026</div><div class="k">Inauguração da loja</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Onde estamos</span>
+          <h2>No coração de Barra Bonita</h2>
+          <p>Fácil de achar: Rua Primeiro de Março, 25, no Centro.</p>
+        </div>
+        <div class="loc-grid">
+          <div class="loc-card reveal">
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><div class="k">Endereço</div><div class="v">R. Primeiro de Março, 25<br>Centro<br>Barra Bonita - SP, 17340-035</div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              <div><div class="k">WhatsApp</div><div class="v"><a href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">(14) 99759-7562</a></div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 7h12l-1 13H7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+              <div><div class="k">Delivery</div><div class="v">Pelo iFood — link na bio do <a href="https://www.instagram.com/gamasorvetesbarrabonita/" target="_blank" rel="noopener">@gamasorvetesbarrabonita</a></div></div>
+            </div>
+            <div class="loc-cta">
+              <a class="btn btn-acai" href="https://www.google.com/maps/search/?api=1&query=Gama+Sorvetes+R.+Primeiro+de+Mar%C3%A7o,+25+Centro+Barra+Bonita+SP+17340-035" target="_blank" rel="noopener">Abrir no Google Maps</a>
+              <a class="btn btn-berry" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-pin" aria-hidden="true"></div>
+            <h3>Barra Bonita · SP</h3>
+            <p>R. Primeiro de Março, 25 — Centro</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gama+Sorvetes+R.+Primeiro+de+Mar%C3%A7o,+25+Centro+Barra+Bonita+SP+17340-035" target="_blank" rel="noopener">Ver rota no mapa &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="cta">
+      <div class="container reveal">
+        <span class="eyebrow">Deu vontade?</span>
+        <h2>Seu sorvete ou açaí está a <em>uma mensagem</em> de distância.</h2>
+        <p>Chame a Gama Sorvetes no WhatsApp, passe na loja do Centro ou peça pelo iFood.</p>
+        <div class="row">
+          <a class="btn btn-berry" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.instagram.com/gamasorvetesbarrabonita/" target="_blank" rel="noopener">Seguir no Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Gama Sorvetes Barra Bonita</strong><br>Sorveteria &amp; açaí artesanal · Barra Bonita/SP · <a href="https://www.instagram.com/gamasorvetesbarrabonita/" target="_blank" rel="noopener">@gamasorvetesbarrabonita</a></div>
+      <div>R. Primeiro de Março, 25 — Centro, 17340-035<br><small>Prévia de demonstração — não é o site oficial. Hoje a loja divulga seus canais pelo Google, Instagram e iFood, sem site próprio.</small></div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5514997597562?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20os%20sorvetes%20e%20o%20a%C3%A7a%C3%AD." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.4-1.9-1.3-2.3-2.3l.8-1-1-2Z" fill="currentColor" stroke="none"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var t = document.querySelector('.menu-toggle'), m = document.getElementById('mobile-menu');
+      t.addEventListener('click', function () {
+        var o = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', o ? 'true' : 'false');
+        t.setAttribute('aria-label', o ? 'Fechar menu' : 'Abrir menu');
+      });
+      m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }); });
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
