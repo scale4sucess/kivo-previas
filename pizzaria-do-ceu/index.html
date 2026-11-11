@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pizzaria do Céu · Conchas/SP — prévia</title>
+  <meta name="description" content="Pizzaria do Céu: pizzaria em Conchas/SP. Nota 4,4 no Google, pedidos pelo WhatsApp e Instagram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #1c1512;
+      --night-2: #241b17;
+      --tomato: #c23b22;
+      --tomato-2: #db4f32;
+      --tomato-deep: #8f2a16;
+      --basil: #4f7942;
+      --basil-2: #6a9a58;
+      --flour: #fff8ec;
+      --crust: #f4e3c2;
+      --paper: #fffaf1;
+      --white: #ffffff;
+      --ink: #2a2017;
+      --ink-soft: #776553;
+      --muted-dark: #c7b6a0;
+      --line: #ecdcb9;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 800; line-height: 1.06; margin: 0 0 .5em; letter-spacing: -.02em; }
+    h3 { font-weight: 700; }
+    p { margin: 0 0 1em; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .6rem; font-size: .74rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--tomato); margin-bottom: 1rem;
+    }
+    .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; box-shadow: 4px -4px 0 -2px var(--basil); }
+    .on-dark .eyebrow { color: var(--basil-2); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      padding: .95rem 1.5rem; border-radius: 14px; font-weight: 700; font-size: .95rem;
+      text-decoration: none; border: 2px solid transparent; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn-tomato { background: var(--tomato); color: var(--white); box-shadow: 0 6px 0 var(--tomato-deep); }
+    .btn-tomato:hover { background: var(--tomato-2); box-shadow: 0 8px 0 var(--tomato-deep); }
+    .btn-basil { background: var(--basil); color: var(--white); box-shadow: 0 6px 0 #355a2b; }
+    .btn-basil:hover { background: var(--basil-2); box-shadow: 0 8px 0 #355a2b; }
+    .btn-line { border-color: rgba(255,248,236,.38); color: var(--flour); }
+    .btn-line:hover { background: var(--flour); color: var(--night); }
+    .btn-dark { background: var(--night); color: var(--flour); }
+    .btn-dark:hover { background: #3a2c24; }
+    .btn-outline { border-color: var(--night); color: var(--night); }
+    .btn-outline:hover { background: var(--night); color: var(--flour); }
+
+    .preview-bar { background: var(--crust); color: var(--night); font-size: .8rem; font-weight: 700; text-align: center; padding: .5rem 1rem; letter-spacing: .02em; }
+
+    header.site {
+      position: sticky; top: 0; z-index: 50; background: rgba(28,21,18,.94);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(79,121,66,.22);
+      color: var(--flour);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+    .brand-mark { width: 44px; height: 44px; flex: none; }
+    .brand-text strong { display: block; font-family: "Fraunces", serif; font-size: 1.2rem; font-weight: 800; line-height: 1; letter-spacing: -.01em; }
+    .brand-text span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted-dark); }
+    .menu ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+    .menu a { text-decoration: none; font-size: .92rem; font-weight: 500; color: #ebdcc8; }
+    .menu a:hover { color: var(--basil-2); }
+    .nav-cta { padding: .65rem 1.1rem; box-shadow: 0 4px 0 var(--tomato-deep); }
+    .menu-toggle { display: none; background: none; border: 0; width: 42px; height: 42px; cursor: pointer; position: relative; }
+    .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+      position: absolute; left: 10px; width: 22px; height: 2px; background: var(--flour); content: ""; transition: transform .2s;
+    }
+    .menu-toggle span { top: 20px; }
+    .menu-toggle span::before { top: -7px; left: 0; }
+    .menu-toggle span::after { top: 7px; left: 0; }
+    .menu-toggle[aria-expanded="true"] span { background: transparent; }
+    .menu-toggle[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: none; border-top: 1px solid rgba(79,121,66,.22); }
+    .mobile-menu ul { list-style: none; margin: 0; padding: 1rem 22px 1.6rem; display: grid; gap: .9rem; }
+    .mobile-menu a { text-decoration: none; color: #ebdcc8; }
+    .mobile-menu .btn { color: var(--white); justify-self: start; }
+    .mobile-menu.open { display: block; }
+
+    .hero {
+      position: relative; overflow: hidden; color: var(--flour);
+      background:
+        radial-gradient(820px 520px at 85% 15%, rgba(194,59,34,.40), transparent 62%),
+        radial-gradient(620px 420px at 5% 105%, rgba(79,121,66,.22), transparent 70%),
+        var(--night);
+      padding: 92px 0 108px;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image: repeating-linear-gradient(-28deg, rgba(255,255,255,.022) 0 3px, transparent 3px 46px);
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); color: var(--white); }
+    .hero h1 em { font-style: normal; color: var(--tomato-2); }
+    .hero h1 .u { background: linear-gradient(transparent 68%, rgba(79,121,66,.55) 68%); }
+    .lead { font-size: 1.14rem; color: #e6d8c4; max-width: 33rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 2.1rem 0 2.4rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; color: var(--muted-dark); }
+    .hero-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+    .hero-meta svg { width: 16px; height: 16px; color: var(--basil-2); }
+
+    .art { position: relative; height: 440px; display: grid; place-items: center; }
+    .art .halo { position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(194,59,34,.38), rgba(28,21,18,0) 68%); }
+    .art .ring { position: absolute; width: 330px; height: 330px; border-radius: 50%; border: 1.5px dashed rgba(79,121,66,.3); }
+    .pizza { position: relative; z-index: 2; width: 300px; filter: drop-shadow(0 30px 40px rgba(0,0,0,.5)); }
+    .badge-float {
+      position: absolute; z-index: 3; background: var(--flour); color: var(--ink); border-radius: 16px;
+      padding: 14px 18px; box-shadow: 0 18px 40px rgba(0,0,0,.4); text-align: left;
+    }
+    .badge-float .n { font-family: "Fraunces", serif; font-size: 2rem; font-weight: 800; line-height: 1; color: var(--night); }
+    .badge-float small { display: block; font-size: .76rem; color: var(--ink-soft); }
+    .badge-float .st { display: flex; gap: 2px; color: var(--basil); margin: .3rem 0 .2rem; }
+    .badge-float .st svg { width: 14px; height: 14px; }
+    .badge-float.b1 { top: 26px; right: 4px; transform: rotate(4deg); }
+    .badge-float.b2 { bottom: 34px; left: 0; transform: rotate(-4deg); background: var(--tomato); color: var(--white); }
+    .badge-float.b2 .n { color: var(--white); font-size: 1.5rem; }
+    .badge-float.b2 small { color: #ffd9ce; }
+
+    .stats { background: var(--tomato); color: var(--white); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .stat { padding: 32px 18px; text-align: center; border-left: 1px solid rgba(255,255,255,.18); }
+    .stat:first-child { border-left: 0; }
+    .stat .v { font-family: "Fraunces", serif; font-size: 2.2rem; font-weight: 800; line-height: 1; }
+    .stat .k { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: #ffe0d6; margin-top: .6rem; }
+
+    .section { padding: 104px 0; }
+    .section-head { max-width: 660px; margin-bottom: 52px; }
+    .section-head h2 { font-size: clamp(2rem, 3.8vw, 3rem); }
+    .section-head p { color: var(--ink-soft); font-size: 1.06rem; }
+
+    .about { background: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-panel {
+      position: relative; border-radius: 22px; padding: 42px 36px; background: var(--crust); border: 1px solid var(--line); overflow: hidden;
+    }
+    .about-panel::before {
+      content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, var(--tomato-2), var(--tomato-deep)); opacity: .9;
+    }
+    .about-panel ul { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .about-panel li { display: flex; gap: 14px; align-items: flex-start; }
+    .about-panel li .dot { width: 34px; height: 34px; flex: none; border-radius: 10px; background: var(--night); color: var(--basil-2); display: grid; place-items: center; }
+    .about-panel li .dot svg { width: 18px; height: 18px; }
+    .about-panel li strong { display: block; font-family: "Fraunces", serif; font-size: 1.1rem; }
+    .about-panel li span { color: var(--ink-soft); font-size: .95rem; }
+    .about-copy p { color: var(--ink-soft); font-size: 1.06rem; }
+
+    .order { background: var(--white); }
+    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px;
+      position: relative; transition: transform .25s, box-shadow .25s, border-color .25s; display: flex; flex-direction: column;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(42,32,23,.10); border-color: #e3c98f; }
+    .card .icon { width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center; background: var(--tomato); color: var(--white); margin-bottom: 1.3rem; }
+    .card .icon svg { width: 26px; height: 26px; }
+    .card h3 { font-size: 1.35rem; }
+    .card p { color: var(--ink-soft); font-size: .97rem; }
+    .card .card-link { margin-top: auto; padding-top: .6rem; font-weight: 700; font-size: .92rem; color: var(--tomato); text-decoration: none; }
+    .card .card-link:hover { color: var(--tomato-deep); }
+    .card.feature { background: var(--night); border-color: var(--night); color: var(--flour); }
+    .card.feature .icon { background: var(--basil); color: var(--white); }
+    .card.feature p { color: #d9cab4; }
+    .card.feature .card-link { color: var(--basil-2); }
+    .tag { display: inline-block; align-self: flex-start; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 999px; background: rgba(194,59,34,.08); color: var(--tomato); border: 1px solid rgba(194,59,34,.2); margin-bottom: .9rem; }
+    .card.feature .tag { background: rgba(79,121,66,.16); color: var(--basil-2); border-color: rgba(79,121,66,.34); }
+
+    .rep { background: var(--night); color: var(--flour); position: relative; overflow: hidden; }
+    .rep::before { content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none; background-image: repeating-linear-gradient(-28deg, rgba(255,255,255,.02) 0 3px, transparent 3px 46px); }
+    .rep-grid { position: relative; display: grid; grid-template-columns: .85fr 1.15fr; gap: 64px; align-items: center; }
+    .rep-score { text-align: center; padding: 48px 30px; border-radius: 22px; background: linear-gradient(160deg, var(--tomato), var(--tomato-deep)); box-shadow: 0 24px 50px rgba(0,0,0,.35); }
+    .rep-score .big { font-family: "Fraunces", serif; font-size: 6.2rem; font-weight: 800; line-height: 1; color: var(--white); }
+    .stars { display: flex; justify-content: center; gap: 6px; margin: .9rem 0 .8rem; color: #ffd9ce; }
+    .stars svg { width: 26px; height: 26px; }
+    .rep-score .note { color: #ffe0d6; font-size: .95rem; }
+    .rep h2 { font-size: clamp(2rem, 3.8vw, 3rem); color: var(--white); }
+    .rep-copy p { color: #d9cab4; font-size: 1.06rem; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 1.8rem; }
+    .fact { padding: 20px 22px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(79,121,66,.22); }
+    .fact .v { font-family: "Fraunces", serif; font-size: 1.6rem; font-weight: 800; color: var(--basil-2); line-height: 1.1; }
+    .fact .k { font-size: .86rem; color: var(--muted-dark); }
+
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+    .loc-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 40px; }
+    .loc-row { display: flex; gap: 1rem; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .loc-row:last-of-type { border-bottom: 0; }
+    .loc-row svg { width: 22px; height: 22px; color: var(--tomato); flex: none; margin-top: 3px; }
+    .loc-row .k { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--tomato); font-weight: 700; }
+    .loc-row .v { font-size: 1.03rem; color: var(--ink); }
+    .loc-row .v a { color: var(--ink); }
+    .loc-cta { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: .8rem; }
+    .map-card {
+      border-radius: 20px; overflow: hidden; position: relative; min-height: 360px; color: var(--flour);
+      background:
+        linear-gradient(170deg, rgba(28,21,18,.05), rgba(28,21,18,.92)),
+        repeating-linear-gradient(20deg, rgba(255,248,236,.16) 0 2px, transparent 2px 52px),
+        repeating-linear-gradient(-70deg, rgba(255,248,236,.12) 0 2px, transparent 2px 64px),
+        var(--tomato-deep);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 36px;
+    }
+    .map-pin { position: absolute; top: 36%; left: 50%; transform: translate(-50%,-50%); width: 58px; height: 58px; border-radius: 50% 50% 50% 0; rotate: -45deg; background: var(--basil); box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+    .map-pin::after { content: ""; position: absolute; inset: 18px; border-radius: 50%; background: var(--night); }
+    .map-card h3 { font-size: 1.9rem; color: var(--white); margin-bottom: .2rem; }
+    .map-card p { color: #f3e2cf; margin: 0; }
+    .map-card a { color: var(--basil-2); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 1rem; font-size: .92rem; }
+
+    .cta { background: var(--crust); padding: 92px 0; text-align: center; border-top: 1px solid var(--line); }
+    .cta h2 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); max-width: 760px; margin: 0 auto .5em; }
+    .cta h2 em { font-style: normal; color: var(--tomato); }
+    .cta p { color: var(--ink-soft); font-size: 1.08rem; max-width: 560px; margin: 0 auto 2rem; }
+    .cta .row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    footer { background: #140f0d; color: #ad9a84; padding: 40px 0; font-size: .86rem; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.2rem; align-items: center; }
+    .foot strong { font-family: "Fraunces", serif; font-size: 1.2rem; color: var(--flour); font-weight: 800; }
+    .foot a { color: var(--basil-2); text-decoration: none; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } .btn:hover, .card:hover { transform: none; } }
+
+    @media (max-width: 960px) {
+      .hero-grid, .rep-grid, .loc-grid, .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .art { height: 380px; max-width: 440px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 760px) {
+      .menu, .nav-cta { display: none; }
+      .menu-toggle { display: block; }
+      .hero { padding: 60px 0 76px; }
+      .section { padding: 76px 0; }
+      .card-grid, .facts, .stats-grid { grid-template-columns: 1fr; }
+      .stat { border-left: 0; border-top: 1px solid rgba(255,255,255,.18); }
+      .stat:first-child { border-top: 0; }
+      .loc-card { padding: 28px; }
+      .about-panel { padding: 34px 24px; }
+      .art { height: 340px; }
+      .art .halo { width: 300px; height: 300px; }
+      .art .ring { width: 270px; height: 270px; }
+      .pizza { width: 230px; }
+      .badge-float { padding: 11px 14px; }
+      .badge-float .n { font-size: 1.6rem; }
+      .badge-float.b2 .n { font-size: 1.25rem; }
+      .hero-actions .btn, .cta .row .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-bar" role="note">Prévia de demonstração visual — não é o site oficial da empresa.</div>
+
+  <header class="site">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Pizzaria do Céu — início">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="12" fill="#c23b22"/>
+          <circle cx="24" cy="25" r="14" fill="#fff8ec"/>
+          <circle cx="19" cy="20" r="2.4" fill="#c23b22"/>
+          <circle cx="29" cy="22" r="2" fill="#4f7942"/>
+          <circle cx="24" cy="30" r="2.2" fill="#c23b22"/>
+          <circle cx="31" cy="29" r="1.8" fill="#4f7942"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Pizzaria do Céu</strong>
+          <span>Conchas · SP</span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">A casa</a></li>
+          <li><a href="#pedir">Como pedir</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-tomato nav-cta" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu"><span></span></button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu móvel">
+      <ul>
+        <li><a href="#sobre">A casa</a></li>
+        <li><a href="#pedir">Como pedir</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a class="btn btn-tomato" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">Pedir no WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero on-dark">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Pizzaria em Conchas/SP</span>
+          <h1>A pizza do <em>centro</em> de Conchas, com <span class="u">nota 4,4</span>.</h1>
+          <p class="lead">A Pizzaria do Céu atende o Centro de Conchas e hoje recebe pedidos pelo WhatsApp, pelo Instagram e pela plataforma de pedidos online — sem um site próprio da casa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-tomato" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              Pedir pelo WhatsApp
+            </a>
+            <a class="btn btn-line" href="https://www.instagram.com/pizzariadoceu/" target="_blank" rel="noopener">Ver o Instagram</a>
+          </div>
+          <div class="hero-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Centro · Conchas/SP
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              4,4 no Google · 26 avaliações
+            </span>
+          </div>
+        </div>
+
+        <div class="art" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="ring"></div>
+          <svg class="pizza" viewBox="0 0 300 300">
+            <circle cx="150" cy="150" r="120" fill="#e39a3b"/>
+            <circle cx="150" cy="150" r="104" fill="#f6c443"/>
+            <circle cx="150" cy="150" r="92" fill="#fbe9a8"/>
+            <g fill="#c23b22">
+              <circle cx="110" cy="110" r="12"/>
+              <circle cx="180" cy="100" r="11"/>
+              <circle cx="205" cy="160" r="12"/>
+              <circle cx="160" cy="195" r="10"/>
+              <circle cx="100" cy="180" r="11"/>
+              <circle cx="150" cy="150" r="11"/>
+            </g>
+            <g fill="#4f7942">
+              <ellipse cx="135" cy="135" rx="9" ry="5" transform="rotate(20 135 135)"/>
+              <ellipse cx="190" cy="140" rx="9" ry="5" transform="rotate(-15 190 140)"/>
+              <ellipse cx="120" cy="175" rx="9" ry="5" transform="rotate(40 120 175)"/>
+              <ellipse cx="175" cy="185" rx="9" ry="5" transform="rotate(-30 175 185)"/>
+            </g>
+            <path d="M150 30a120 120 0 0 1 104 60" stroke="#8f2a16" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <div class="badge-float b1">
+            <div class="n">4,4</div>
+            <div class="st">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <small>26 avaliações no Google</small>
+          </div>
+          <div class="badge-float b2">
+            <div class="n">@pizzariadoceu</div>
+            <small>3.515 seguidores no Instagram</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Destaques">
+      <div class="container stats-grid">
+        <div class="stat"><div class="v">4,4★</div><div class="k">Nota no Google</div></div>
+        <div class="stat"><div class="v">26</div><div class="k">Avaliações</div></div>
+        <div class="stat"><div class="v">3.515</div><div class="k">Seguidores no Instagram</div></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">A casa</span>
+          <h2>Pizzaria do Centro de Conchas</h2>
+          <p>A Pizzaria do Céu fica na R. Mato Grosso, 440, no Centro de Conchas, e mantém nota 4,4 no Google com 26 avaliações.</p>
+          <p>Hoje a casa ainda não tem um site próprio: o campo de site do seu perfil no Google aponta para uma plataforma de pedidos online de terceiros (menu10.com.br), e o contato com os clientes segue pelo Instagram <strong>@pizzariadoceu</strong>, com 3.515 seguidores.</p>
+        </div>
+        <div class="about-panel reveal">
+          <ul>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></span>
+              <div><strong>Pizzaria</strong><span>Pizzaria no Centro de Conchas/SP.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span>
+              <div><strong>Nota 4,4</strong><span>26 avaliações no Google.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <div><strong>Centro</strong><span>R. Mato Grosso, 440 — Conchas/SP.</span></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+              <div><strong>3.515 seguidores</strong><span>Comunidade ativa no Instagram @pizzariadoceu.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="pedir" class="section order">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Como pedir</span>
+          <h2>Bateu a fome? Escolha o seu caminho</h2>
+          <p>Hoje os pedidos da Pizzaria do Céu chegam pelo WhatsApp, pelo Instagram ou pela plataforma de pedidos online indicada no perfil do Google.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card feature reveal">
+            <span class="tag">Direto com a casa</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11.5h7"/><path d="M8.5 14.5h4"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Mande uma mensagem e combine o seu pedido diretamente com a Pizzaria do Céu.</p>
+            <a class="card-link" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">Chamar no WhatsApp &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Delivery</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            </div>
+            <h3>Pedidos online</h3>
+            <p>O perfil da casa no Google indica uma plataforma de pedidos online de terceiros para delivery.</p>
+            <a class="card-link" href="https://menu10.com.br/" target="_blank" rel="noopener">Abrir a plataforma &rarr;</a>
+          </article>
+          <article class="card reveal">
+            <span class="tag">Novidades</span>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </div>
+            <h3>Instagram</h3>
+            <p>Acompanhe a Pizzaria do Céu no <strong>@pizzariadoceu</strong>, com 3.515 seguidores.</p>
+            <a class="card-link" href="https://www.instagram.com/pizzariadoceu/" target="_blank" rel="noopener">Ver o perfil &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="section rep on-dark">
+      <div class="container rep-grid">
+        <div class="rep-score reveal">
+          <div class="big">4,4</div>
+          <div class="stars" aria-label="4,4 de 5 estrelas">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </div>
+          <div class="note">26 avaliações no Google</div>
+        </div>
+        <div class="rep-copy reveal">
+          <span class="eyebrow">Reputação</span>
+          <h2>Nota alta, bairro fiel</h2>
+          <p>Com 26 avaliações no Google, a Pizzaria do Céu mantém nota 4,4 — um sinal forte da clientela do Centro de Conchas.</p>
+          <div class="facts">
+            <div class="fact"><div class="v">4,4 ★</div><div class="k">Média no Google</div></div>
+            <div class="fact"><div class="v">26</div><div class="k">Avaliações de clientes</div></div>
+            <div class="fact"><div class="v">3.515</div><div class="k">Seguidores no @pizzariadoceu</div></div>
+            <div class="fact"><div class="v">Conchas</div><div class="k">Centro · SP</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="localizacao" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Localização</span>
+          <h2>No Centro de Conchas</h2>
+          <p>Encontre a Pizzaria do Céu na R. Mato Grosso, 440.</p>
+        </div>
+        <div class="loc-grid">
+          <div class="loc-card reveal">
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <div><div class="k">Endereço</div><div class="v">R. Mato Grosso, 440<br>Centro<br>Conchas - SP</div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+              <div><div class="k">Pedidos</div><div class="v">WhatsApp direto com a casa, pelo botão abaixo</div></div>
+            </div>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              <div><div class="k">Delivery</div><div class="v">Plataforma de pedidos online indicada no perfil do Google: <a href="https://menu10.com.br/" target="_blank" rel="noopener">menu10.com.br</a></div></div>
+            </div>
+            <div class="loc-cta">
+              <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Pizzaria+do+C%C3%A9u+R.+Mato+Grosso,+440+Centro+Conchas+SP" target="_blank" rel="noopener">Abrir no Google Maps</a>
+              <a class="btn btn-tomato" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-pin" aria-hidden="true"></div>
+            <h3>Conchas · SP</h3>
+            <p>R. Mato Grosso, 440 — Centro</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pizzaria+do+C%C3%A9u+R.+Mato+Grosso,+440+Centro+Conchas+SP" target="_blank" rel="noopener">Ver rota no mapa &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="cta">
+      <div class="container reveal">
+        <span class="eyebrow">Bateu a fome?</span>
+        <h2>Sua próxima pizza está a <em>uma mensagem</em> de distância.</h2>
+        <p>Chame a Pizzaria do Céu no WhatsApp ou acompanhe as novidades no Instagram.</p>
+        <div class="row">
+          <a class="btn btn-tomato" href="https://wa.me/5514981182833?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20e%20quero%20saber%20mais%20sobre%20as%20pizzas." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            Pedir pelo WhatsApp
+          </a>
+          <a class="btn btn-outline" href="https://www.instagram.com/pizzariadoceu/" target="_blank" rel="noopener">Ver o Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div><strong>Pizzaria do Céu</strong><br>Pizzaria · Conchas/SP · <a href="https://www.instagram.com/pizzariadoceu/" target="_blank" rel="noopener">@pizzariadoceu</a></div>
+      <div>R. Mato Grosso, 440 — Centro<br><small>Prévia de demonstração — não é o site oficial. Hoje a casa atende pelo Instagram, WhatsApp e uma plataforma de pedidos online de terceiros, sem site próprio.</small></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var t = document.querySelector('.menu-toggle'), m = document.getElementById('mobile-menu');
+      t.addEventListener('click', function () {
+        var o = m.classList.toggle('open');
+        t.setAttribute('aria-expanded', o ? 'true' : 'false');
+        t.setAttribute('aria-label', o ? 'Fechar menu' : 'Abrir menu');
+      });
+      m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }); });
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
