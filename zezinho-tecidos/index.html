@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Zezinho Tecidos | São Manuel – SP</title>
+<meta name="description" content="Zezinho Tecidos — tecidos, armarinho e confecções em São Manuel/SP desde 1993. Cama, mesa e banho, roupas e decoração. Rua Epitácio Pessoa, 201, Centro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#24191c;
+    --ink-soft:#4f4246;
+    --muted:#85767a;
+    --linen:#f6efe6;
+    --paper:#fffcf7;
+    --line:#e8dccd;
+    --wine:#6e1f33;
+    --wine-deep:#4f1424;
+    --indigo:#22304f;
+    --indigo-deep:#172038;
+    --ochre:#c98a3a;
+    --ochre-light:#f0d8b2;
+    --serif:'Playfair Display', Georgia, serif;
+    --sans:'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);font-weight:600;display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;border-top:2px dashed currentColor;opacity:.7}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  h2{font-size:clamp(2rem,4vw,2.8rem);margin:.6rem 0 1rem}
+  .lead{color:var(--ink-soft);font-size:1.05rem;max-width:640px}
+
+  /* Costura (linha pontilhada) */
+  .stitch{height:0;border-top:2px dashed var(--ochre);opacity:.55}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,252,247,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:50%;background:var(--wine);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--wine),inset 0 0 0 4px rgba(240,216,178,.55)}
+  .brand-mark svg{width:22px;height:22px}
+  .brand-name{font-family:var(--serif);font-size:1.45rem;font-weight:700;line-height:1}
+  .brand-sub{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--wine)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.95rem;transition:all .2s ease;border:1px solid transparent}
+  .btn svg{width:18px;height:18px}
+  .btn-wine{background:var(--wine);color:#fff}
+  .btn-wine:hover{background:var(--wine-deep);transform:translateY(-1px)}
+  .btn-line{border-color:var(--ink);color:var(--ink)}
+  .btn-line:hover{background:var(--ink);color:#fff}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:96px 0 92px;background:
+      repeating-linear-gradient(45deg,rgba(110,31,51,.035) 0 2px,transparent 2px 14px),
+      repeating-linear-gradient(-45deg,rgba(34,48,79,.035) 0 2px,transparent 2px 14px),
+      linear-gradient(180deg,var(--linen) 0%,var(--paper) 100%)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:18px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--wine)}
+  .hero .lead{font-size:1.15rem;margin-bottom:34px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-note{margin-top:26px;font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--ochre)}
+
+  .seal{position:relative;background:var(--indigo);color:#ece6dc;border-radius:28px;padding:44px 38px;box-shadow:0 30px 60px -30px rgba(23,32,56,.6)}
+  .seal::after{content:"";position:absolute;inset:12px;border:2px dashed rgba(240,216,178,.45);border-radius:20px;pointer-events:none}
+  .seal .eyebrow{color:var(--ochre-light)}
+  .seal-year{font-family:var(--serif);font-size:clamp(4rem,9vw,5.6rem);font-weight:700;line-height:1;color:#fff;margin:14px 0 4px}
+  .seal-year small{font-size:.32em;font-weight:500;font-style:italic;color:var(--ochre-light);margin-left:6px}
+  .seal p{color:#c8c4bf;font-size:.95rem}
+  .seal-row{display:flex;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.12);font-size:.95rem;margin-top:16px}
+  .seal-row + .seal-row{margin-top:0}
+  .seal-row svg{flex:0 0 20px;width:20px;height:20px;color:var(--ochre-light);margin-top:2px}
+  .seal-row strong{display:block;color:#fff;font-weight:600}
+  .seal-row span{color:#c8c4bf}
+
+  .spool{position:absolute;right:-110px;bottom:-140px;width:380px;height:380px;border-radius:50%;border:2px dashed var(--ochre);opacity:.28}
+  .spool.two{right:-50px;bottom:-80px;width:260px;height:260px;border-style:solid;border-width:1px}
+
+  section{padding:96px 0}
+  .section-head{margin-bottom:48px}
+
+  /* História */
+  .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+  .story-art{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:var(--wine);
+      background-image:
+        repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 3px,transparent 3px 12px),
+        repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 3px,transparent 3px 12px);
+      display:flex;flex-direction:column;justify-content:flex-end;padding:36px;color:#fff}
+  .story-art::before{content:"";position:absolute;inset:14px;border:2px dashed rgba(240,216,178,.5);border-radius:20px}
+  .story-art svg{position:absolute;top:40px;left:40px;width:84px;height:84px;color:var(--ochre-light);opacity:.9}
+  .story-art .q{position:relative;font-family:var(--serif);font-size:1.9rem;font-style:italic;line-height:1.2}
+  .story-art .who{position:relative;margin-top:14px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre-light)}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px}
+  .fact b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--wine);line-height:1.1}
+  .fact span{font-size:.85rem;color:var(--muted)}
+
+  /* Produtos */
+  .products{background:var(--linen)}
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .prod{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px;position:relative;transition:all .25s ease}
+  .prod:hover{border-color:var(--wine);transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(110,31,51,.45)}
+  .prod-ic{width:54px;height:54px;border-radius:16px;background:var(--linen);display:grid;place-items:center;margin-bottom:22px;color:var(--wine);outline:2px dashed var(--ochre-light);outline-offset:4px}
+  .prod-ic svg{width:26px;height:26px}
+  .prod h3{font-size:1.6rem;margin-bottom:10px}
+  .prod p{font-size:.95rem;color:var(--ink-soft)}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .tag{font-size:.8rem;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-soft)}
+
+  /* Faixa */
+  .band{background:var(--wine);color:#f3e7e2;padding:72px 0;position:relative;overflow:hidden}
+  .band::before,.band::after{content:"";position:absolute;left:0;right:0;border-top:2px dashed rgba(240,216,178,.45)}
+  .band::before{top:14px}
+  .band::after{bottom:14px}
+  .band-inner{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+  .band-num{font-family:var(--serif);font-size:clamp(4rem,10vw,7rem);font-weight:700;line-height:1;color:var(--ochre-light)}
+  .band h2{color:#fff;margin-top:0}
+  .band p{color:#e2cfd2;max-width:620px}
+
+  /* Local */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+  .card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px 34px;display:flex;flex-direction:column}
+  .card-ic{width:50px;height:50px;border-radius:50%;background:var(--indigo);color:var(--ochre-light);display:grid;place-items:center;margin-bottom:22px}
+  .card-ic svg{width:22px;height:22px}
+  .card h3{font-size:1.7rem;margin-bottom:14px}
+  .card address{font-style:normal;color:var(--ink-soft);font-size:1.05rem;line-height:1.75}
+  .card address strong{color:var(--ink)}
+  .card .link{margin-top:auto;padding-top:24px;font-weight:600;color:var(--wine);display:inline-flex;align-items:center;gap:6px;font-size:.95rem}
+  .card .link:hover{color:var(--ink)}
+  .map-art{border-radius:24px;overflow:hidden;position:relative;min-height:300px;background:var(--indigo);
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:36px 36px;display:grid;place-items:center;color:#fff;text-align:center;padding:30px}
+  .map-art::before{content:"";position:absolute;left:-10%;right:-10%;top:52%;border-top:10px solid rgba(240,216,178,.18);transform:rotate(-8deg)}
+  .map-art::after{content:"";position:absolute;top:-10%;bottom:-10%;left:46%;border-left:10px solid rgba(240,216,178,.14);transform:rotate(6deg)}
+  .pin{position:relative;z-index:1}
+  .pin-dot{width:64px;height:64px;margin:0 auto 16px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--wine);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.6)}
+  .pin-dot span{width:22px;height:22px;border-radius:50%;background:var(--ochre-light)}
+  .pin b{font-family:var(--serif);font-size:1.4rem;display:block}
+  .pin small{color:#c8c4bf;font-size:.85rem}
+
+  footer{background:var(--indigo-deep);color:#a8a6aa;padding:52px 0 32px;font-size:.88rem}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+  .foot .brand-name{color:#fff}
+  .foot a:hover{color:var(--ochre-light)}
+  .foot-col{display:flex;flex-direction:column;gap:6px}
+  .demo-note{margin-top:36px;padding-top:20px;border-top:1px dashed rgba(255,255,255,.15);font-size:.75rem;color:#7c7a80;text-align:center}
+
+  @media (max-width:960px){
+    .hero-grid,.story-grid,.loc-grid{grid-template-columns:1fr;gap:40px}
+    .prod-grid{grid-template-columns:1fr}
+    .band-inner{grid-template-columns:1fr;gap:16px}
+    .nav-links{display:none}
+    .story-art{aspect-ratio:auto;min-height:340px}
+  }
+  @media (max-width:520px){
+    section{padding:72px 0}
+    .hero{padding:64px 0}
+    .nav .btn{display:none}
+    .facts{grid-template-columns:1fr}
+    .seal{padding:36px 28px}
+    .card{padding:30px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Zezinho Tecidos">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f0d8b2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 19 5"/><ellipse cx="17.5" cy="6.5" rx="1.3" ry="2.2" transform="rotate(45 17.5 6.5)"/><path d="M4 12c3-2 5 2 8 0s5-2 8 0" stroke-dasharray="2 2.2"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Zezinho Tecidos</div>
+        <div class="brand-sub">São Manuel/SP · desde 1993</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#historia">Nossa história</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#visite">Visite a loja</a>
+    </nav>
+    <a href="#visite" class="btn btn-wine">Como chegar</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="spool" aria-hidden="true"></div>
+    <div class="spool two" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Tecidos, armarinho e confecções</span>
+        <h1>Mais de 30 anos de <em>tecidos</em> e tradição em São Manuel.</h1>
+        <p class="lead">Desde 1993, a loja que leva o apelido do fundador, José Natal Clarice — o Zezinho — reúne tecidos, armarinho, linha de cama, mesa e banho, roupas e decoração no Centro da cidade.</p>
+        <div class="hero-ctas">
+          <a href="#visite" class="btn btn-wine">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Visite a loja
+          </a>
+          <a href="#historia" class="btn btn-line">Conheça a história</a>
+        </div>
+        <p class="hero-note"><span class="dot"></span>Rua Epitácio Pessoa, 201 · Centro · São Manuel/SP</p>
+      </div>
+
+      <aside class="seal">
+        <span class="eyebrow">Desde</span>
+        <div class="seal-year">1993<small>São Manuel</small></div>
+        <p>Uma das lojas mais tradicionais da cidade.</p>
+        <div class="seal-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+          <div><strong>Fundador: José Natal Clarice</strong><span>O “Zezinho”, que dá nome à loja</span></div>
+        </div>
+        <div class="seal-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><strong>Rua Epitácio Pessoa, 201</strong><span>Centro – São Manuel/SP</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section id="historia">
+    <div class="wrap story-grid">
+      <div class="story-art" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="2.5" rx="1"/><rect x="7" y="18.5" width="10" height="2.5" rx="1"/><path d="M8.5 5.5v13M15.5 5.5v13"/><path d="M8.5 8h7M8.5 10.5h7M8.5 13h7M8.5 15.5h7" stroke-dasharray="1.5 1.2"/></svg>
+        <div class="q">Uma loja que carrega o nome de quem a começou.</div>
+        <div class="who">Zezinho Tecidos · desde 1993</div>
+      </div>
+      <div>
+        <span class="eyebrow">Nossa história</span>
+        <h2>Do apelido do fundador ao nome da loja</h2>
+        <p class="lead">A Zezinho Tecidos foi fundada em 1993 por José Natal Clarice, conhecido em São Manuel como “Zezinho”. O apelido virou nome de loja — e a loja virou endereço conhecido no Centro da cidade.</p>
+        <p class="lead" style="margin-top:16px">São mais de três décadas trabalhando com tecidos, armarinho e confecções, o que faz da Zezinho Tecidos uma das lojas mais tradicionais de São Manuel.</p>
+        <div class="facts">
+          <div class="fact"><b>1993</b><span>Ano de fundação</span></div>
+          <div class="fact"><b>30+</b><span>Anos de história</span></div>
+          <div class="fact"><b>Centro</b><span>São Manuel/SP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products" id="produtos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">O que você encontra</span>
+        <h2>Tecidos e confecções para a casa e para vestir</h2>
+        <p class="lead">Armarinho, tecidos e confecções reunidos em uma só loja. Passe para conhecer as opções disponíveis.</p>
+      </div>
+      <div class="prod-grid">
+        <div class="prod">
+          <div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 15h18M3 18v2M21 18v2"/><rect x="5.5" y="6" width="5" height="4" rx="1"/><rect x="13.5" y="6" width="5" height="4" rx="1"/></svg></div>
+          <h3>Cama, mesa e banho</h3>
+          <p>Linha para o dia a dia da casa: peças para o quarto, para a mesa e para o banheiro.</p>
+        </div>
+        <div class="prod">
+          <div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3c0 1.7-1.8 3-4 3S8 4.7 8 3z"/></svg></div>
+          <h3>Roupas</h3>
+          <p>Confecções para vestir, ao lado dos tecidos e do armarinho de quem gosta de costurar.</p>
+        </div>
+        <div class="prod">
+          <div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16"/><path d="M6 4v12c0 2 1.5 3 3 4M18 4v12c0 2-1.5 3-3 4"/><path d="M6 9c2 1 4 1 6 0s4-1 6 0" stroke-dasharray="2 2"/></svg></div>
+          <h3>Decoração</h3>
+          <p>Tecidos e peças para dar cor e acabamento aos ambientes da casa.</p>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Tecidos</span>
+        <span class="tag">Armarinho</span>
+        <span class="tag">Confecções</span>
+        <span class="tag">Cama, mesa e banho</span>
+        <span class="tag">Roupas</span>
+        <span class="tag">Decoração</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA -->
+  <section class="band">
+    <div class="wrap band-inner">
+      <div class="band-num">30+</div>
+      <div>
+        <h2>Mais de 30 anos no Centro de São Manuel</h2>
+        <p>Desde 1993 na cidade, com o nome do fundador na fachada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISITE -->
+  <section id="visite">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Visite a loja</span>
+        <h2>Venha conhecer a Zezinho Tecidos</h2>
+        <p class="lead">A loja fica no Centro de São Manuel, na Rua Epitácio Pessoa.</p>
+      </div>
+      <div class="loc-grid">
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3>Endereço</h3>
+          <address>
+            <strong>Zezinho Tecidos</strong><br>
+            Rua Epitácio Pessoa, 201<br>
+            Centro – São Manuel – SP
+          </address>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Epit%C3%A1cio%20Pessoa%2C%20201%2C%20Centro%2C%20S%C3%A3o%20Manuel%20-%20SP" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+        <div class="map-art" aria-hidden="true">
+          <div class="pin">
+            <div class="pin-dot"><span></span></div>
+            <b>Rua Epitácio Pessoa, 201</b>
+            <small>Centro · São Manuel/SP</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand-name">Zezinho Tecidos</div>
+        <p style="margin-top:6px">Tecidos, armarinho e confecções · desde 1993</p>
+      </div>
+      <div class="foot-col">
+        <span>Rua Epitácio Pessoa, 201</span>
+        <span>Centro – São Manuel – SP</span>
+      </div>
+      <div class="foot-col">
+        <a href="#historia">Nossa história</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#visite">Visite a loja</a>
+      </div>
+    </div>
+    <p class="demo-note">Prévia de demonstração — página ilustrativa, não é o site oficial da Zezinho Tecidos.</p>
+  </div>
+</footer>
+
+</body>
+</html>
